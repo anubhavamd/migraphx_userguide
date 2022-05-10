@@ -72,7 +72,7 @@
 </td>
 <td>
 <pre>
-5. Contributor Guide
+5. Contributor's Guide
 	5.1 MIGraphX Fundamentals
 		5.1.1 Location of the Examples
 		5.1.2 Adding Two Literals
