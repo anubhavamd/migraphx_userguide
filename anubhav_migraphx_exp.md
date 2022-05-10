@@ -1,22 +1,137 @@
-Table Of Contents
+***Table Of Contents***
 
-[1. Getting Started Guide for MIGraphX](#_Toc101516457)
+<table 1>
+<tr>
+<th>Getting Started</th>
+<th>Python User Guide</th>
+<th>C++ user Guide</th>
+</tr>
+<tr>
+<td>
+<pre>
+1. Getting Started Guide for MIGraphX
+	1.1. Introduction
+		1.1.1. Documentation Roadmap
+	1.2. List of prerequisites
+	1.3. Installing pre-built packages
+	1.4. Building From Source
+		1.4.1. Use the ROCm build tool rbuild
+		1.4.2. Use cmake to build MIGraphX
+		1.4.3. Use docker
+ </pre>
+</td>
+<td>
+<pre>
+2. Python User Guide
+	2.1. Setting path and installing package
+	2.2 Defining different modules in detail
+		2.2.1. Shape
+		2.2.2. Argument
+		2.2.3. Target
+		2.2.4. Program
+		2.2.5. parse_onnx
+		2.2.6. parse_tf
+		2.2.7. Load
+		2.2.8. Save
+</pre>
+</td>
+<td>
+<pre>
+3. C++ User Guide
+	3.1 Defining different modules in detail
+		3.1.1 Shape
+		3.1.2 Argument
+		3.1.3 Target
+		3.1.4 Program
+		3.1.5 Quantize
+		3.1.6 parse_onnx
+		3.1.7 Load
+</pre>
+</td>
+</table 1>
+<table 2>
+<tr>
+<th>MIGraphX Driver</th>
+<th>Contributor Guide</th>	
+</tr>
+<td>
+<pre>
+4. MIGraphX Driver
+	4.1 Description
+	4.2 How to Use
+		4.2.1 Commands
+		4.2.2 Options
+	4.3 Defining different modules in detail
+		4.3.1 Read	
+		4.3.2 compile
+		4.3.3 Run
+		4.3.4 Perf
+		4.3.5 Verify
+		4.3.6 Roctx
+</pre>
+</td>
+<td>
+<pre>
+5. Contributor Guide
+	5.1 MIGraphX Fundamentals
+		5.1.1 Location of the Examples
+		5.1.2 Adding Two Literals
+		5.1.3 Using Parameters
+		5.1.4 Handling Tensor Data
+		5.1.5 Importing From ONNX
+	5.2 Data Types
+		5.2.1 Shape
+		5.2.2 Literal
+		5.2.3 Argument
+		5.2.4 raw_data
+		5.2.5 Tensor_view
+	5.3 Program
+		5.3.1 Instruction
+		5.3.2 Instruction_ref
+		5.3.3 Program
+		5.3.4 Parse_onnx
+		5.3.5 Parse_tf
+		5.3.6 Onnx_options
+		5.3.7 Tf_options
+	5.4 Targets
+		5.4.1 Target
+		5.4.2 gpu::target
+		5.4.3 cpu::target
+	5.5 Passes
+		5.5.1 Pass
+		5.5.2 Dead_code_elimination
+		5.5.3 Eliminate_common_subexpression
+		5.5.4 Eliminate_concat
+		5.5.5 Eliminate_contiguous
+`		5.5.6 Eliminate_identity
+		5.5.7 Eliminate_pad
+		5.5.8 Propagate_constant
+		5.5.9 Rewrite_batchnorm
+		5.5.10 Rewrite_rnn
+		5.5.11 Schedule
+		5.5.12 Simplify_algebra
+		5.5.13 Simplify_reshapes
+	5.6 Matchers
+		5.6.1 Introduction
+		5.6.2 Arguments
+		5.6.3 Binding
+		5.6.4 Finding matches
+		5.6.5 Creating matchers
+	5.7 Tools
+		5.7.1 roctx.py
+</td>
+</pre>
+</table 2>
+	[1. Getting Started Guide for MIGraphX](#_Toc101516457)
+	[1.1. Introduction](#_Toc101516458)
+	[1.1.1. Documentation Roadmap](#_Toc101516459)
+	[1.2. List of prerequisites](#_Toc101516460)
+	[1.3. Installing pre-built packages](#_Toc101516461)
+	[1.4. Building From Source](#_Toc101516462)
+	[1.4.2. Use cmake to build MIGraphX](#_Toc101516463)
+	[1.4.3. Use docker](#_Toc101516464)
 
-[1.1. Introduction](#_Toc101516458)
-
-[1.1.1. Documentation Roadmap](#_Toc101516459)
-
-[1.2. List of prerequisites](#_Toc101516460)
-
-[1.3. Installing pre-built packages](#_Toc101516461)
-
-[1.4. Building From Source](#_Toc101516462)
-
-[1.4.2. Use cmake to build MIGraphX](#_Toc101516463)
-
-[1.4.3. Use docker](#_Toc101516464)
-
-[2. Python User Guide](#_Toc101516465)
+***[2. Python User Guide](#_Toc101516465)***
 
 [2.1. Setting path and installing package](#_Toc101516466)
 
@@ -38,7 +153,7 @@ Table Of Contents
 
 [2.2.8. Save](#_Toc101516475)
 
-[3. C++ User Guide](#_Toc101516476)
+***[3. C++ User Guide](#_Toc101516476)***
 
 [3.1 Defining different modules in detail](#_Toc101516477)
 
@@ -58,7 +173,7 @@ Table Of Contents
 
 [3.1.8 Save](#_Toc101516485)
 
-[4. MIGraphX Driver](#_Toc101516486)
+***[4. MIGraphX Driver](#_Toc101516486)***
 
 [4.1 Description](#_Toc101516487)
 
@@ -84,7 +199,7 @@ Table Of Contents
 
 [4.3.6 Roctx](#_Toc101516498)
 
-[5. Contributor Guide](#_Toc101516499)
+[5. Contributor Guide](#_Toc101516499)***
 
 [5.1 MIGraphX Fundamentals](#_Toc101516500)
 
