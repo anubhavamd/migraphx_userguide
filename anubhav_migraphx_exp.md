@@ -5,12 +5,13 @@
 <th>Getting Started</th>
 <th>Python User Guide</th>
 <th>C++ user Guide</th>
+<th>MIGraphX Driver</th>
 </tr>
 <tr>
 <td>
 <pre>
 1. Getting Started Guide for MIGraphX
-	1.1. Introduction
+        1.1. <a href="introduction/">Introduction</a>
 		1.1.1. Documentation Roadmap
 	1.2. List of prerequisites
 	1.3. Installing pre-built packages
@@ -48,12 +49,6 @@
 		3.1.7 Load
 </pre>
 </td>
-</table 1>
-<table 2>
-<tr>
-<th>MIGraphX Driver</th>
-<th>Contributor Guide</th>	
-</tr>
 <td>
 <pre>
 4. MIGraphX Driver
@@ -70,6 +65,11 @@
 		4.3.6 Roctx
 </pre>
 </td>
+</table 1>
+<table 2>
+<tr>
+<th>Contributor Guide</th>	
+</tr>
 <td>
 <pre>
 5. Contributor Guide
