@@ -123,7 +123,6 @@
 </pre>
 </table 2>
 	[1. Getting Started Guide for MIGraphX](#_Toc101516457)
-	[1.1. Introduction](#_Toc101516458)
 	[1.1.1. Documentation Roadmap](#_Toc101516459)
 	[1.2. List of prerequisites](#_Toc101516460)
 	[1.3. Installing pre-built packages](#_Toc101516461)
