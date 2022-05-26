@@ -1,4 +1,11 @@
-***Table Of Contents***
+<table width="100%">
+        <tr width="100%">
+           <td align="center"><img src="https://raw.githubusercontent.com/Xilinx/Image-Collateral/main/xilinx-logo.png" width="30%"/><h1>Vitis™ In-Depth Tutorials</h1>
+           </td>
+        </tr>
+       </table>
+
+# Table Of Contents
 
 <table 1>
 <tr>
@@ -122,181 +129,11 @@
 </td>
 </pre>
 </table 2>
-	[1. Getting Started Guide for MIGraphX](#_Toc101516457)
-	[1.1.1. Documentation Roadmap](#_Toc101516459)
-	[1.2. List of prerequisites](#_Toc101516460)
-	[1.3. Installing pre-built packages](#_Toc101516461)
-	[1.4. Building From Source](#_Toc101516462)
-	[1.4.2. Use cmake to build MIGraphX](#_Toc101516463)
-	[1.4.3. Use docker](#_Toc101516464)
-
-***[2. Python User Guide](#_Toc101516465)***
-
-[2.1. Setting path and installing package](#_Toc101516466)
-
-[2.2 Defining different modules in detail](#_Toc101516467)
-
-[2.2.1. Shape](#_Toc101516468)
-
-[2.2.2. Argument](#_Toc101516469)
-
-[2.2.3. Target](#_Toc101516470)
-
-[2.2.4. Program](#_Toc101516471)
-
-[2.2.5. parse_onnx](#_Toc101516472)
-
-[2.2.6. parse_tf](#_Toc101516473)
-
-[2.2.7. Load](#_Toc101516474)
-
-[2.2.8. Save](#_Toc101516475)
-
-***[3. C++ User Guide](#_Toc101516476)***
-
-[3.1 Defining different modules in detail](#_Toc101516477)
-
-[3.1.1 Shape](#_Toc101516478)
-
-[3.1.2 Argument](#_Toc101516479)
-
-[3.1.3 Target](#_Toc101516480)
-
-[3.1.4 Program](#_Toc101516481)
-
-[3.1.5 Quantize](#_Toc101516482)
-
-[3.1.6 parse_onnx](#_Toc101516483)
-
-[3.1.7 Load](#_Toc101516484)
-
-[3.1.8 Save](#_Toc101516485)
-
-***[4. MIGraphX Driver](#_Toc101516486)***
-
-[4.1 Description](#_Toc101516487)
-
-[4.2 How to Use](#_Toc101516488)
-
-[4.2.1 Commands](#_Toc101516489)
-
-[4.2.2 Options](#_Toc101516490)
-
-[![Graphical user interface, application, email Description automatically generated](media/55968d31b828db50711928931e75d299.png)](#_Toc101516491)
-
-[4.3 Defining different modules in detail](#_Toc101516492)
-
-[4.3.1 Read](#_Toc101516493)
-
-[4.3.2 compile](#_Toc101516494)
-
-[4.3.3 Run](#_Toc101516495)
-
-[4.3.4 Perf](#_Toc101516496)
-
-[4.3.5 Verify](#_Toc101516497)
-
-[4.3.6 Roctx](#_Toc101516498)
-
-[5. Contributor Guide](#_Toc101516499)***
-
-[5.1 MIGraphX Fundamentals](#_Toc101516500)
-
-[5.1.1 Location of the Examples](#_Toc101516501)
-
-[5.1.2 Adding Two Literals](#_Toc101516502)
-
-[5.1.3 Using Parameters](#_Toc101516503)
-
-[5.1.4 Handling Tensor Data](#_Toc101516504)
-
-[5.1.5 Importing From ONNX](#_Toc101516505)
-
-[5.2 Data Types](#_Toc101516506)
-
-[5.2.1 Shape](#_Toc101516507)
-
-[5.2.2 Literal](#_Toc101516508)
-
-[5.2.3 Argument](#_Toc101516509)
-
-[5.2.4 raw_data](#_Toc101516510)
-
-[5.2.5 Tensor_view](#_Toc101516511)
-
-[5.3 Program](#_Toc101516512)
-
-[5.3.1 Instruction](#_Toc101516513)
-
-[5.3.2 Instruction_ref](#_Toc101516514)
-
-[5.3.3 Program](#_Toc101516515)
-
-[5.3.4 Parse_onnx](#_Toc101516516)
-
-[5.3.5 Parse_tf](#_Toc101516517)
-
-[5.3.6 Onnx_options](#_Toc101516518)
-
-[5.3.7 Tf_options](#_Toc101516519)
-
-[5.4 Targets](#_Toc101516520)
-
-[5.4.1 Target](#_Toc101516521)
-
-[5.4.2 gpu::target](#_Toc101516522)
-
-[5.4.3 cpu::target](#_Toc101516523)
-
-[5.5 Passes](#_Toc101516524)
-
-[5.5.1 Pass](#_Toc101516525)
-
-[5.5.2 Dead_code_elimination](#_Toc101516526)
-
-[5.5.3 Eliminate_common_subexpression](#_Toc101516527)
-
-[5.5.4 Eliminate_concat](#_Toc101516528)
-
-[5.5.5 Eliminate_contiguous](#_Toc101516529)
-
-[5.5.6 Eliminate_identity](#_Toc101516530)
-
-[5.5.7 Eliminate_pad](#_Toc101516531)
-
-[5.5.8 Propagate_constant](#_Toc101516532)
-
-[5.5.9 Rewrite_batchnorm](#_Toc101516533)
-
-[5.5.10 Rewrite_rnn](#_Toc101516534)
-
-[5.5.11 Schedule](#_Toc101516535)
-
-[5.5.12 Simplify_algebra](#_Toc101516536)
-
-[5.5.13 Simplify_reshapes](#_Toc101516537)
-
-[5.6 Matchers](#_Toc101516538)
-
-[5.6.1 Introduction](#_Toc101516539)
-
-[5.6.2 Arguments](#_Toc101516540)
-
-[5.6.3 Binding](#_Toc101516541)
-
-[5.6.4 Finding matches](#_Toc101516542)
-
-[5.6.5 Creating matchers](#_Toc101516543)
-
-[5.7 Tools](#_Toc101516544)
-
-[5.7.1 roctx.py](#_Toc101516545)
-
-# 
+	
 
 # 1. Getting Started Guide for MIGraphX
 
-# 1.1. Introduction
+# 1.1. Introduction 
 
 The MIGraphX execution provider uses AMD's Deep Learning graph optimization engine to accelerate ONNX model on AMD GPUs.
 
@@ -331,9 +168,9 @@ The following is a list of prerequisites required to build MIGraphX source.
 # 1.3. Installing pre-built packages
 
 With ROCm installed correctly, MIGraphX binaries can be installed on Ubuntu with the following command:
-
+```
 sudo apt update && sudo apt install -y migraphx
-
+```
 then the header files and libs are installed under /opt/rocm-\<version\>, where \<version\> is the ROCm version.
 
 # 1.4. Building From Source
@@ -352,82 +189,81 @@ There are three ways to build the MIGraphX sources.
 
     This approach builds a docker image with all prerequisites installed, then build the MIGraphX sources inside a docker container.
 
-#### **1.4.1. Use the ROCm build tool rbuild**.
+### **1.4.1. Use the ROCm build tool rbuild**.
 
 In this approach, we use the rbuild build tool to build MIGraphX. The specific steps are as follows:
 
-1.  Install rocm-cmake, pip3, rocblas, and miopen-hip with the command
-
+Install rocm-cmake, pip3, rocblas, and miopen-hip with the command
+```
 sudo apt update && sudo apt install -y rocm-cmake python3-pip rocblas miopen-hip
-
-1.  Install rbuild (sudo may be required here.)
-
+```
+Install rbuild (sudo may be required here.)
+```
 pip3 install https://github.com/RadeonOpenCompute/rbuild/archive/master.tar.gz
-
-1.  Build MIGraphX source code
-
+```
+Build MIGraphX source code
+```
 rbuild build -d depend -B build --cxx=/opt/rocm/llvm/bin/clang++
-
+```
 then all the prerequisites are in the folder depend, and MIGraphX is built in the build directory.
 
 Note that for ROCm3.7 and later releases, Ubuntu 18.04 or later releases are needed. Upgrade to Ubuntu 18.04 is available at [Upgrade Ubuntu to 18.04](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/wiki/Upgrade-to-Ubuntu-18.04-for-ROCM3.7-or-later-releases)
 
 Also note that you may meet the error of rbuild: command not found. It is because rbuild is installed at \$HOME/.local/bin, which is not in PATH. You can either export PATH as export PATH=\$HOME/.local/bin:\$PATH to add the folder to PATH or add the option --prefix /usr/local in the pip3 command when installing rbuild.
 
-## 1.4.2. Use cmake to build MIGraphX
+### 1.4.2. Use cmake to build MIGraphX
 
 If using this approach, we need to install the prerequisites, configure the cmake, and then build the source.
 
-##### Installing the prerequisites
+#### Installing the prerequisites
 
 For convenience, the prerequisites can be built automatically with rbuild as:
-
+```
 rbuild build -d depend --cxx=/opt/rocm/llvm/bin/clang++
-
+```
 then all the prerequisites are in the folder depend, and they can be used in the cmake configuration as -DCMAKE_PREFIX_PATH=depend.
 
 If you have sudo access, as an alternative to the rbuild command, you can install the prerequisites just like in the dockerfile by calling ./tools/install_prereqs.sh.
 
 (Note that this script is for Ubuntu. By default, all prerequisites are installed at the default location /usr/local and are accessible by all users. For the default location, sudo is required to run the script. You can also specify a location at which the prerequisites are installed with ./tools/install_prereqs.sh \$your_loc.)
 
-##### Building MIGraphX source and install libs
+#### Building MIGraphX source and install libs
 
 With the above prerequisites installed, we can build source as:
 
-1.  Go to the project folder and create a build directory:
-
+Go to the project folder and create a build directory:
+```
 mkdir build
-
 cd build
-
-1.  Configure the cmake. If the prerequisites are installed at the default location /usr/local, the command is:
-
+```
+Configure the cmake. If the prerequisites are installed at the default location /usr/local, the command is:
+```
 CXX=/opt/rocm/llvm/bin/clang++ cmake..
-
+```
 Otherwise, you need to set -DCMAKE_PREFIX_PATH=\$your_loc to configure the cmake.
 
-1.  Build MIGraphX source code
-
+Build MIGraphX source code
+```
 make -j\$(nproc)
-
+```
 Correctness can be verified as:
-
+```
 make -j\$(nproc) check
-
+```
 MIGraphX libs can be installed as:
-
+```
 make install
-
-## 1.4.3. Use docker
+```
+### 1.4.3. Use docker
 
 The easiest way to setup the development environment is to use docker. With the dockerfile, you can build a docker image as:
-
+```
 docker build -t migraphx.
-
+```
 Then to enter the developement environment use docker run:
-
+```
 docker run --device='/dev/kfd' --device='/dev/dri' -v=\`pwd\`:/code/AMDMIGraphX -w /code/AMDMIGraphX --group-add video -it migraphx
-
+```
 In the docker container, all the required prerequisites are already installed, so users can just go to the folder /code/AMDMIGraphX and follow the steps in the above [Build MIGraphX source and install libs](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX#building-migraphx-source-and-install-libs) section to build MIGraphX source.c
 
 # 2. Python User Guide
@@ -437,145 +273,148 @@ In the docker container, all the required prerequisites are already installed, s
 To use MIGraphX's Python module, please either set PYTHONPATH or use .deb package as explained below:
 
 -   Setting PYTHONPATH:
-
+```
 export PYTHONPATH=/opt/rocm/lib:\$PYTHONPATH
-
+```
 -   Creating and installing the package:
 
 To create deb package:
-
+```
 make package
-
+```
 This will provide the path of .deb package.
 
 To install:
-
+```
 dpkg -i \<path_to_deb_file\>
-
+```
 # 2.2 Defining different modules in detail
 
 ## 2.2.1. Shape
-
+```
 **classmigraphx.shape(type**, **lens**, **strides=None)**
-
+```
 Describes the shape of a tensor. This includes size, layout, and data type/
-
+```
 **migraphx.type()**
-
+```
 An integer that represents the type
 
 **Return type:** int
-
+	
+```
 **migraphx.lens()**
-
+```
 A list of the lengths of the shape
 
 **Return type:** list[int]
-
+```
 **migraphx.strides()**
-
+```
 A list of the strides of the shape
 
 **Return type:** list[int]
-
+```
 **migraphx.elements()**
-
+```
 The number of elements in the shape
 
 **Return type:** int
-
+```
 **migraphx.bytes()**
-
+```
 The number of bytes the shape uses
 
 **Return type:** int
-
+```
 **migraphx.type_size()**
-
+```
 The number of bytes one element uses
 
 **Return type:** int
-
+```
 **migraphx.packed()**
-
+```
 Returns true if the shape is packed.
 
 **Return type:** bool
-
+```
 **migraphx.transposed()**
-
+```
 Returns true if the shape is transposed.
 
 **Return type:** bool
-
+```
 **migraphx.broadcasted()**
-
+```
 Returns true if the shape is broadcasted.
 
 **Return type:** bool
-
+```
 **migraphx.standard()**
-
+```
 Returns true if the shape is a standard shape. That is, the shape is both packed and not transposed.
 
 **Return type:** bool
-
+```
 **migraphx.scalar()**
-
+```
 Returns true if all strides are equal to 0 (scalar tensor).
 
 **Return type:** bool
 
 ## 2.2.2. Argument
-
+```
 **classmigraphx.argument(data)**
-
+```
 Construct an argument from a python buffer. This can include numpy arrays.
-
+```
 **migraphx.get_shape()**
-
+```
 Returns the shape of the argument.
 
 **Return type:** shape
-
+```
 **migraphx.tolist()**
-
+```
 Convert the elements of the argument to a python list.
 
 **Return type:** list
-
+```
 **migraphx.generate_argument(s**, **seed=0)**
-
+```
 Generate an argument with random data.
 
-**Parameters: s** ([*shape*](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.shape)) – Shape of argument to generate.
+**Parameters:**
+-    s (shape) – Shape of argument to generate.
 
-**seed** (*int*) – The seed used for random number generation
+-    seed (int) – The seed used for random number generation
 
-**Return type:** [argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)
+**Return type:** argument
 
 ## 2.2.3. Target
-
+```
 **Class migraphx.target**
-
+```
 This represents the compiliation target.
-
+```
 **migraphx.get_target(name)**
-
+```
 Constructs the target.
 
-**Parameters: name** (*str*) – The name of the target to construct. This can either be ‘gpu’ or ‘ref’.
+**Parameters: 
+-   **name** (*str*) – The name of the target to construct. This can either be ‘gpu’ or ‘ref’.
 
-**Return type:** target
+-   **Return type:** target
 
 ## 2.2.4. Program
-
+```
 **class migraphx.program**
-
+```
 Represents the computation graph to be compiled and run.
-
+```
 **migraphx.clone()**
-
+```
 Make a copy of the program
 
 **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
@@ -585,15 +424,15 @@ Make a copy of the program
 Get the shapes of all the input parameters in the program.
 
 **Return type:** dict[str, [shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.shape)]
-
+```
 **migraphx.get_shape()**
-
+```
 Get the shape of the final output of the program.
 
 **Return type:** [shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.shape)
-
+```
 **migraphx.compile(t**, **offload_copy=True**, **fast_math=True)**
-
+```
 Compiles the program for the target and optimizes it.
 
 **Parameters**
@@ -601,9 +440,9 @@ Compiles the program for the target and optimizes it.
 -   **t** ([*target*](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.target)) – This is the target to compile the program for.
 -   **offload_copy** (*bool*) – For targets with offloaded memory(such as the gpu), this will insert instructions during compilation to copy the input parameters to the offloaded memory and to copy the final result from the offloaded memory back to main memory.
 -   **fast_math** (*bool*) – Optimize math functions to use faster approximate versions. There may be slight accuracy degredation when enabled.
-
+```
 **migraphx.run(params)**
-
+```
 Run the program.
 
 **Parameters: params** (*dict[str,* [*argument*](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)*]*) – This is a map of the input parameters which will be used when running the program.
@@ -611,17 +450,18 @@ Run the program.
 **Returns:** The result of the last instruction.
 
 **Return type:** [argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)
-
+```
 **migraphx.quantize_fp16(prog**, **ins_names=['all'])**
-
+```
 Quantize the program to use fp16.
 
-**Parameters: prog** ([*program*](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)) – Program to quantize.
+**Parameters: 
+-    **prog** ([*program*](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)) – Program to quantize.
 
-**ins_names** (*list[str]*) – List of instructions to quantize.
-
+-    **ins_names** (*list[str]*) – List of instructions to quantize.
+```
 **migraphx.quantize_int8(prog**, **t**, **calibration=[]**, **ins_names=['dot', 'convolution'])**
-
+```
 Quantize the program to use int8.
 
 **Parameters**
@@ -632,9 +472,9 @@ Quantize the program to use int8.
 -   **ins_names** (*list[str]*) – List of instructions to quantize.
 
 ## 2.2.5. parse_onnx
-
+```
 migraphx.parse_onnx(filename, default_dim_value=1, map_input_dims={}, skip_unknown_operators=false, print_program_on_error=false)
-
+```
 Load and parse an onnx file.
 
 **Parameters**
@@ -648,9 +488,9 @@ Load and parse an onnx file.
     **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
 
 ## 2.2.6. parse_tf
-
+```
 **migraphx.parse_tf(filename**, **is_nhwc=True**, **batch_size=1)**
-
+```
 Load and parse an tensorflow protobuf file file.
 
 **Parameters**
@@ -662,9 +502,9 @@ Load and parse an tensorflow protobuf file file.
     **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
 
 ## 2.2.7. Load
-
+```
 **migraphx.load(filename**, **format='msgpack')**
-
+```
 Load a MIGraphX program
 
 **Parameters**
@@ -675,9 +515,9 @@ Load a MIGraphX program
 **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
 
 ## 2.2.8. Save
-
+```
 **migraphx.save(p**, **filename**, **format='msgpack')**
-
+```
 Save a MIGraphX program
 
 **Parameters**
@@ -691,329 +531,495 @@ Save a MIGraphX program
 # 3.1 Defining different modules in detail
 
 ## 3.1.1 Shape
-
+```
 **enum migraphx_shape_datatype_t**
-
+```
 An enum to represent the different data type inputs.
 
 *Values:*
-
+```
 **enumerator migraphx_shape_tuple_type**
-
+```
+```
 **enumerator migraphx_shape_bool_type**
-
+```
+```
 **enumerator migraphx_shape_half_type**
-
+```
 **enumerator migraphx_shape_float_type**
-
+```
+```
 **enumerator migraphx_shape_double_type**
-
+```
+```
 **enumerator migraphx_shape_uint8_type**
-
+```
+```
 **enumerator migraphx_shape_int8_type**
-
+```
+```
 **enumerator migraphx_shape_uint16_type**
-
+```
+```
 **enumerator migraphx_shape_int16_type**
-
+```
+```
 **enumerator migraphx_shape_int32_type**
-
+```
+```
 **enumerator migraphx_shape_int64_type**
-
+```
+```
 **enumerator migraphx_shape_uint32_type**
-
+```
+```
 **enumerator migraphx_shape_uint64_type**
+```
 
-# 
-
+```
 **struct migraphx::shape : public migraphx::handle_base\<\>**
-
+```
 Describe shape of tensor.
 
 A shape consists of a data type, lengths of multi-dimension tensor, and strides
 
 **Public Functions**
-
+```
 **inline shape()**
-
+```
+```
 **inline shape(const migraphx_shape \*p)**
-
+```
+```
 **inline shape(migraphx_shape \*p**, **own)**
-
+```
+```
 **inline shape(migraphx_shape \*p**, **borrow)**
-
+```
+```
 **inline shape(migraphx_shape_datatype_t type)**
-
+```
 Construct a scalar shape.
-
+```
 **inline shape(migraphx_shape_datatype_t** **type, std::vector\<size_t\> plengths)**
+```
 
 Construct a shape with its type and lengths. The strides are automatically computed assumming a packed layout.
 
-## 3.1.2 Argument
+```
+inline shape(migraphx_shape_datatype_t type, std::vector<size_t> plengths, std::vector<size_t> pstrides)
+```
+```
+inline std::vector<size_t> lengths() const
+```
+```
+inline std::vector<size_t> strides() const
+```
+```
+inline migraphx_shape_datatype_t type() const
+```
+```
+inline size_t bytes() const
+```
 
+**Friends**
+
+
+```
+inline friend friend bool operator== (const shape &px, const shape &py)
+```
+```
+inline friend friend bool operator!= (const shape &px, const shape &py)
+```
+
+3.1.2 Argument
+
+
+```
 **struct migraphx::argument : public migraphx::handle_base\<\>**
-
+```
 Arguments to be passed to an migraphx arguments.
 
 An argument represents a raw buffer of data with a shape.
 
 **Public Functions**
-
+```
 **inline argument()**
-
+```
+```
 **inline argument(migraphx_argument \*p**, **borrow)**
-
+```
+```
 **inline argument(migraphx_argument \*p**, **own)**
-
+```
+```
 **inline argument(const migraphx_argument \*p)**
-
+```
+```
 **inline argument(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **pshape, void \*pbuffer)**
-
+```
+```
 **inline** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **get_shape() const**
-
+```
+```
 **inline char \*data() const**
+```
 
 Public Static Functions
-
+```
 **static inline** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx8argumentE) **generate(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **ps, size_t pseed = 0)**
-
+```
 Generate an argument using random data.
 
 **Friends**
-
+```
 **inline** **friend** **friend** **bool** **operator==** **(const** **argument** **\&px,** **const** **argument** **\&py)**
-
+```
+```
 **inline** **friend** **friend** **bool** **operator!=** **(const** **argument** **\&px,** **const** **argument** **\&py)**
+```
 
 ## 3.1.3 Target
-
+```
 **struct migraphx::target : public migraphx::handle_base\<\>**
-
+```
 target for compilation.
 
 **Public Functions**
-
+```
 **inline target()**
-
+```
+```
 **inline target(migraphx_target \*p**, **own)**
-
+```
+```
 **inline target(migraphx_target \*p**, **borrow)**
-
+```
+```
 **inline target(const char \*name)**
-
+```
 Construct a target from its name.
 
 ## 3.1.4 Program
-
+```
 **struct migraphx::program_parameter_shapes : public migraphx::handle_base\<\>**
+```
 
 Public Functions
 
+```
 **inline program_parameter_shapes()**
-
+```
+```
 **inline program_parameter_shapes(migraphx_program_parameter_shapes \*p**, **own)**
-
+```
+```
 **inline program_parameter_shapes(migraphx_program_parameter_shapes \*p**, **borrow)**
-
+```
+```
 **inline size_t size() const**
-
+```
+```
 **inline** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **operator[](const char \*pname) const**
-
+```
+```
 **inline std::vector\<const char\*\> names() const**
-
+```
+```
 **struct migraphx::program_parameters : public migraphx::handle_base\<\>**
+```
 
 A class to construct the inputs parameters for a program.
 
+
 **Public Functions**
-
+```
 **inline program_parameters(migraphx_program_parameters \*p**, **own)**
-
+```
+```
 **inline program_parameters(migraphx_program_parameters \*p**, **borrow)**
-
+```
+```
 **inline program_parameters(migraphx_program_parameters \*p)**
-
+```
+```
 **inline program_parameters()inline program_parameters(std::initializer_list\<std::pair\<std::string,** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx8argumentE)**\>\> l)**
+```
 
 Construct the parameters from initializer_list.
 
+
+```
 **inline void add(const char \*pname, const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx8argumentE) **\&pargument) const**
+```
 
 Add a new parameter.
 
+
+```
 **struct migraphx_compile_options**
+```
 
 **Public Functions**
 
+```
 **template\<class ...Ts\>  
 inline migraphx_compile_options(**[**Ts**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4IDpEN24migraphx_compile_options24migraphx_compile_optionsEDpRR2Ts)**&&... xs)**
+```
+
 
 **Public Members**
 
-**migraphx::compile_options object**
 
+```
+**migraphx::compile_options object**
+```
+```
 **struct migraphx::program : public migraphx::handle_base\<\>**
+```
 
 A program represents the all computation graphs to be compiled and executed.
 
+
+
 **Public Functions**
-
+```
 **inline program()**
-
+```
+```
 **inline program(migraphx_program \*p**, **own)**
-
+```
+```
 **inline program(migraphx_program \*p**, **borrow)**
-
+```
+```
 **inline void compile(const** [**target**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx6targetE) **\&ptarget, const compile_options \&poptions) const**
+```
 
 Compile the program for a specific target to be ran on.
 
+```
 **inline void compile(const** [**target**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx6targetE) **\&ptarget) const**
+```
 
 Compile the program for a specific target to be ran on.
 
+```
 **inline program_parameter_shapes get_parameter_shapes() const**
+```
 
 Return the shapes for the input parameters.
 
+
+```
 **inline shapes get_output_shapes() const**
+```
 
 Get the shapes of all the outputs returned by this program.
 
+
+```
 **inline arguments eval(const program_parameters \&pparams) const**
+```
 
 Run the program using the inputs passed in.
 
+
+```
 **inline void print() const**
-
+```
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **sort()**
-
+```
 **inline module get_main_module()**
-
+```
 **Friends**
-
+```
 **inline** **friend** **friend** **bool** **operator==** **(const** **program** **\&px,** **const** **program** **\&py)**
-
+```
+```
 **inline** **friend** **friend** **bool** **operator!=** **(const** **program** **\&px,** **const** **program** **\&py)**
+```
 
 ## 3.1.5 Quantize
-
+```
 **struct migraphx::quantize_op_names : public migraphx::handle_base\<\>**
+```
 
 **Public Functions**
 
+```
 **inline quantize_op_names()**
-
+```
+```
 **inline quantize_op_names(migraphx_quantize_op_names \*p**, **own)**
-
+```
+```
 **inline void add(const std::string \&name)**
-
+```
+```
 **inline void migraphx::quantize_fp16(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&prog)**
+```
 
 Quantize program to use fp16.
 
+
+```
 **inline void migraphx::quantize_fp16(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&prog, const** [**quantize_op_names**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx17quantize_op_namesE) **\&names)**
+```
+
 
 Quantize program to use fp16.
 
+
+```
 **struct migraphx::quantize_int8_options : public migraphx::handle_base\<\>**
+
 
 Options to be passed when quantizing for int8.
 
+
 **Public Functions**
-
+```
 **inline quantize_int8_options()**
-
+```
+```
 **inline quantize_int8_options(migraphx_quantize_int8_options \*p**, **own)**
-
+```
+```
 **inline quantize_int8_options(migraphx_quantize_int8_options \*p**, **borrow)**
-
+```
+```
 **inline void add_op_name(const std::string \&name)**
+```
 
 Add an operator that should be quantized.
 
+
+```
 **inline void add_calibration_data(const program_parameters \&pp)**
+```
 
 Add calibrartion data to be used for quantizing.
 
+
 **Public Members**
-
+```
 **std::vector\<parameter_map\> calibration = {}**
-
+```
+```
 **std::vector\<std::string\> op_names = {}**
-
+```
 **inline void migraphx::quantize_int8(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&prog, const** [**target**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx6targetE) **\&ptarget, const** [**quantize_int8_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx21quantize_int8_optionsE) **\&options)**
+```
 
 Quantize program to use int8.
 
 ## 3.1.6 parse_onnx
-
+```
 **struct migraphx::onnx_options : public migraphx::handle_base\<\>**
+```
 
 Options for parsing onnx options.
 
+
 **Public Functions**
-
+```
 **inline onnx_options()**
-
+```
+```
 **inline onnx_options(migraphx_onnx_options \*p**, **own)**
-
+```
+```
 **inline void set_input_parameter_shape(const std::string \&name**, **std::vector\<std::size_t\> dim)**
+```
 
 Make onnx parser treat an inputs with a certain dimensions.
 
+
+```
 **inline void set_default_dim_value(unsigned int value)**
+```
 
 When there is a dimension parameter, then use this default value.
 
+
+```
 **inline void set_default_loop_iterations(int64_t value)**
+```
 
 Set default max iteration number for the loop operator.
 
+
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **migraphx::parse_onnx(const char \*filename)**
+```
 
 Parse an onnx file into a migraphx program.
 
+
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **migraphx::parse_onnx(const char \*filename, const migraphx::onnx_options** **\&options)**
+```
 
 Parse an onnx file into a migraphx program.
 
+
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **migraphx::parse_onnx_buffer(const std::string \&buffer)**
+```
 
 Parse a buffer of memory as an onnx file.
 
+
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **migraphx::parse_onnx_buffer(const std::string \&buffer, const migraphx::onnx_options** **\&options)**
+```
+
 
 Parse a buffer of memory as an onnx file.
 
+
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **migraphx::parse_onnx_buffer(const void \*data, size_t size)**
+```
 
 Parse a buffer of memory as an onnx file.
 
+
+```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **migraphx::parse_onnx_buffer(const void \*data, size_t size, const migraphx::onnx_options** **\&options)**
+```
 
 Parse a buffer of memory as an onnx file.
+
 
 ## 3.1.7 Load
-
+```
 **struct migraphx_file_options**
+```
 
 **Public Functions**
 
+```
 **template\<class ...Ts\>  
 inline migraphx_file_options(**[**Ts**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4IDpEN21migraphx_file_options21migraphx_file_optionsEDpRR2Ts)**&&... xs)**
+```
 
 **Public Members**
 
+```
 **migraphx::file_options object**
-
+```
+```
+inline program migraphx::load(const char *filename)
+```
 Load a saved migraphx program from a file.
 
 ## 3.1.8 Save
-
+```
 **inline void migraphx::save(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&p, const char \*filename)**
-
+```
 Save a program to a file.
 
 # 4. MIGraphX Driver
@@ -1048,83 +1054,139 @@ See below for a comprehensive list of commands and option arguments, as well as 
 
 Loads and prints input graph.
 
+```
 **\<input file\>**
+```
 
 File to load
 
+
+```
 **--model [resnet50\|inceptionv3\|alexnet]**
+```
 
 Load model
 
+
+```
 \--onnx
+```
 
 Load as onnx
 
+
+```
 \--tf
+```
 
 Load as tensorflow
 
+
+```
 \--migraphx
+```
 
 Load as MIGraphX
 
+
+```
 \--migraphx-json
+```
 
 Load as MIGraphX JSON
 
+
+```
 \--batch [unsigned int] (Default: 1)
+```
 
 Set batch size for model
 
+```
 \--nhwc
+```
 
 Treat tensorflow format as nhwc
 
+```
 \--skip-unknown-operators
+```
 
 Skip unknown operators when parsing and continue to parse.
 
+
+```
 \--nchw
+```
 
 Treat tensorflow format as nchw
 
+
+```
 \--trim, -t [unsigned int]
+```
 
 Trim instructions from the end (Default: 0)
 
+```
 \--input-dim [std::vector\<std::string\>]
+```
 
 Dim of a parameter (format: “@name d1 d2 dn”)
 
+
+```
 \--optimize, -O
+```
+
 
 Optimize when reading
 
+
+```
 \--graphviz, -g
+```
+
 
 Print out a graphviz representation.
 
+```
 \--brief
+```
 
 Make the output brief.
 
+```
 \--cpp
+```
+
 
 Print out the program as cpp program.
 
+```
 \--json
+```
+
 
 Print out program as json.
 
+
+```
 \--text
+```
 
 Print out program in text format.
 
+
+```
 \--binary
+```
 
 Print out program in binary format.
 
+```
 \--output, -o [std::string]
+```
 
 Output to file.
 
@@ -1132,119 +1194,176 @@ Output to file.
 
 Compiles and prints input graph.
 
+```
 \<input file\>
+```
 
 File to load
 
+```
 \--model [resnet50\|inceptionv3\|alexnet]
+```
 
 Load model
 
+```
 \--onnx
+```
 
 Load as onnx
 
+```
 \--tf
+```
 
 Load as tensorflow
 
+```
 \--migraphx
+```
 
 Load as MIGraphX
 
+```
 \--migraphx-json
+```
 
 Load as MIGraphX JSON
 
+```
 \--batch [unsigned int] (Default: 1)
+```
 
 Set batch size for model
 
+```
 \--nhwc
+```
 
 Treat tensorflow format as nhwc
 
+```
 \--skip-unknown-operators
+```
 
 Skip unknown operators when parsing and continue to parse.
 
+```
 \--nchw
+```
 
 Treat tensorflow format as nchw
 
+```
 \--trim, -t [unsigned int] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-trim](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-trim)
+```
 
 Trim instructions from the end (Default: 0)
 
+```
 \--input-dim [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-input-dim](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-input-dim)
+```
 
 Dim of a parameter (format: “@name d1 d2 dn”)
 
+```
 \--optimize, -O [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-optimize](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-optimize)
+```
 
 Optimize when reading
 
+```
 \--graphviz, -g [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-graphviz](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-graphviz)
+```
 
 Print out a graphviz representation.
 
+```
 \--brief [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-brief](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-brief)
-
+```
 Make the output brief.
 
+```
 \--cpp
+```
 
 Print out the program as cpp program.
 
+```
 \--json
+```
 
 Print out program as json.
 
+```
 \--text [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-text](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-text)
+```
 
 Print out program in text format.
 
+```
 \--binary [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-binary](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-binary)
+```
 
 Print out program in binary format.
 
+```
 \--output, -o [std::string] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-output](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-output)
+```
 
 Output to file.
 
+```
 \--fill0 [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-fill0](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-fill0)
+```
 
 Fill parameter with 0s
 
+```
 \--fill1 [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-fill1](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-fill1)
+```
 
 Fill parameter with 1s
 
+```
 \--gpu
+```
 
 Compile on the gpu
 
+```
 \--cpu
+```
 
 Compile on the cpu
 
+```
 \--ref [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-ref)
+```
 
 Compile on the reference implementation
 
+```
 \--enable-offload-copy [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-enable-offload-copy](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-enable-offload-copy)
+```
 
 Enable implicit offload copying
 
+```
 \--disable-fast-math [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-disable-fast-math](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-disable-fast-math)
+```
 
 Disable fast math optimization
 
+```
 \--fp16 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-fp16](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-fp16)
+```
 
 Quantize for fp16
 
+```
 \--int8 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-compile-int8](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-compile-int8)
+```
 
 Quantize for int8
 
@@ -1252,119 +1371,178 @@ Quantize for int8
 
 Loads and prints input graph.
 
+```
 \<input file\> [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-arg-input](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-arg-input)
+```
 
 File to load
 
+```
 \--model [resnet50\|inceptionv3\|alexnet] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-model](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-model)
+```
 
 Load model
 
+```
 \--onnx
+```
 
 Load as onnx
 
+```
 \--tf
+```
 
 Load as tensorflow
 
+```
 \--migraphx
+```
 
 Load as MIGraphX
 
+```
 \--migraphx-json
+```
 
 Load as MIGraphX JSON
 
+```
 \--batch [unsigned int] (Default: 1) [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-batch](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-batch)
+```
 
 Set batch size for model
 
+```
 \--nhwc
+```
 
 Treat tensorflow format as nhwc
 
+```
 \--skip-unknown-operators [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-skip-unknown-operators](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-skip-unknown-operators)
+```
 
 Skip unknown operators when parsing and continue to parse.
 
+```
 \--nchw
+```
 
 Treat tensorflow format as nchw
 
+```
 \--trim, -t [unsigned int] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-trim](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-trim)
+```
 
 Trim instructions from the end (Default: 0)
 
+
+```
 \--input-dim [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-input-dim](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-input-dim)
+```
 
 Dim of a parameter (format: “@name d1 d2 dn”)
 
+```
 \--optimize, -O [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-optimize](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-optimize)
+```
 
 Optimize when reading
 
+```
 \--graphviz, -g [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-graphviz](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-graphviz)
+```
 
 Print out a graphviz representation.
 
+```
 \--brief [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-brief](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-brief)
+```
 
 Make the output brief.
 
+```
 \--cpp
+```
 
 Print out the program as cpp program.
 
+```
 \--json
+```
 
 Print out program as json.
 
+```
 \--text [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-text](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-text)
+```
 
 Print out program in text format.
 
+```
 \--binary [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-binary](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-binary)
+```
 
 Print out program in binary format.
 
+```
 \--output, -o [std::string] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-output](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-output)
+```
 
 Output to file.
 
+```
 \--fill0 [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-fill0](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-fill0)
+```
 
 Fill parameter with 0s
 
+```
 \--fill1 [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-fill1](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-fill1)
+```
 
 Fill parameter with 1s
 
+```
 \--gpu
+```
 
 Compile on the gpu
 
+```
 \--cpu
+```
 
 Compile on the cpu
 
+```
 \--ref [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-ref)
+```
 
 Compile on the reference implementation
 
+```
 \--enable-offload-copy [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-enable-offload-copy](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-enable-offload-copy)
+```
 
 Enable implicit offload copying
 
+```
 \--disable-fast-math [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-disable-fast-math](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-disable-fast-math)
+```
 
 Disable fast math optimization
 
+```
 \--fp16 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-fp16](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-fp16)
+```
 
 Quantize for fp16
 
+```
 \--int8 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-run-int8](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-run-int8)
+```
 
 Quantize for int8
 
@@ -1372,123 +1550,184 @@ Quantize for int8
 
 Compiles and runs input graph then prints performance report.
 
+```
 \<input file\> [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-arg-input](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-arg-input)
+```
 
 File to load
 
+```
 \--model [resnet50\|inceptionv3\|alexnet] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-model](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-model)
+```
 
 Load model
 
+```
 \--onnx
+```
 
 Load as onnx
 
+```
 \--tf
+```
 
 Load as tensorflow
 
+```
 \--migraphx
+```
 
 Load as MIGraphX
 
+```
 \--migraphx-json
+```
 
 Load as MIGraphX JSON
 
+```
 \--batch [unsigned int] (Default: 1) [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-batch](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-batch)
+```
 
 Set batch size for model
 
+```
 \--nhwc
+```
 
 Treat tensorflow format as nhwc
 
+```
 \--skip-unknown-operators [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-skip-unknown-operators](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-skip-unknown-operators)
+```
 
 Skip unknown operators when parsing and continue to parse.
 
+```
 \--nchw
+```
 
 Treat tensorflow format as nchw
 
+```
 \--trim, -t [unsigned int] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-trim](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-trim)
+```
 
 Trim instructions from the end (Default: 0)
 
+```
 \--input-dim [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-input-dim](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-input-dim)
+```
 
 Dim of a parameter (format: “@name d1 d2 dn”)
 
+```
 \--optimize, -O [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-optimize](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-optimize)
+```
 
 Optimize when reading
 
+```
 \--graphviz, -g [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-graphviz](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-graphviz)
+```
 
 Print out a graphviz representation.
 
+```
 \--brief [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-brief](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-brief)
+```
 
 Make the output brief.
 
+```
 \--cpp
+```
 
 Print out the program as cpp program.
 
+```
 \--json
+```
 
 Print out program as json.
 
+```
 \--text [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-text](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-text)
+```
 
 Print out program in text format.
 
+```
 \--binary [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-binary](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-binary)
+```
 
 Print out program in binary format.
 
+```
 \--output, -o [std::string] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-output](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-output)
+```
 
 Output to file.
 
+```
 \--fill0 [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-fill0](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-fill0)
+```
 
 Fill parameter with 0s
 
+```
 \--fill1 [std::vector\<std::string\>] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-fill1](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-fill1)
+```
 
 Fill parameter with 1s
 
+```
 \--gpu
+```
 
 Compile on the gpu
 
+```
 \--cpu
+```
 
 Compile on the cpu
-
+``
+```
 \--ref [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-ref)
+```
 
 Compile on the reference implementation
 
+```
 \--enable-offload-copy [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-enable-offload-copy](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-enable-offload-copy)
+```
 
 Enable implicit offload copying
 
+```
 \--disable-fast-math [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-disable-fast-math](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-disable-fast-math)
+```
 
 Disable fast math optimization
 
+````
 \--fp16 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-fp16](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-fp16)
+```
+
 
 Quantize for fp16
 
+```
 \--int8 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-int8](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-int8)
+```
 
 Quantize for int8
 
+```
 \--iterations, -n [unsigned int] [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-iterations](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-iterations)
+```
 
 Number of iterations to run for perf report (Default: 100)
 
