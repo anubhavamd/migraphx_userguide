@@ -540,38 +540,51 @@ An enum to represent the different data type inputs.
 ```
 **enumerator migraphx_shape_tuple_type**
 ```
+
 ```
 **enumerator migraphx_shape_bool_type**
 ```
+
 ```
 **enumerator migraphx_shape_half_type**
 ```
+
+```
 **enumerator migraphx_shape_float_type**
 ```
+
 ```
 **enumerator migraphx_shape_double_type**
 ```
+
 ```
 **enumerator migraphx_shape_uint8_type**
 ```
+
 ```
 **enumerator migraphx_shape_int8_type**
 ```
+
 ```
 **enumerator migraphx_shape_uint16_type**
 ```
+
 ```
 **enumerator migraphx_shape_int16_type**
 ```
+
 ```
 **enumerator migraphx_shape_int32_type**
 ```
+
 ```
 **enumerator migraphx_shape_int64_type**
 ```
+
 ```
 **enumerator migraphx_shape_uint32_type**
 ```
+
 ```
 **enumerator migraphx_shape_uint64_type**
 ```
@@ -587,19 +600,25 @@ A shape consists of a data type, lengths of multi-dimension tensor, and strides
 ```
 **inline shape()**
 ```
+
 ```
 **inline shape(const migraphx_shape \*p)**
 ```
+
 ```
 **inline shape(migraphx_shape \*p**, **own)**
 ```
+
 ```
 **inline shape(migraphx_shape \*p**, **borrow)**
 ```
+
 ```
 **inline shape(migraphx_shape_datatype_t type)**
 ```
+
 Construct a scalar shape.
+
 ```
 **inline shape(migraphx_shape_datatype_t** **type, std::vector\<size_t\> plengths)**
 ```
@@ -609,15 +628,19 @@ Construct a shape with its type and lengths. The strides are automatically compu
 ```
 inline shape(migraphx_shape_datatype_t type, std::vector<size_t> plengths, std::vector<size_t> pstrides)
 ```
+
 ```
 inline std::vector<size_t> lengths() const
 ```
+
 ```
 inline std::vector<size_t> strides() const
 ```
+
 ```
 inline migraphx_shape_datatype_t type() const
 ```
+
 ```
 inline size_t bytes() const
 ```
@@ -628,6 +651,7 @@ inline size_t bytes() const
 ```
 inline friend friend bool operator== (const shape &px, const shape &py)
 ```
+
 ```
 inline friend friend bool operator!= (const shape &px, const shape &py)
 ```
@@ -646,21 +670,27 @@ An argument represents a raw buffer of data with a shape.
 ```
 **inline argument()**
 ```
+
 ```
 **inline argument(migraphx_argument \*p**, **borrow)**
 ```
+
 ```
 **inline argument(migraphx_argument \*p**, **own)**
 ```
+
 ```
 **inline argument(const migraphx_argument \*p)**
 ```
+
 ```
 **inline argument(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **pshape, void \*pbuffer)**
 ```
+
 ```
 **inline** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **get_shape() const**
 ```
+
 ```
 **inline char \*data() const**
 ```
@@ -675,6 +705,7 @@ Generate an argument using random data.
 ```
 **inline** **friend** **friend** **bool** **operator==** **(const** **argument** **\&px,** **const** **argument** **\&py)**
 ```
+
 ```
 **inline** **friend** **friend** **bool** **operator!=** **(const** **argument** **\&px,** **const** **argument** **\&py)**
 ```
@@ -689,12 +720,15 @@ target for compilation.
 ```
 **inline target()**
 ```
+
 ```
 **inline target(migraphx_target \*p**, **own)**
 ```
+
 ```
 **inline target(migraphx_target \*p**, **borrow)**
 ```
+
 ```
 **inline target(const char \*name)**
 ```
@@ -710,21 +744,27 @@ Public Functions
 ```
 **inline program_parameter_shapes()**
 ```
+
 ```
 **inline program_parameter_shapes(migraphx_program_parameter_shapes \*p**, **own)**
 ```
+
 ```
 **inline program_parameter_shapes(migraphx_program_parameter_shapes \*p**, **borrow)**
 ```
+
 ```
 **inline size_t size() const**
 ```
+
 ```
 **inline** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) **operator[](const char \*pname) const**
 ```
+
 ```
 **inline std::vector\<const char\*\> names() const**
 ```
+
 ```
 **struct migraphx::program_parameters : public migraphx::handle_base\<\>**
 ```
@@ -736,12 +776,15 @@ A class to construct the inputs parameters for a program.
 ```
 **inline program_parameters(migraphx_program_parameters \*p**, **own)**
 ```
+
 ```
 **inline program_parameters(migraphx_program_parameters \*p**, **borrow)**
 ```
+
 ```
 **inline program_parameters(migraphx_program_parameters \*p)**
 ```
+
 ```
 **inline program_parameters()inline program_parameters(std::initializer_list\<std::pair\<std::string,** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx8argumentE)**\>\> l)**
 ```
@@ -774,6 +817,7 @@ inline migraphx_compile_options(**[**Ts**](https://rocmsoftwareplatform.github.i
 ```
 **migraphx::compile_options object**
 ```
+
 ```
 **struct migraphx::program : public migraphx::handle_base\<\>**
 ```
@@ -786,12 +830,15 @@ A program represents the all computation graphs to be compiled and executed.
 ```
 **inline program()**
 ```
+
 ```
 **inline program(migraphx_program \*p**, **own)**
 ```
+
 ```
 **inline program(migraphx_program \*p**, **borrow)**
 ```
+
 ```
 **inline void compile(const** [**target**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx6targetE) **\&ptarget, const compile_options \&poptions) const**
 ```
@@ -828,15 +875,20 @@ Run the program using the inputs passed in.
 ```
 **inline void print() const**
 ```
+
 ```
 **inline** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **sort()**
 ```
+
+```
 **inline module get_main_module()**
 ```
+
 **Friends**
 ```
 **inline** **friend** **friend** **bool** **operator==** **(const** **program** **\&px,** **const** **program** **\&py)**
 ```
+
 ```
 **inline** **friend** **friend** **bool** **operator!=** **(const** **program** **\&px,** **const** **program** **\&py)**
 ```
@@ -851,12 +903,15 @@ Run the program using the inputs passed in.
 ```
 **inline quantize_op_names()**
 ```
+
 ```
 **inline quantize_op_names(migraphx_quantize_op_names \*p**, **own)**
 ```
+
 ```
 **inline void add(const std::string \&name)**
 ```
+
 ```
 **inline void migraphx::quantize_fp16(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&prog)**
 ```
@@ -874,21 +929,25 @@ Quantize program to use fp16.
 
 ```
 **struct migraphx::quantize_int8_options : public migraphx::handle_base\<\>**
-
+```
 
 Options to be passed when quantizing for int8.
 
 
 **Public Functions**
+
 ```
 **inline quantize_int8_options()**
 ```
+
 ```
 **inline quantize_int8_options(migraphx_quantize_int8_options \*p**, **own)**
 ```
+
 ```
 **inline quantize_int8_options(migraphx_quantize_int8_options \*p**, **borrow)**
 ```
+
 ```
 **inline void add_op_name(const std::string \&name)**
 ```
@@ -904,11 +963,15 @@ Add calibrartion data to be used for quantizing.
 
 
 **Public Members**
+
 ```
 **std::vector\<parameter_map\> calibration = {}**
 ```
+
 ```
 **std::vector\<std::string\> op_names = {}**
+```
+
 ```
 **inline void migraphx::quantize_int8(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&prog, const** [**target**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx6targetE) **\&ptarget, const** [**quantize_int8_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx21quantize_int8_optionsE) **\&options)**
 ```
@@ -924,12 +987,15 @@ Options for parsing onnx options.
 
 
 **Public Functions**
+
 ```
 **inline onnx_options()**
 ```
+
 ```
 **inline onnx_options(migraphx_onnx_options \*p**, **own)**
 ```
+
 ```
 **inline void set_input_parameter_shape(const std::string \&name**, **std::vector\<std::size_t\> dim)**
 ```
