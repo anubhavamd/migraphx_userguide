@@ -17,7 +17,7 @@
 <tr>
 <td>
 <pre>
-1. Getting Started Guide for MIGraphX
+1. Getting Started Guide for MIGraphX  
         1.1. Introduction
 		1.1.1. Documentation Roadmap
 	1.2. List of prerequisites
