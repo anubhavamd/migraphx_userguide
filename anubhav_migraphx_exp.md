@@ -17,8 +17,8 @@
 <tr>
 <td>
 <pre>
-1. Getting Started Guide for MIGraphX  
-        1.1. Introduction
+1. Getting Started Guide for MIGraphX 
+        1.1. Introduction 
 		1.1.1. Documentation Roadmap
 	1.2. List of prerequisites
 	1.3. Installing pre-built packages
@@ -129,11 +129,100 @@
 </td>
 </pre>
 </table 2>
+
+
+# Table Of Contents
+
+1. [Getting Started Guide for MIGraphX](#paragraph1)
+
+   1.1. [Introduction](#subparagraph11)
 	
+      1.1.1.[Documentation Roadmap](#anotherparagraph111)
+     
+   1.2. [List of prerequisites](#subparagraph12)
+   
+   1.3. [Installing pre-built packages](#subparagraph13)
+   
+   1.4. [Building From Source](#subparagraph14)
 
-# 1. Getting Started Guide for MIGraphX
+     1.4.1.[Use the ROCm build tool rbuild](#anotherparagraph141)
+     
+     1.4.2.[Use cmake to build MIGraphX](#anotherparagraph142)
 
-# 1.1. Introduction 
+     1.4.3.[Use docker](#anotherparagraph143)
+     
+2. [Python User Guide](#paragraph2)
+
+   2.1. [Setting path and installing package](#subparagraph21)
+   
+   2.2. [Defining different modules in detail](#subparagraph22)
+
+     2.2.1.[Shape](#anotherparagraph221)
+
+     2.2.2.[Argument](#anotherparagraph222)
+
+     2.2.3.[Target](#anotherparagraph223)
+ 
+     2.2.4.[Program](#anotherparagraph224)
+     
+     2.2.5.[parse_onnx](#anotherparagraph225)
+     
+     2.2.6.[parse_tf](#anotherparagraph226)
+     
+     2.2.7.[Load](#anotherparagraph227)
+     
+     2.2.8.[Save](#anotherparagraph228)
+     
+3. [C++ User Guide](#paragraph3)
+   
+   3.1. [Defining different modules in detail](#subparagraph31)
+   
+     3.1.1[Shape](#anotherparagraph311)
+     
+     3.1.2.[Argument](#anotherparagraph312)
+     
+     3.1.3.[Target](#anotherparagraph313)
+     
+     3.1.4.[Program](#anotherparagraph314)
+     
+     3.1.5.[Quantize](#anotherparagraph315)
+     
+     3.1.6.[parse_onnx](#anotherparagraph316)
+     
+     3.1.7.[Load](#anotherparagraph317)
+     
+     3.1.8.[Save](#anotherparagraph318)
+     
+4. [MIGraphX Driver](#paragraph4)
+   
+    4.1. [Description](#subparagraph41)
+
+    4.2. [How to Use](#subparagraph42)
+
+      4.2.1.[Commands](#anotherparagraph421)
+      
+      4.2.2.[Options](#anotherparagraph422)
+      
+    4.3. [Defining different modules in detail](#subparagraph43)
+    
+      4.3.1.[Read](#anotherparagraph431)
+      
+      4.3.2[compile](#anotherparagraph432)
+      
+      4.3.3[Run](#anotherparagraph433)
+      
+      4.3.4[Perf](#anotherparagraph434)
+      
+      4.3.5.[Verify](#anotherparagraph435)
+      
+      4.3.6.[Roctx](#anotherparagraph436)
+      
+   
+
+
+# 1. Getting Started Guide for MIGraphX <a name="paragraph1"></a>
+
+# 1.1. Introduction <a name="subparagraph11"></a>
 
 The MIGraphX execution provider uses AMD's Deep Learning graph optimization engine to accelerate ONNX model on AMD GPUs.
 
@@ -141,7 +230,7 @@ ONNX Runtime is an accelerator for machine learning models with multi platform s
 
 The document also contains an Python User guide, C++ user Guide, MIGraphX Driver and Contributor Guide.
 
-## 1.1.1. Documentation Roadmap
+## 1.1.1. Documentation Roadmap <a name="anotherparagraph111"></a>
 
 The following is a list of MIGraphX documents in the suggested reading order:
 
@@ -151,7 +240,7 @@ The following is a list of MIGraphX documents in the suggested reading order:
 -   MIGraphX Driver: Under this section we will cover modules like perf, verify, roctx, etc.
 -   Contributor’s Guide: Provides detailed information about MIGraphX Fundamentals, datatypes, operators, targets, etc.
 
-# 1.2. List of prerequisites
+# 1.2. List of prerequisites <a name="subparagraph12"></a>
 
 The following is a list of prerequisites required to build MIGraphX source.
 
@@ -165,7 +254,7 @@ The following is a list of prerequisites required to build MIGraphX source.
 -   [JSON](https://github.com/nlohmann/json) - for model serialization to json string format
 -   [MessagePack](https://msgpack.org/index.html) - for model serialization to binary format
 
-# 1.3. Installing pre-built packages
+# 1.3. Installing pre-built packages <a name="subparagraph13"></a>
 
 With ROCm installed correctly, MIGraphX binaries can be installed on Ubuntu with the following command:
 ```
@@ -173,7 +262,7 @@ sudo apt update && sudo apt install -y migraphx
 ```
 then the header files and libs are installed under /opt/rocm-\<version\>, where \<version\> is the ROCm version.
 
-# 1.4. Building From Source
+# 1.4. Building From Source <a name="subparagraph14"></a>
 
 There are three ways to build the MIGraphX sources.
 
@@ -189,7 +278,7 @@ There are three ways to build the MIGraphX sources.
 
     This approach builds a docker image with all prerequisites installed, then build the MIGraphX sources inside a docker container.
 
-### **1.4.1. Use the ROCm build tool rbuild**.
+### 1.4.1. Use the ROCm build tool rbuild <a name="anotherparagraph141"></a>
 
 In this approach, we use the rbuild build tool to build MIGraphX. The specific steps are as follows:
 
@@ -211,7 +300,7 @@ Note that for ROCm3.7 and later releases, Ubuntu 18.04 or later releases are nee
 
 Also note that you may meet the error of rbuild: command not found. It is because rbuild is installed at \$HOME/.local/bin, which is not in PATH. You can either export PATH as export PATH=\$HOME/.local/bin:\$PATH to add the folder to PATH or add the option --prefix /usr/local in the pip3 command when installing rbuild.
 
-### 1.4.2. Use cmake to build MIGraphX
+### 1.4.2. Use cmake to build MIGraphX <a name="anotherparagraph142"></a>
 
 If using this approach, we need to install the prerequisites, configure the cmake, and then build the source.
 
@@ -254,7 +343,7 @@ MIGraphX libs can be installed as:
 ```
 make install
 ```
-### 1.4.3. Use docker
+### 1.4.3. Use docker <a name="anotherparagraph143"></a>
 
 The easiest way to setup the development environment is to use docker. With the dockerfile, you can build a docker image as:
 ```
@@ -266,9 +355,9 @@ docker run --device='/dev/kfd' --device='/dev/dri' -v=\`pwd\`:/code/AMDMIGraphX 
 ```
 In the docker container, all the required prerequisites are already installed, so users can just go to the folder /code/AMDMIGraphX and follow the steps in the above [Build MIGraphX source and install libs](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX#building-migraphx-source-and-install-libs) section to build MIGraphX source.c
 
-# 2. Python User Guide
+# 2. Python User Guide <a name="paragraph2"></a>
 
-# 2.1. Setting path and installing package
+# 2.1. Setting path and installing package <a name="subparagraph21"></a>
 
 To use MIGraphX's Python module, please either set PYTHONPATH or use .deb package as explained below:
 
@@ -288,9 +377,9 @@ To install:
 ```
 dpkg -i \<path_to_deb_file\>
 ```
-# 2.2 Defining different modules in detail
+# 2.2 Defining different modules in detail <a name="subparagraph22"></a>
 
-## 2.2.1. Shape
+## 2.2.1. Shape <a name="anotherparagraph221"></a>
 ```
 **classmigraphx.shape(type**, **lens**, **strides=None)**
 ```
@@ -363,7 +452,7 @@ Returns true if all strides are equal to 0 (scalar tensor).
 
 **Return type:** bool
 
-## 2.2.2. Argument
+## 2.2.2. Argument <a name="anotherparagraph222"></a>
 ```
 **classmigraphx.argument(data)**
 ```
@@ -392,7 +481,7 @@ Generate an argument with random data.
 
 **Return type:** argument
 
-## 2.2.3. Target
+## 2.2.3. Target <a name="anotherparagraph223"></a>
 ```
 **Class migraphx.target**
 ```
@@ -407,7 +496,7 @@ Constructs the target.
 
 -   **Return type:** target
 
-## 2.2.4. Program
+## 2.2.4. Program <a name="anotherparagraph224"></a>
 ```
 **class migraphx.program**
 ```
@@ -471,7 +560,7 @@ Quantize the program to use int8.
 -   **calibration** (*list[dict[str,* [*argument*](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)*]]*) – Calibration data used to decide the parameters to the int8 optimization.
 -   **ins_names** (*list[str]*) – List of instructions to quantize.
 
-## 2.2.5. parse_onnx
+## 2.2.5. parse_onnx <a name="anotherparagraph225"></a>
 ```
 migraphx.parse_onnx(filename, default_dim_value=1, map_input_dims={}, skip_unknown_operators=false, print_program_on_error=false)
 ```
@@ -487,7 +576,7 @@ Load and parse an onnx file.
 
     **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
 
-## 2.2.6. parse_tf
+## 2.2.6. parse_tf <a name="anotherparagraph226"></a>
 ```
 **migraphx.parse_tf(filename**, **is_nhwc=True**, **batch_size=1)**
 ```
@@ -501,7 +590,7 @@ Load and parse an tensorflow protobuf file file.
 
     **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
 
-## 2.2.7. Load
+## 2.2.7. Load <a name="anotherparagraph227"></a>
 ```
 **migraphx.load(filename**, **format='msgpack')**
 ```
@@ -514,7 +603,7 @@ Load a MIGraphX program
 
 **Return type:** [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
 
-## 2.2.8. Save
+## 2.2.8. Save <a name="anotherparagraph228"></a>
 ```
 **migraphx.save(p**, **filename**, **format='msgpack')**
 ```
@@ -526,11 +615,11 @@ Save a MIGraphX program
 -   **filename** (*str*) – Path to file.
 -   **format** (*str*) – Format of file. Valid options are msgpack or json.
 
-# 3. C++ User Guide
+# 3. C++ User Guide <a name="paragraph3"></a>
 
-# 3.1 Defining different modules in detail
+# 3.1 Defining different modules in detail <a name="subparagraph31"></a>
 
-## 3.1.1 Shape
+## 3.1.1 Shape <a name="anotherparagraph311"></a>
 ```
 **enum migraphx_shape_datatype_t**
 ```
@@ -656,7 +745,7 @@ inline friend friend bool operator== (const shape &px, const shape &py)
 inline friend friend bool operator!= (const shape &px, const shape &py)
 ```
 
-3.1.2 Argument
+## 3.1.2 Argument <a name="anotherparagraph312"></a>
 
 
 ```
@@ -710,7 +799,7 @@ Generate an argument using random data.
 **inline** **friend** **friend** **bool** **operator!=** **(const** **argument** **\&px,** **const** **argument** **\&py)**
 ```
 
-## 3.1.3 Target
+## 3.1.3 Target  <a name="anotherparagraph313"></a>
 ```
 **struct migraphx::target : public migraphx::handle_base\<\>**
 ```
@@ -734,7 +823,7 @@ target for compilation.
 ```
 Construct a target from its name.
 
-## 3.1.4 Program
+## 3.1.4 Program  <a name="anotherparagraph314"></a>
 ```
 **struct migraphx::program_parameter_shapes : public migraphx::handle_base\<\>**
 ```
@@ -893,7 +982,7 @@ Run the program using the inputs passed in.
 **inline** **friend** **friend** **bool** **operator!=** **(const** **program** **\&px,** **const** **program** **\&py)**
 ```
 
-## 3.1.5 Quantize
+## 3.1.5 Quantize  <a name="anotherparagraph315"></a>
 ```
 **struct migraphx::quantize_op_names : public migraphx::handle_base\<\>**
 ```
@@ -978,7 +1067,7 @@ Add calibrartion data to be used for quantizing.
 
 Quantize program to use int8.
 
-## 3.1.6 parse_onnx
+## 3.1.6 parse_onnx  <a name="anotherparagraph316"></a>
 ```
 **struct migraphx::onnx_options : public migraphx::handle_base\<\>**
 ```
@@ -1060,7 +1149,7 @@ Parse a buffer of memory as an onnx file.
 Parse a buffer of memory as an onnx file.
 
 
-## 3.1.7 Load
+## 3.1.7 Load  <a name="anotherparagraph317"></a>
 ```
 **struct migraphx_file_options**
 ```
@@ -1082,31 +1171,31 @@ inline program migraphx::load(const char *filename)
 ```
 Load a saved migraphx program from a file.
 
-## 3.1.8 Save
+## 3.1.8 Save  <a name="anotherparagraph318"></a>
 ```
 **inline void migraphx::save(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) **\&p, const char \*filename)**
 ```
 Save a program to a file.
 
-# 4. MIGraphX Driver
+# 4. MIGraphX Driver <a name="paragraph4"></a>
 
-# 4.1 Description
+# 4.1 Description <a name="subparagraph41"></a>
 
 The MIGraphX driver is a tool that allows you to utilize many of the core functions of MIGraphX without having to write your own program.
 
-# 4.2 How to Use
+# 4.2 How to Use <a name="subparagraph42"></a>
 
 The MIGraphX driver is installed with MIGraphX and can be found in */opt/rocm/bin/migraphx-driver*, or in *AMDMIGraphX/build/bin/migraphx-driver* after building the source code.
 
 See below for a comprehensive list of commands and option arguments, as well as some usage examples.
 
-## 4.2.1 Commands
+## 4.2.1 Commands <a name="anotherparagraph421"></a>
 
 ## 
 
 ![Graphical user interface, text, application, email Description automatically generated](media/19520c77695364dfd7eed063ccad316c.png)
 
-## 4.2.2 Options
+## 4.2.2 Options <a name="anotherparagraph422"></a>
 
 ## 
 
@@ -1114,9 +1203,9 @@ See below for a comprehensive list of commands and option arguments, as well as 
 
 # 
 
-# 4.3 Defining different modules in detail
+# 4.3 Defining different modules in detail <a name="subparagraph43"></a>
 
-## 4.3.1 Read
+## 4.3.1 Read <a name="anotherparagraph431"></a>
 
 Loads and prints input graph.
 
@@ -1256,7 +1345,7 @@ Print out program in binary format.
 
 Output to file.
 
-## 4.3.2 compile
+## 4.3.2 compile <a name="anotherparagraph432"></a>
 
 Compiles and prints input graph.
 
@@ -1433,7 +1522,7 @@ Quantize for fp16
 
 Quantize for int8
 
-## 4.3.3 Run
+## 4.3.3 Run <a name="anotherparagraph433"></a>
 
 Loads and prints input graph.
 
@@ -1612,7 +1701,7 @@ Quantize for fp16
 
 Quantize for int8
 
-## 4.3.4 Perf
+## 4.3.4 Perf <a name="anotherparagraph434"></a>
 
 Compiles and runs input graph then prints performance report.
 
@@ -1778,10 +1867,9 @@ Enable implicit offload copying
 
 Disable fast math optimization
 
-````
+```
 \--fp16 [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html\#cmdoption-migraphx-driver-perf-fp16](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/driver.html#cmdoption-migraphx-driver-perf-fp16)
 ```
-
 
 Quantize for fp16
 
@@ -1797,7 +1885,7 @@ Quantize for int8
 
 Number of iterations to run for perf report (Default: 100)
 
-## 4.3.5 Verify
+## 4.3.5 Verify <a name="anotherparagraph435"></a>
 
 Runs reference and CPU or GPU implementations and checks outputs for consistency.
 
@@ -1929,7 +2017,7 @@ Verify each instruction
 
 Reduce program and verify
 
-## 4.3.6 Roctx
+## 4.3.6 Roctx <a name="anotherparagraph436"></a>
 
 Provides marker information for each operation, allowing MIGraphX to be used with rocprof for performance analysis. This allows user to get GPU-level kernel timing information. An example command line combined with rocprof for tracing purposes is given below:
 
@@ -2053,21 +2141,21 @@ Quantize for fp16
 
 Quantize for int8
 
-# 5. Contributor Guide
+# 5. Contributor Guide <a name="paragraph5"></a>
 
-# 5.1 MIGraphX Fundamentals
+# 5.1 MIGraphX Fundamentals <a name="subparagraph51"></a>
 
 MIGraphX provides an optimized execution engine for deep learning neural networks. We will cover some simple operations in the MIGraphX framework here. For a quick start guide to using MIGraphX, look in the example directory:
 
 https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/tree/develop/examples/migraphx.
 
-## 5.1.1 Location of the Examples
+## 5.1.1 Location of the Examples <a name="anotherparagraph511"></a>
 
 The ref_dev_examples.cpp can be found in the test directory (/test). The executable file test_ref_dev_examples based on this file will be created in the bin/ of the build directory after running make -j\$(nproc) test_ref_dev_examples. The executable will also be created when running make -j\$(nproc) check, alongside with all the other tests. Directions for building MIGraphX from source can be found in the main README file:
 
 [https://github.com/ROCmSoftwarePlatform/AMDMIGraphX\#readme](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX#readme).
 
-## 5.1.2 Adding Two Literals
+## 5.1.2 Adding Two Literals <a name="anotherparagraph512"></a>
 
 A program is a collection of modules, which are collections of instructions to be executed when calling [**eval**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4NK8migraphx7program4evalERK18program_parameters). Each instruction has an associated **operation** which represents the computation to be performed by the instruction.
 
@@ -2107,7 +2195,7 @@ We can compile the program for the GPU as well, but the file will have to be mov
 
 ## 
 
-## 5.1.3 Using Parameters
+## 5.1.3 Using Parameters <a name="anotherparagraph513"></a>
 
 The previous program will always produce the same value of adding 1 and 2. In the next program we want to pass an input to a program and compute a value based on the input. We can modify the program to take an input parameter x, as seen in the add_parameter() function:
 
@@ -2147,7 +2235,7 @@ EXPECT(result.at\<int\>() == 6);
 
 ## 
 
-## 5.1.4 Handling Tensor Data
+## 5.1.4 Handling Tensor Data <a name="anotherparagraph514"></a>
 
 In the previous examples we have only been dealing with scalars, but the [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx5shapeE) class can describe multi-dimensional tensors. For example, we can compute a simple convolution:
 
@@ -2205,7 +2293,7 @@ EXPECT(migraphx::verify_range(results_vector, sol));
 
 An [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx8argumentE) can handle memory buffers from either the GPU or the CPU. By default when running the [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE), buffers are allocated on the corresponding target. When compiling for the CPU, the buffers by default will be allocated on the CPU. When compiling for the GPU, the buffers by default will be allocated on the GPU. With the option offloaf_copy=true set while compiling for the GPU, the buffers will be located on the CPU.
 
-## 5.1.5 Importing From ONNX
+## 5.1.5 Importing From ONNX <a name="anotherparagraph515"></a>
 
 A [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/cpp.html#_CPPv4N8migraphx7programE) can be built directly from an onnx file using the MIGraphX ONNX parser. This makes it easier to use neural networks directly from other frameworks. In this case, there is an parse_onnx function:
 
@@ -2213,9 +2301,9 @@ program p = migraphx::parse_onnx("model.onnx");
 
 p.compile(migraphx::gpu::target{});
 
-# 5.2 Data Types
+# 5.2 Data Types <a name="subparagraph52"></a>
 
-## 5.2.1 Shape
+## 5.2.1 Shape <a name="anotherparagraph521"></a>
 
 **struct migraphx::internal::shape**
 
@@ -2438,7 +2526,7 @@ struct get_type\<uint64_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDM
 **template\<class T\>  
 struct get_type\<uint8_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI7uint8_t1TEE)**\> : public std::integral_constant\<type_t,** [**uint8_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10uint8_typeE)**\>**
 
-## 5.2.2 Literal
+## 5.2.2 Literal <a name="paragraph5"></a>
 
 **struct migraphx::internal::literal : public migraphx::internal::raw_data\<**[**literal**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal7literalE)**\>**
 
