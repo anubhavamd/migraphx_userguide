@@ -198,10 +198,6 @@
     4.1. [Description](#subparagraph41)
 
     4.2. [How to Use](#subparagraph42)
-
-      4.2.1.[Commands](#anotherparagraph421)
-      
-      4.2.2.[Options](#anotherparagraph422)
       
     4.3. [Defining different modules in detail](#subparagraph43)
     
@@ -217,9 +213,101 @@
       
       4.3.6.[Roctx](#anotherparagraph436)
       
+5. [Contributor Guide](#paragraph5)
+ 
+   5.1. [MIGraphX Fundamentals](#subparagraph51)
    
+     5.1.1.[Location of the Examples](#anotherparagraph511)
+      
+     5.1.2.[Adding Two Literals](#anotherparagraph512)
+     
+     5.1.3.[Using Parameters](#anotherparagraph513)
+     
+     5.1.4.[Handling Tensor Data](#anotherparagraph514)
+     
+     5.1.5.[Importing From ONNX](#anotherparagraph515)
+     
+   5.2.  [Data Types](#subparagraph52)
+   
+     5.2.1.[Shape](#anotherparagraph521)
+     
+     5.2.2.[Literal](#anotherparagraph522)
+     
+     5.2.3.[Argument](#anotherparagraph523)
+     
+     5.2.4.[raw_data](#anotherparagraph524)
+     
+     5.2.5.[Tensor_view](#anotherparagraph525)
+     
+   5.3. [Program](#subparagraph53)
+   
+     5.3.1.[Instruction](#anotherparagraph531)
 
+     5.3.2.[Instruction_ref](#anotherparagraph532)
+     
+     5.3.3.[Program](#anotherparagraph533)
+     
+     5.3.4.[Parse_onnx](#anotherparagraph534)
+     
+     5.3.5.[Parse_tf](#anotherparagraph535)
+     
+     5.3.6.[Onnx_options](#anotherparagraph536)
+     
+     5.3.7.[Tf_options](#anotherparagraph537)
+     
+   5.4. [Targets](#subparagraph54)
+   
+     5.4.1.[Target](#anotherparagraph541)
+     
+     5.4.2.[gpu::target](#anotherparagraph542)
+     
+     5.4.3.[cpu::target](#anotherparagraph543)
+     
+   5.5. [Passes](#subparagraph55)
+ 
+     5.5.1.[Pass](#anotherparagraph551)
 
+     5.5.2.[Dead_code_elimination](#anotherparagraph552)
+     
+     5.5.3.[Eliminate_common_subexpression](#anotherparagraph553)
+   
+     5.5.4.[Eliminate_concat](#anotherparagraph554)
+    
+     5.5.5.[Eliminate_contiguous](#anotherparagraph555)
+    
+     5.5.6.[Eliminate_identity](#anotherparagraph556)
+     
+     5.5.7.[Eliminate_pad](#anotherparagraph557)
+     
+     5.5.8.[Propagate_constant](#anotherparagraph558)
+   
+     5.5.9.[Rewrite_batchnorm](#anotherparagraph559)
+   
+     5.5.10.[Rewrite_rnn](#anotherparagraph5510)
+  
+     5.5.11.[Schedule](#anotherparagraph5511)
+   
+     5.5.12.[Simplify_algebra](#anotherparagraph5512)
+   
+     5.5.13.[Simplify_reshapes](#anotherparagraph5513)
+   
+   5.6. [Matchers](#subparagraph56)
+  
+     5.6.1.[Introduction](#anotherparagraph561)
+   
+     5.6.2.[Arguments](#anotherparagraph562)
+   
+     5.6.3.[Binding](#anotherparagraph563)
+   
+     5.6.4.[Finding matches](#anotherparagraph564)
+   
+     5.6.5.[Creating matchers](#anotherparagraph565)
+   
+   5.7. [Tools](#subparagraph57)
+  
+     5.7.1.[roctx.py](#anotherparagraph571)
+      
+   
 # 1. Getting Started Guide for MIGraphX <a name="paragraph1"></a>
 
 # 1.1. Introduction <a name="subparagraph11"></a>
@@ -1186,22 +1274,6 @@ The MIGraphX driver is a tool that allows you to utilize many of the core functi
 # 4.2 How to Use <a name="subparagraph42"></a>
 
 The MIGraphX driver is installed with MIGraphX and can be found in */opt/rocm/bin/migraphx-driver*, or in *AMDMIGraphX/build/bin/migraphx-driver* after building the source code.
-
-See below for a comprehensive list of commands and option arguments, as well as some usage examples.
-
-## 4.2.1 Commands <a name="anotherparagraph421"></a>
-
-## 
-
-![Graphical user interface, text, application, email Description automatically generated](media/19520c77695364dfd7eed063ccad316c.png)
-
-## 4.2.2 Options <a name="anotherparagraph422"></a>
-
-## 
-
-## ![Graphical user interface, application, email Description automatically generated](media/55968d31b828db50711928931e75d299.png)
-
-# 
 
 # 4.3 Defining different modules in detail <a name="subparagraph43"></a>
 
@@ -2526,7 +2598,7 @@ struct get_type\<uint64_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDM
 **template\<class T\>  
 struct get_type\<uint8_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI7uint8_t1TEE)**\> : public std::integral_constant\<type_t,** [**uint8_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10uint8_typeE)**\>**
 
-## 5.2.2 Literal <a name="paragraph5"></a>
+## 5.2.2 Literal <a name="anotherparagraph522"></a>
 
 **struct migraphx::internal::literal : public migraphx::internal::raw_data\<**[**literal**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal7literalE)**\>**
 
@@ -2569,7 +2641,7 @@ Provides a raw pointer to the data.
 
 Convert the data to an argument.
 
-## 5.2.3 Argument
+## 5.2.3 Argument <a name="anotherparagraph523"></a>
 
 **struct migraphx::internal::argument : public migraphx::internal::raw_data\<**[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE)**\>**
 
@@ -2620,7 +2692,7 @@ Make copy of the argument that is always sharing the data.
 
 Return the ith element.
 
-## 5.2.4 raw_data
+## 5.2.4 raw_data <a name="anotherparagraph524"></a>
 
 **template\<class Derived\>**  
 **struct migraphx::internal::raw_data : public migraphx::internal::raw_data_base**
@@ -2713,7 +2785,7 @@ Cast the data pointer.
 
 **const** [**Derived**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8raw_dataE) **\*self**
 
-## 5.2.5 Tensor_view
+## 5.2.5 Tensor_view <a name="anotherparagraph525"></a>
 
 **template\<class T\>**  
 **struct migraphx::internal::tensor_view**
@@ -2781,9 +2853,9 @@ Cast the data pointer.
 
 **inline friend friend std::ostream & operator\<\< (std::ostream \&os, const tensor_view\< T \> \&x)**
 
-# 5.3 Program
+# 5.3 Program <a name="subparagraph53"></a>
 
-## 5.3.1 Instruction
+## 5.3.1 Instruction <a name="anotherparagraph531"></a>
 
 **struct migraphx::internal::instruction**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instructionE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instructionE)
 
@@ -2874,13 +2946,13 @@ Cast the data pointer.
 
 **friend friend bool operator!= (instruction_ref ref, const instruction \&i)**
 
-## 5.3.2 Instruction_ref
+## 5.3.2 Instruction_ref <a name="anotherparagraph532"></a>
 
 **type migraphx::internal::instruction_ref**
 
 References an instruction in the program.
 
-## 5.3.3 Program
+## 5.3.3 Program <a name="anotherparagraph533"></a>
 
 **struct migraphx::internal::program**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7programE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE)
 
@@ -2972,19 +3044,19 @@ Stores the instruction stream.
 
 **inline friend friend bool operator!= (const program \&x, const program \&y)**
 
-## 5.3.4 Parse_onnx
+## 5.3.4 Parse_onnx <a name="anotherparagraph534"></a>
 
 [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **migraphx::internal::parse_onnx(const std::string \&name**, **const** [**onnx_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_optionsE)**& =** [**onnx_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_optionsE)**{})**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal10parse_onnxERKNSt6stringERK12onnx_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10parse_onnxERKNSt6stringERK12onnx_options)
 
 Create a program from an onnx file.
 
-## 5.3.5 Parse_tf
+## 5.3.5 Parse_tf <a name="anotherparagraph535"></a>
 
 [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **migraphx::internal::parse_tf(const std::string \&name**, **const** [**tf_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_optionsE) **\&options =** [**tf_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_optionsE)**{})**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal8parse_tfERKNSt6stringERK10tf_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal8parse_tfERKNSt6stringERK10tf_options)
 
 Create a program from a tf pb file (default is nhwc format)
 
-## 5.3.6 Onnx_options
+## 5.3.6 Onnx_options <a name="anotherparagraph536"></a>
 
 **struct migraphx::internal::onnx_options**
 
@@ -3012,7 +3084,7 @@ Print program if an error occurs.
 
 Max iter num for the loop operator.
 
-## 5.3.7 Tf_options
+## 5.3.7 Tf_options <a name="anotherparagraph537"></a>
 
 **struct migraphx::internal::tf_options**
 
@@ -3030,9 +3102,9 @@ Explicitly specify the dims of an input.
 
 **std::vector\<std::string\> output_node_names = {}**
 
-# 5.4 Targets
+# 5.4 Targets <a name="subparagraph54"></a>
 
-## 5.4.1 Target
+## 5.4.1 Target <a name="anotherparagraph541"></a>
 
 **struct migraphx::internal::target**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4N8migraphx8internal6targetE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal6targetE)
 
@@ -3085,7 +3157,7 @@ Allocate an argument based on the input shape.
 
 **Returns** Allocated argument in the target.
 
-## 5.4.2 gpu::target
+## 5.4.2 gpu::target <a name="anotherparagraph542"></a>
 
 **struct migraphx::internal::gpu::target**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4N8migraphx8internal3gpu6targetE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal3gpu6targetE)
 
@@ -3103,7 +3175,7 @@ Allocate an argument based on the input shape.
 
 [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **allocate(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target8allocateERK5shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target8allocateERK5shape)
 
-## 5.4.3 cpu::target
+## 5.4.3 cpu::target <a name="anotherparagraph543"></a>
 
 **struct migraphx::internal::cpu::target**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4N8migraphx8internal3cpu6targetE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal3cpu6targetE)
 
@@ -3121,9 +3193,9 @@ Allocate an argument based on the input shape.
 
 [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **allocate(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target8allocateERK5shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target8allocateERK5shape)
 
-# 5.5 Passes
+# 5.5 Passes <a name="subparagraph55"></a>
 
-## 5.5.1 Pass
+## 5.5.1 Pass <a name="anotherparagraph551"></a>
 
 **struct migraphx::internal::pass**
 
@@ -3145,7 +3217,7 @@ Run the pass on the module.
 
 Run the pass on the program.
 
-## 5.5.2 Dead_code_elimination
+## 5.5.2 Dead_code_elimination <a name="anotherparagraph552"></a>
 
 **struct migraphx::internal::dead_code_elimination**
 
@@ -3159,7 +3231,7 @@ Remove instructions where the output is not used.
 
 **void apply(**[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **\&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal21dead_code_elimination5applyER7program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal21dead_code_elimination5applyER7program)
 
-## 5.5.3 Eliminate_common_subexpression
+## 5.5.3 Eliminate_common_subexpression <a name="anotherparagraph553"></a>
 
 **struct migraphx::internal::eliminate_common_subexpression**
 
@@ -3171,7 +3243,7 @@ Remove identical instructions.
 
 **void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal30eliminate_common_subexpression5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal30eliminate_common_subexpression5applyER6module)
 
-## 5.5.4 Eliminate_concat
+## 5.5.4 Eliminate_concat <a name="anotherparagraph554"></a>
 
 **struct migraphx::internal::eliminate_concat**
 
@@ -3187,7 +3259,7 @@ Remove concat operators by having each operator can write to different chunk of 
 
 **concat_optimization concat_opt**
 
-## 5.5.5 Eliminate_contiguous
+## 5.5.5 Eliminate_contiguous <a name="anotherparagraph555"></a>
 
 **struct migraphx::internal::eliminate_contiguous**
 
@@ -3203,7 +3275,7 @@ Remove contiguous instructions by checking if the operator can use non-standard 
 
 **std::string op_name**
 
-## 5.5.6 Eliminate_identity
+## 5.5.6 Eliminate_identity <a name="anotherparagraph556"></a>
 
 **struct migraphx::internal::eliminate_identity**
 
@@ -3215,7 +3287,7 @@ Remove identity instructions. Currently when used as the last pass, it will pres
 
 **void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal18eliminate_identity5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal18eliminate_identity5applyER6module)
 
-## 5.5.7 Eliminate_pad
+## 5.5.7 Eliminate_pad <a name="anotherparagraph557"></a>
 
 **struct migraphx::internal::eliminate_pad**
 
@@ -3227,7 +3299,7 @@ Remove pads if they can be written as an attribute to another op (im2col, convol
 
 **void apply(module \&m) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal13eliminate_pad5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal13eliminate_pad5applyER6module)
 
-## 5.5.8 Propagate_constant
+## 5.5.8 Propagate_constant <a name="anotherparagraph558"></a>
 
 **struct migraphx::internal::propagate_constant**
 
@@ -3239,7 +3311,7 @@ Replace instructions which take all literals with a literal of the computation.
 
 **void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal18propagate_constant5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal18propagate_constant5applyER6module)
 
-## 5.5.9 Rewrite_batchnorm
+## 5.5.9 Rewrite_batchnorm <a name="anotherparagraph559"></a>
 
 **struct migraphx::internal::rewrite_batchnorm**
 
@@ -3251,7 +3323,7 @@ Rewrite batchnorm to a multiply and add.
 
 **void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal17rewrite_batchnorm5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal17rewrite_batchnorm5applyER6module)
 
-## 5.5.10 Rewrite_rnn
+## 5.5.10 Rewrite_rnn <a name="anotherparagraph5510"></a>
 
 **struct migraphx::internal::rewrite_rnn**
 
@@ -3263,7 +3335,7 @@ Rewrite rnn to gemm and add.
 
 **void apply(module \&prog) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal11rewrite_rnn5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal11rewrite_rnn5applyER6module)
 
-## 5.5.11 Schedule
+## 5.5.11 Schedule <a name="anotherparagraph5511"></a>
 
 **struct migraphx::internal::schedule**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4N8migraphx8internal8scheduleE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal8scheduleE)
 
@@ -3281,7 +3353,7 @@ Schedule instructions for concurrent execution
 
 **bool enable = true**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4N8migraphx8internal8schedule6enableE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal8schedule6enableE)
 
-## 5.5.12 Simplify_algebra
+## 5.5.12 Simplify_algebra <a name="anotherparagraph5512"></a>
 
 **struct migraphx::internal::simplify_algebra**
 
@@ -3293,7 +3365,7 @@ Simplify many algebraic instructions to more efficient versions.
 
 **void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal16simplify_algebra5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal16simplify_algebra5applyER6module)
 
-## 5.5.13 Simplify_reshapes
+## 5.5.13 Simplify_reshapes <a name="anotherparagraph5513"></a>
 
 **struct migraphx::internal::simplify_reshapes**
 
@@ -3305,9 +3377,9 @@ Eliminate redundant reshapes.
 
 **void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal17simplify_reshapes5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal17simplify_reshapes5applyER6module)
 
-# 5.6 Matchers
+# 5.6 Matchers <a name="subparagraph56"></a>
 
-## 5.6.1 Introduction
+## 5.6.1 Introduction <a name="anotherparagraph561"></a>
 
 The matchers provide a way compose several predicates together. Many of the matchers can be composed so that m(m1, m2) will first check that m matches and then it will check that m1 and m2 will match.
 
@@ -3319,7 +3391,7 @@ This will find sum operators. We can also find sum operators which the output is
 
 auto match_sum = name(“sum”)(standard_shape());
 
-## 5.6.2 Arguments
+## 5.6.2 Arguments <a name="anotherparagraph562"></a>
 
 We also want to match arguments to the instructions as well. One way, is to match each argument using the arg matcher:
 
@@ -3329,7 +3401,7 @@ This will match a sum operator with the two arguments that are literals. Of cour
 
 **auto** match_sum = name("sum")(args(name("@literal"), name("@literal")));
 
-## 5.6.3 Binding
+## 5.6.3 Binding <a name="anotherparagraph563"></a>
 
 As we traverse through the instructions we may want reference some of the instructions we find along the way. We can do this by calling .bind:
 
@@ -3343,7 +3415,7 @@ name("@literal").bind("two")
 
 This will associate the instruction to a name that can be read from the matcher_result when it matches.
 
-## 5.6.4 Finding matches
+## 5.6.4 Finding matches <a name="anotherparagraph564"></a>
 
 Finally, when you want to use the matchers to find instructions a callback object can be written which has the matcher and an apply function which will take the matcher_result when the match is found:
 
@@ -3365,7 +3437,7 @@ void apply(program& p, matcher_result r) **const**
 
 find_matches(prog, match_find_sum{});
 
-## 5.6.5 Creating matchers
+## 5.6.5 Creating matchers <a name="anotherparagraph565"></a>
 
 There are several ways to create matchers. The macros MIGRAPH_BASIC_MATCHER and MIGRAPH_PRED_MATCHER help with creating matchers. For example, we can create a matcher for shapes that are broadcasted:
 
@@ -3391,9 +3463,9 @@ If we want parameters to the predicate, then we will need to use the make_basic_
 
 }
 
-# 5.7 Tools
+# 5.7 Tools <a name="subparagraph57"></a>
 
-## 5.7.1 roctx.py
+## 5.7.1 roctx.py <a name="anotherparagraph571"></a>
 
 MIGraphX driver provides **roctx** command which can be used with **rocprof** binary to get marker timing information for each MIGraphX operator. In order to help user to process timing information, rocTX helper script is provided at **tools/roctx.py**. The **roctx.py** helper script provides two main functionality: **run** and **parse**. Available knobs and usage are given below:
 
