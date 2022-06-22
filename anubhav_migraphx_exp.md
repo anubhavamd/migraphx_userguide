@@ -32,7 +32,7 @@
 <pre>
 2. Python User Guide
 	2.1. Setting path and installing package
-	2.2 Defining different modules in detail
+	2.2. Defining different modules in detail
 		2.2.1. Shape
 		2.2.2. Argument
 		2.2.3. Target
@@ -46,30 +46,30 @@
 <td>
 <pre>
 3. C++ User Guide
-	3.1 Defining different modules in detail
-		3.1.1 Shape
-		3.1.2 Argument
-		3.1.3 Target
-		3.1.4 Program
-		3.1.5 Quantize
-		3.1.6 parse_onnx
-		3.1.7 Load
+	3.1. Defining different modules in detail
+		3.1.1. Shape
+		3.1.2. Argument
+		3.1.3. Target
+		3.1.4. Program
+		3.1.5. Quantize
+		3.1.6. parse_onnx
+		3.1.7. Load
 </pre>
 </td>
 <td>
 <pre>
 4. MIGraphX Driver
-	4.1 Description
-	4.2 How to Use
-		4.2.1 Commands
-		4.2.2 Options
-	4.3 Defining different modules in detail
-		4.3.1 Read	
-		4.3.2 compile
-		4.3.3 Run
-		4.3.4 Perf
-		4.3.5 Verify
-		4.3.6 Roctx
+	4.1. Description
+	4.2. How to Use
+		4.2.1. Commands
+		4.2.2. Options
+	4.3. Defining different modules in detail
+		4.3.1. Read	
+		4.3.2. compile
+		4.3.3. Run
+		4.3.4. Perf
+		4.3.5. Verify
+		4.3.6. Roctx
 </pre>
 </td>
 </table 1>
@@ -80,52 +80,52 @@
 <td>
 <pre>
 5. Contributor Guide
-	5.1 MIGraphX Fundamentals
-		5.1.1 Location of the Examples
-		5.1.2 Adding Two Literals
-		5.1.3 Using Parameters
-		5.1.4 Handling Tensor Data
-		5.1.5 Importing From ONNX
-	5.2 Data Types
-		5.2.1 Shape
-		5.2.2 Literal
-		5.2.3 Argument
-		5.2.4 raw_data
-		5.2.5 Tensor_view
-	5.3 Program
-		5.3.1 Instruction
-		5.3.2 Instruction_ref
-		5.3.3 Program
-		5.3.4 Parse_onnx
-		5.3.5 Parse_tf
-		5.3.6 Onnx_options
-		5.3.7 Tf_options
-	5.4 Targets
-		5.4.1 Target
-		5.4.2 gpu::target
-		5.4.3 cpu::target
-	5.5 Passes
-		5.5.1 Pass
-		5.5.2 Dead_code_elimination
-		5.5.3 Eliminate_common_subexpression
-		5.5.4 Eliminate_concat
-		5.5.5 Eliminate_contiguous
-`		5.5.6 Eliminate_identity
-		5.5.7 Eliminate_pad
-		5.5.8 Propagate_constant
-		5.5.9 Rewrite_batchnorm
-		5.5.10 Rewrite_rnn
-		5.5.11 Schedule
-		5.5.12 Simplify_algebra
-		5.5.13 Simplify_reshapes
-	5.6 Matchers
-		5.6.1 Introduction
-		5.6.2 Arguments
-		5.6.3 Binding
-		5.6.4 Finding matches
-		5.6.5 Creating matchers
-	5.7 Tools
-		5.7.1 roctx.py
+	5.1. MIGraphX Fundamentals
+		5.1.1. Location of the Examples
+		5.1.2. Adding Two Literals
+		5.1.3. Using Parameters
+		5.1.4. Handling Tensor Data
+		5.1.5. Importing From ONNX
+	5.2. Data Types
+		5.2.1. Shape
+		5.2.2. Literal
+		5.2.3. Argument
+		5.2.4. raw_data
+		5.2.5. Tensor_view
+	5.3. Program
+		5.3.1. Instruction
+		5.3.2. Instruction_ref
+		5.3.3. Program
+		5.3.4. Parse_onnx
+		5.3.5. Parse_tf
+		5.3.6. Onnx_options
+		5.3.7. Tf_options
+	5.4. Targets
+		5.4.1. Target
+		5.4.2. gpu::target
+		5.4.3. cpu::target
+	5.5. Passes
+		5.5.1. Pass
+		5.5.2. Dead_code_elimination
+		5.5.3. Eliminate_common_subexpression
+		5.5.4. Eliminate_concat
+		5.5.5. Eliminate_contiguous
+`		5.5.6. Eliminate_identity
+		5.5.7. Eliminate_pad
+		5.5.8. Propagate_constant
+		5.5.9. Rewrite_batchnorm
+		5.5.10. Rewrite_rnn
+		5.5.11. Schedule
+		5.5.12. Simplify_algebra
+		5.5.13. Simplify_reshapes
+	5.6. Matchers
+		5.6.1. Introduction
+		5.6.2. Arguments
+		5.6.3. Binding
+		5.6.4. Finding matches
+		5.6.5. Creating matchers
+	5.7. Tools
+		5.7.1. roctx.py
 </td>
 </pre>
 </table 2>
@@ -177,7 +177,7 @@
    
    3.1. [Defining different modules in detail](#subparagraph31)
    
-     3.1.1[Shape](#anotherparagraph311)
+     3.1.1.[Shape](#anotherparagraph311)
      
      3.1.2.[Argument](#anotherparagraph312)
      
@@ -203,11 +203,11 @@
     
       4.3.1.[Read](#anotherparagraph431)
       
-      4.3.2[compile](#anotherparagraph432)
+      4.3.2.[compile](#anotherparagraph432)
       
-      4.3.3[Run](#anotherparagraph433)
+      4.3.3.[Run](#anotherparagraph433)
       
-      4.3.4[Perf](#anotherparagraph434)
+      4.3.4.[Perf](#anotherparagraph434)
       
       4.3.5.[Verify](#anotherparagraph435)
       
@@ -348,7 +348,7 @@ With ROCm installed correctly, MIGraphX binaries can be installed on Ubuntu with
 ```
 sudo apt update && sudo apt install -y migraphx
 ```
-then the header files and libs are installed under /opt/rocm-\<version\>, where \<version\> is the ROCm version.
+then the header files and libs are installed under ``` /opt/rocm-\<version\> ```, where \<version\> is the ROCm version.
 
 # 1.4. Building From Source <a name="subparagraph14"></a>
 
@@ -370,15 +370,15 @@ There are three ways to build the MIGraphX sources.
 
 In this approach, we use the rbuild build tool to build MIGraphX. The specific steps are as follows:
 
-Install rocm-cmake, pip3, rocblas, and miopen-hip with the command
+1. Install rocm-cmake, pip3, rocblas, and miopen-hip with the command
 ```
 sudo apt update && sudo apt install -y rocm-cmake python3-pip rocblas miopen-hip
 ```
-Install rbuild (sudo may be required here.)
+2. Install rbuild (sudo may be required here.)
 ```
 pip3 install https://github.com/RadeonOpenCompute/rbuild/archive/master.tar.gz
 ```
-Build MIGraphX source code
+3. Build MIGraphX source code
 ```
 rbuild build -d depend -B build --cxx=/opt/rocm/llvm/bin/clang++
 ```
@@ -386,7 +386,7 @@ then all the prerequisites are in the folder depend, and MIGraphX is built in th
 
 Note that for ROCm3.7 and later releases, Ubuntu 18.04 or later releases are needed. Upgrade to Ubuntu 18.04 is available at [Upgrade Ubuntu to 18.04](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/wiki/Upgrade-to-Ubuntu-18.04-for-ROCM3.7-or-later-releases)
 
-Also note that you may meet the error of rbuild: command not found. It is because rbuild is installed at \$HOME/.local/bin, which is not in PATH. You can either export PATH as export PATH=\$HOME/.local/bin:\$PATH to add the folder to PATH or add the option --prefix /usr/local in the pip3 command when installing rbuild.
+Also note that you may meet the error of rbuild: command not found. It is because rbuild is installed at ``` \$HOME/.local/bin ```, which is not in PATH. You can either export PATH as export ``` PATH=\$HOME/.local/bin:\$PATH ``` to add the folder to PATH or add the option ``` --prefix /usr/local ``` in the pip3 command when installing rbuild.
 
 ### 1.4.2. Use cmake to build MIGraphX <a name="anotherparagraph142"></a>
 
@@ -398,7 +398,7 @@ For convenience, the prerequisites can be built automatically with rbuild as:
 ```
 rbuild build -d depend --cxx=/opt/rocm/llvm/bin/clang++
 ```
-then all the prerequisites are in the folder depend, and they can be used in the cmake configuration as -DCMAKE_PREFIX_PATH=depend.
+then all the prerequisites are in the folder depend, and they can be used in the cmake configuration as ``` -DCMAKE_PREFIX_PATH=depend ```.
 
 If you have sudo access, as an alternative to the rbuild command, you can install the prerequisites just like in the dockerfile by calling ./tools/install_prereqs.sh.
 
