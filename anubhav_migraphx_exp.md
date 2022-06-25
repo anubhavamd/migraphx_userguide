@@ -2339,7 +2339,7 @@ https://github.com/ROCmSoftwarePlatform/AMDMIGraphX/tree/develop/examples/migrap
 
 ## 5.1.1 Location of the Examples <a name="anotherparagraph511"></a>
 
-The ``` ref_dev_examples.cpp ``` can be found in the test directory ```(/test)```. The executable file ``` test_ref_dev_examples ``` based on this file will be created in the ```bin/``` of the build directory after running ``` make -j\$(nproc) test_ref_dev_examples ```. The executable will also be created when running ``` make -j\$(nproc) check ```, alongside with all the other tests. Directions for building MIGraphX from source can be found in the main README file:
+The ``` ref_dev_examples.cpp ``` can be found in the test directory ``` (/test) ```. The executable file ``` test_ref_dev_examples ``` based on this file will be created in the ``` bin/ ``` of the build directory after running ``` make -j\$(nproc) test_ref_dev_examples ```. The executable will also be created when running ``` make -j\$(nproc) check ```, alongside with all the other tests. Directions for building MIGraphX from source can be found in the main README file:
 
 https://github.com/ROCmSoftwarePlatform/AMDMIGraphX\#readme.
 
@@ -2467,481 +2467,772 @@ p.compile(migraphx::gpu::target{});
 
 ## 5.2.1 Shape <a name="anotherparagraph521"></a>
 
-**struct migraphx::internal::shape**
+```
+struct migraphx::internal::shape
+```
 
-**Public Types**
+##### Public Types
 
-**enum type_t**
+```
+enum type_t
+```
 
-*Values:*
+##### Values:
 
-**enumerator bool_typet**
+```
+enumerator bool_typet
+```
 
-**enumerator half_type**
+```
+enumerator half_type
+```
 
-**enumerator float_type**
+```
+enumerator float_type
+```
 
-**enumerator double_type**
+```
+enumerator double_type
+```
 
-**enumerator uint8_type**
+```
+enumerator uint8_type
+```
 
-**enumerator int8_type**
+```
+enumerator int8_type
+```
 
-**enumerator uint16_type**
+```
+enumerator uint16_type
+```
 
-**enumerator int16_type**
+```
+enumerator int16_type
+```
 
-**enumerator int32_type**
+```
+enumerator int32_type
+```
 
-**enumerator int64_type**
+```
+enumerator int64_type
+```
 
-**enumerator uint32_type**
+```
+enumerator uint32_type
+```
 
-**enumerator uint64_type**
+```
+enumerator uint64_type
+```
 
-**enumerator tuple_type**
+```
+enumerator tuple_type
+```
 
-**Public Functions**
+##### Public Functions
 
-**shape()**
+```
+shape()
+```
 
-**shape(type_t t)**
+```
+shape(type_t t)
+```
 
-**shape(type_t t, std::vector\<std::size_t\> l)**
+```
+shape(type_t t, std::vector<std::size_t> l)
+```
 
-**shape(type_t** **t, std::vector\<std::size_t\> l, std::vector\<std::size_t\> s)**
+```
+shape(type_t t, std::vector<std::size_t> l, std::vector<std::size_t> s)
+```
 
-**template\<class Range\>  
-inline shape(type_t t, const** [**Range**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape5shapeE6type_tRK5Range) **\&l)**
+```
+template<class Range>  
+inline shape(type_t t, const Range&l)
+```
 
-**template\<class Range1, class Range2\>  
-inline shape(type_t t, const** [**Range1**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00EN8migraphx8internal5shape5shapeE6type_tRK6Range1RK6Range2) **\&l, const** [**Range2**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00EN8migraphx8internal5shape5shapeE6type_tRK6Range1RK6Range2) **\&s)**
+```
+template<class Range1, class Range2>  
+inline shape(type_t t, const Range1&l, const Range2&s)
+```
 
-**shape(const std::vector\<**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape5shapeERKNSt6vectorI5shapeEE)**\> \&subs)**
+```
+shape(const std::vector<shape>&subs)
+```
 
-[**type_t**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_tE) **type() const**
+```
+type_t type() const
+```
 
-**const std::vector\<std::size_t\> \&lens() const**
+```
+const std::vector<std::size_t> &lens() const
+```
 
-**const std::vector\<std::size_t\> \&strides() const**
+```
+const std::vector<std::size_t> &strides() const
+```
 
-**std::size_t elements() const**
+```
+std::size_t elements() const
+```
 
-**std::size_t bytes() const**
+```
+std::size_t bytes() const
+```
 
-**std::size_t type_size() const**
+```
+std::size_t type_size() const
+```
 
-**std::size_t index(std::initializer_list\<std::size_t\> l) const**
+```
+std::size_t index(std::initializer_list<std::size_t> l) const
+```
 
+```
+Map multiple indices to space index.
+```
+
+```
+std::size_t index(const std::vector<std::size_t> &l) const
+```
 Map multiple indices to space index.
 
-**std::size_t index(const std::vector\<std::size_t\> \&l) const**
-
-Map multiple indices to space index.
-
-**template\<class Iterator\>  
-inline std::size_t index(**[**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape5indexENSt6size_tE8Iterator8Iterator) **start,** [**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape5indexENSt6size_tE8Iterator8Iterator) **last) const**
-
+```
+template<class Iterator>  
+inline std::size_t index(Iterator start,Iterator lastconst)
+```
 Map multiple indices from a range of iterator to a space index.
 
-**std::size_t index(std::size_t i) const**
-
+```
+std::size_t index(std::size_t i) const
+```
 Map element index to space index.
 
-**std::vector\<std::size_t\> multi(std::size_t i) const**
+```
+std::vector<std::size_t> multi(std::size_t i) const
+```
 
-**void multi_copy(std::size_t i, std::size_t \*start, const std::size_t \*end) const**
+```
+void multi_copy(std::size_t i, std::size_t*start, const std::size_t*end) const
+```
 
-**bool packed() const**
-
+```
+bool packed() const
+```
 Returns true if the shape is packed with no padding.
 
-**bool transposed() const**
-
+```
+bool transposed() const
+```
 Returns true is the shape has been transposed. That is the strides are not in descending order
 
-**bool broadcasted() const**
-
+```
+bool broadcasted() const
+```
 Returns true if the shape is broadcasting a dimension. That is, one of the strides are zero.
 
-**bool standard() const**
-
+```
+bool standard() const
+```
 Returns true if the shape is in its standard format. That is, the shape is both packed and not transposed.
 
-**bool scalar() const**
-
+```
+bool scalar() const
+```
 Returns true if all strides are equal to 0 (scalar tensor)
 
-[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **normalize_standard() const**
+```
+shape normalize_standard() const
+```
 
-[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **with_lens(type_t** **t, const std::vector\<std::size_t\> \&l) const**
+```
+shape with_lens(type_t t, const std::vector<std::size_t> &l) const
+```
 
-[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **with_lens(const std::vector\<std::size_t\> \&l) const**
+```
+shape with_lens(const std::vector<std::size_t> &l) const
+```
 
-**template\<class ...Visitors\>  
-inline void visit_type(**[**Visitors**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDpENK8migraphx8internal5shape10visit_typeEvDp8Visitors)**... vs) const**
+```
+template<class ...Visitors>  
+inline void visit_type(Visitors... vs) const
+```
 
-**std::string type_string() const**
+```
+std::string type_string() const
+```
 
-**const std::vector\<**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE)**\> \&sub_shapes() const**
+```
+const std::vector<shape> &sub_shapes() const
+```
 
-**Public Static Functions**
+##### Public Static Functions
 
-**static const std::vector\<type_t\> \&types()**
+```
+static const std::vector<type_t> &types()
+```
 
-**static std::string name(type_t t)**
+```
+static std::string name(type_t t)
+```
 
-**static std::string cpp_type(type_t t)**
+```
+static std::string cpp_type(type_t t)
+```
 
-**static** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **from_permutation(type_t** **t, const std::vector\<std::size_t\> \&l, const std::vector\<int64_t\> \&perm**
+```
+static shape from_permutation(type_t t, const std::vector<std::size_t> &l, const std::vector<int64_t> &perm
+```
 
-**template\<class Visitor, class TupleVisitor\>  
-static inline void visit(type_t t,** [**Visitor**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00EN8migraphx8internal5shape5visitEv6type_t7Visitor12TupleVisitor) **v, TupleVisitor tv)**
+```
+template<class Visitor, class TupleVisitor>  
+static inline void visit(type_t t, Visitor v, TupleVisitor tv)
+```
 
-**template\<class Visitor\>  
-static inline void visit(type_t t,** [**Visitor**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape5visitEv6type_t7Visitor) **v)**
+```
+template<class Visitor>  
+static inline void visit(type_t t,Visitor v)
+```
 
-**template\<class Visitor\>  
-static inline void visit_types(**[**Visitor**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape11visit_typesEv7Visitor) **v)**
+```
+template<class Visitor>  
+static inline void visit_types(Visitor v)
+```
 
-**static type_t parse_type(const std::string \&s)**
+```
+static type_t parse_type(const std::string &s)
+```
 
-**Friends**
+##### Friends
 
-**friend** **friend** **bool** **operator==** **(const** **shape** **\&x,** **const** **shape** **\&y)**
+```
+friend friend bool operator== (const shape &x, const shape &y)
+```
 
-**friend friend bool operator!= (const shape \&x, const shape \&y)**
+```
+friend friend bool operator!= (const shape &x, const shape &y)
+```
 
-**friend friend std::ostream & operator\<\< (std::ostream \&os, const shape \&x)**
+```
+friend friend std::ostream & operator<< (std::ostream &os, const shape &x)
+```
 
-**template\<class T\>  
-struct as**
+```
+template<class T>  
+struct as
+```
 
-**Public Types**
+##### Public Types
 
-**using type = std::conditional_t\<std::is_same\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape2asE)**, bool\>{}, int8_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape2asE)**\>**
+```
+using type = std::conditional_t<std::is_same<T, bool>{}, int8_t, T>
+```
 
-**Public Functions**
+##### Public Functions
 
-**inline** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **max() const**
+```
+inline type max() const
+```
 
-**inline** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **min() const**
+```
+inline type min() const
+```
 
-**template\<class U\>  
-inline** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **operator()(**[**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape2asclE4type1U) **u) const**
+```
+template<class U>
+inline type operator()(U u) const
+```
 
-**template\<class U\>  
-inline** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **\*operator()(**[**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape2asclEP4typeP1U) **\*u) const**
+```
+template<class U>
+inline type *operator()(U *u) const
+```
 
-**template\<class U\>  
-inline const** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **\*operator()(const** [**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape2asclEPK4typePK1U) **\*u) const**
+```
+template<class U>
+inline const type *operator()(const U *u) const
+```
 
-**inline** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **operator()() const**
+```
+inline type operator()() const
+```
 
-**inline std::size_t size(std::size_t n = 1) const**
+```
+inline std::size_t size(std::size_t n = 1) const
+```
 
-**template\<class U\>  
-inline** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **\*from(**[**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape2as4fromEP4typeP1UNSt6size_tE) **\*buffer, std::size_t n = 0) const**
+```
+template<class U>
+inline type *from(U *buffer, std::size_t n = 0) const
+```
 
-**template\<class U\>  
-inline const** [**type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape2as4typeE) **\*from(const** [**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal5shape2as4fromEPK4typePK1UNSt6size_tE) **\*buffer, std::size_t n = 0) const**
+```
+template<class U>
+inline const type *from(const U *buffer, std::size_t n = 0) const
+```
 
-**inline type_t type_enum() const**
+```
+inline type_t type_enum() const
+```
 
-**template\<class T, class = void\>**  
-**struct get_type**
+```
+template<class T, class = void>
+struct get_type
+```
 
-**template\<class T\>  
-struct get_type\<bool,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeIb1TEE)**\> : public std::integral_constant\<type_t,** [**bool_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t9bool_typeE)**\>**
+```
+template<class T>
+struct get_type<bool, T> : public std::integral_constant<type_t, bool_type>
+```
 
-**template\<class T\>  
-struct get_type\<const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeIK1TEE)**\> : public migraphx::internal::**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE)**::get_type\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeIK1TEE)**\>**
+```
+template<class T>
+struct get_type<const T> : public migraphx::internal::shape::get_type<T>
+```
 
-**template\<class T\>  
-struct get_type\<double,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeId1TEE)**\> : public std::integral_constant\<type_t,** [**double_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t11double_typeE)**\>**
+```
+template<class T>
+struct get_type<double, T> : public std::integral_constant<type_t, double_type>
+```
 
-**template\<class T\>  
-struct get_type\<float,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeIf1TEE)**\> : public std::integral_constant\<type_t,** [**float_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10float_typeE)**\>**` `**template\<class T\>  
-struct get_type\<half,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI4half1TEE)**\> : public std::integral_constant\<type_t,** [**half_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t9half_typeE)**\>**
+```
+template<class T>
+struct get_type<float, T> : public std::integral_constant<type_t, float_type>
+```
 
-**template\<class T\>  
-struct get_type\<int16_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI7int16_t1TEE)**\> : public std::integral_constant\<type_t,** [**int16_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10int16_typeE)**\>**
+```
+template<class T>
+struct get_type<half, T> : public std::integral_constant<type_t, half_type>
+```
 
-**template\<class T\>  
-struct get_type\<int32_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI7int32_t1TEE)**\> : public std::integral_constant\<type_t,** [**int32_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10int32_typeE)**\>**
+```
+template<class T>
+struct get_type<int16_t, T> : public std::integral_constant<type_t, int16_type>
+```
 
-**template\<class T\>  
-struct get_type\<int64_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI7int64_t1TEE)**\> : public std::integral_constant\<type_t,** [**int64_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10int64_typeE)**\>**
+```
+template<class T>
+struct get_type<int32_t, T> : public std::integral_constant<type_t, int32_type>
+```
 
-**template\<class T\>  
-struct get_type\<int8_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI6int8_t1TEE)**\> : public std::integral_constant\<type_t,** [**int8_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t9int8_typeE)**\>**
+```
+template<class T>
+struct get_type<int64_t, T> : public std::integral_constant<type_t, int64_type>
+```
 
-**template\<class T\>  
-struct get_type\<uint16_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI8uint16_t1TEE)**\> : public std::integral_constant\<type_t,** [**uint16_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t11uint16_typeE)**\>**
+```
+template<class T>
+struct get_type<int8_t, T> : public std::integral_constant<type_t, int8_type>
+```
 
-**template\<class T\>  
-struct get_type\<uint32_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI8uint32_t1TEE)**\> : public std::integral_constant\<type_t,** [**uint32_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t11uint32_typeE)**\>**
+```
+template<class T>
+struct get_type<uint16_t, T> : public std::integral_constant<type_t, uint16_type>
+```
 
-**template\<class T\>  
-struct get_type\<uint64_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI8uint64_t1TEE)**\> : public std::integral_constant\<type_t,** [**uint64_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t11uint64_typeE)**\>**
+```
+template<class T>
+struct get_type<uint32_t, T> : public std::integral_constant<type_t, uint32_type>
+```
 
-**template\<class T\>  
-struct get_type\<uint8_t,** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal5shape8get_typeI7uint8_t1TEE)**\> : public std::integral_constant\<type_t,** [**uint8_type**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shape6type_t10uint8_typeE)**\>**
+```
+template<class T>
+struct get_type<uint64_t, T> : public std::integral_constant<type_t, uint64_type>
+```
+
+```
+template<class T>
+struct get_type<uint8_t, T> : public std::integral_constant<type_t, uint8_type>
+```
 
 ## 5.2.2 Literal <a name="anotherparagraph522"></a>
 
-**struct migraphx::internal::literal : public migraphx::internal::raw_data\<**[**literal**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal7literalE)**\>**
-
+```
+struct migraphx::internal::literal : public migraphx::internal::raw_data<literal>
+```
 Represents a raw literal.
-
 This stores the literal has a raw buffer that is owned by this class
 
-**Public Functions**
+##### Public Functions
 
-**inline literal()**
+```
+inline literal()
+```
 
-**template\<class U, class T = deduce\<**[**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00_N5shape6type_tEEN8migraphx8internal7literal7literalE1U)**\>,** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE)**::type_t** **ShapeType =** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE)**::get_type\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00_N5shape6type_tEEN8migraphx8internal7literal7literalE1U)**\>{}\>**  
-**inline literal(**[**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00_N5shape6type_tEEN8migraphx8internal7literal7literalE1U) **x)**
+```
+template<class U, class T = deduce<U>, shape::type_t ShapeType = shape::get_type<T>{}>
+inline literal(U x)
+```
 
-**template\<class T\>**  
-**inline literal(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s**, **const std::vector\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal7literal7literalERK5shapeRKNSt6vectorI1TEE)**\> \&x)**
+```
+template<class T>
+inline literal(const shape &s, const std::vector<T> &x)
+```
 
-**template\<class T\>**  
-**inline literal(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s**, **const std::initializer_list\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal7literal7literalERK5shapeRKNSt16initializer_listI1TEE)**\> \&x)**
+```
+template<class T>
+inline literal(const shape &s, const std::initializer_list<T> &x)
+```
 
-**template\<class Iterator\>**  
-**inline literal(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s**, [**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal7literal7literalERK5shape8Iterator8Iterator) **start**, [**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal7literal7literalERK5shape8Iterator8Iterator) **end)**
+```
+template<class Iterator>
+inline literal(const shape &s, Iterator start, Iterator end)
+```
 
-**template\<class T, long PrivateRequires__LINE_\_ = \_LINE_, typename std::enable_if\<(PrivateRequires__LINE_\_** **== \_LINE\_ && (migraphx::and_\<sizeof(**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXeqst1TL1EEEEEEiE4typeEEN8migraphx8internal7literal7literalERK5shapeP1T)**) == 1\>{})), int\>::type = 0\>**  
-**inline literal(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s**, [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXeqst1TL1EEEEEEiE4typeEEN8migraphx8internal7literal7literalERK5shapeP1T) **\*x)**
+```
+template<class T, long PrivateRequires__LINE__ = __LINE__, typename std::enable_if<(PrivateRequires__LINE__ == __LINE__ && (migraphx::and_<sizeof(T) == 1>{})), int>::type = 0>
+inline literal(const shape &s, T *x)
+```
 
-**inline bool empty() const**
-
+```
+inline bool empty() const
+```
 Whether data is available.
 
-**inline const char \*data() const**
-
+```
+inline const char *data() const
+```
 Provides a raw pointer to the data.
 
-**inline const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&get_shape() const**
+```
+inline const shape &get_shape() const
+```
 
-**inline std::vector\<**[**literal**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal7literalE)**\> get_sub_objects() const**
+```
+inline std::vector<literal> get_sub_objects() const
+```
 
-**inline** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **get_argument() const**
-
+```
+inline argument get_argument() const
+```
 Convert the data to an argument.
 
 ## 5.2.3 Argument <a name="anotherparagraph523"></a>
 
-**struct migraphx::internal::argument : public migraphx::internal::raw_data\<**[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE)**\>**
-
+```
+struct migraphx::internal::argument : public migraphx::internal::raw_data<argument>
+```
 Arguments passed to instructions.
+An ``` argument ``` can represent a raw buffer of data that either be referenced from another element or it can be owned by the argument.
 
-An argument can represent a raw buffer of data that either be referenced from another element or it can be owned by the argument.
+##### Public Functions
 
-**Public Functions**
+```
+argument() = default
+```
 
-**argument() = default**
+```
+argument(const shape &s)
+```
 
-**argument(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s)**
+```
+template<class F, long PrivateRequires__LINE__ = __LINE__, typename std::enable_if<(PrivateRequires__LINE__ == __LINE__ && (migraphx::and_<std::is_pointer<decltype(std::declval<F>()())>{}>{})), int>::type = 0>
+inline argument(shape s, F d)
+```
 
-**template\<class F, long PrivateRequires__LINE_\_ = \_LINE_, typename std::enable_if\<(PrivateRequires__LINE_\_** **== \_LINE\_ && (migraphx::and_\<std::is_pointer\<decltype(std::declval\<**[**F**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXclNSt10is_pointerIDTclclNSt7declvalI1FEEEEEEEEEEEEEiE4typeEEN8migraphx8internal8argument8argumentE5shape1F)**\>()())\>{}\>{})), int\>::type = 0\>**  
-**inline argument(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **s**, [**F**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXclNSt10is_pointerIDTclclNSt7declvalI1FEEEEEEEEEEEEEiE4typeEEN8migraphx8internal8argument8argumentE5shape1F) **d)**
+```
+template<class T>
+inline argument(shape s, T *d)
+```
 
-**template\<class T\>**  
-**inline argument(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **s**, [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8argument8argumentE5shapeP1T) **\*d)**
+```
+template<class T>
+inline argument(shape s, std::shared_ptr<T> d)
+```
 
-**template\<class T\>**  
-**inline argument(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **s**, **std::shared_ptr\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8argument8argumentE5shapeNSt10shared_ptrI1TEE)**\> d)**
+```
+argument(shape s, std::nullptr_t)
+```
 
-**argument(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **s**, **std::nullptr_t)**
+```
+argument(const std::vector<argument> &args)
+```
 
-**argument(const std::vector\<**[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argument8argumentERKNSt6vectorI8argumentEE)**\> \&args)**
-
-**char \*data() const**
-
+```
+char *data() const
+```
 Provides a raw pointer to the data.
 
-**bool empty() const**
 
+```
+bool empty() const
+```
 Whether data is available.
 
-**const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&get_shape() const**
+```
+const shape &get_shape() const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **reshape(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s) const**
+```
+argument reshape(const shape &s) const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy() const**
+```
+argument copy() const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **share() const**
-
+```
+argument share() const
+```
 Make copy of the argument that is always sharing the data.
 
-**std::vector\<**[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE)**\> get_sub_objects() const**
+```
+std::vector<argument> get_sub_objects() const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **element(std::size_t i) const**
-
+```
+argument element(std::size_t i) const
+```
 Return the ith element.
 
 ## 5.2.4 raw_data <a name="anotherparagraph524"></a>
 
-**template\<class Derived\>**  
-**struct migraphx::internal::raw_data : public migraphx::internal::raw_data_base**
-
+```
+template<class Derived>
+struct migraphx::internal::raw_data : public migraphx::internal::raw_data_base
+```
 Provides a base class for common operations with raw buffer.
 
-For classes that handle a raw buffer of data, this will provide common operations such as equals, printing, and visitors. To use this class the derived class needs to provide a data() method to retrieve a raw pointer to the data, and get_shape method that provides the shape of the data.
+For classes that handle a raw buffer of data, this will provide common operations such as equals, printing, and visitors. To use this class the derived class needs to provide a ``` data() ``` method to retrieve a raw pointer to the data, and ``` get_shape ``` method that provides the shape of the data.
 
-**Public Functions**
+##### Public Functions
 
-**template\<class Visitor\>**  
-**inline void visit_at(**[**Visitor**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal8raw_data8visit_atEv7VisitorNSt6size_tE) **v**, **std::size_t n = 0) const**
-
+```
+template<class Visitor>
+inline void visit_at(Visitor v, std::size_t n = 0) const
+```
 Visits a single data element at a certain index.
 
-**Parameters**
+##### Parameters
+- v – A function which will be called with the type of data
 
--   **v** – A function which will be called with the type of data
--   **n** – The index to read from
+- n – The index to read from
 
-**template\<class Visitor, class TupleVisitor\>**  
-**inline void visit(**[**Visitor**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I00ENK8migraphx8internal8raw_data5visitEv7Visitor12TupleVisitor) **v**, **TupleVisitor tv) const**
+```
+template<class Visitor, class TupleVisitor>
+inline void visit(Visitor v, TupleVisitor tv) const
+```
 
-**template\<class Visitor\>**  
-**inline void visit(**[**Visitor**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal8raw_data5visitEv7Visitor) **v) const**
-
+```
+template<class Visitor>
+inline void visit(Visitor v) const
+```
 Visits the data.
+This will call the visitor function with a ``` tensor_view<T> ``` based on the shape of the data.
 
-This will call the visitor function with a tensor_view\<T\> based on the shape of the data.
+##### Parameters:
+-  v – A function to be called with ``` tensor_view<T> ```
 
-**Parameters**
-
-**v** – A function to be called with tensor_view\<T\>
-
-**inline bool single() const**
-
+```
+inline bool single() const
+```
 Returns true if the raw data is only one element.
 
-**template\<class T\>**  
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal8raw_data2atE1TNSt6size_tE) **at(std::size_t n = 0) const**
-
+```
+template<class T>
+inline T at(std::size_t n = 0) const
+```
 Retrieves a single element of data.
 
-**Parameters n** – The index to retrieve the data from
+- Parameters            n – The index to retrieve the data from
+- Template Parameters   T – The type of data to be retrieved
+- Returns               The element as T
 
-**Template Parameter T** – The type of data to be retrieved
-
-**Returns** The element as T
-
-**inline auto_cast implicit() const**
-
+```
+inline auto_cast implicit() const
+```
 Implicit conversion of raw data pointer.
 
-**template\<class T\>**  
-**inline tensor_view\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal8raw_data3getE11tensor_viewI1TEv)**\> get() const**
-
+```
+template<class T>
+inline tensor_view<T> get() const
+```
 Get a tensor_view to the data.
 
-**template\<class T\>**  
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal8raw_data4castEP1Tv) **\*cast() const**
-
+```
+template<class T>
+inline T *cast() const
+```
 Cast the data pointer.
 
-**inline std::string to_string() const**
+```
+inline std::string to_string() const
+```
 
-**Friends**
+##### Friends
 
-**template\<class Stream\> inline friend friend Stream & operator\<\< (Stream \&os, const Derived \&d)**
+```
+template<class Stream> inline friend friend Stream & operator<< (Stream &os, const Derived &d)
+```
 
-**struct auto_cast**
+```
+struct auto_cast
+```
+##### Public Types
 
-**Public Types**
+```
+using is_data_ptr = bool_c<(std::is_void<T>{} or std::is_same<char, std::remove_cv_t<T>>{} or std::is_same<unsigned char, std::remove_cv_t<T>>{})>
+```
 
-**using is_data_ptr = bool_c\<(std::is_void\<T\>{} or std::is_same\<char, std::remove_cv_t\<T\>\>{} or std::is \_same\<unsigned char, std::remove_cv_t\<T\>\>{})\>**
+```
+using get_data_type = std::conditional_t<is_data_ptr<T>{}, float, T>
+```
+##### Public Functions
 
-**using get_data_type = std::conditional_t\<is_data_ptr\<T\>{}, float, T\>**
+```
+template<class T>
+inline operator T()
+```
 
-**Public Functions**
+```
+template<class T>
+inline bool matches() const
+```
 
-**template\<class T\>**  
-**inline operator** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8raw_data9auto_castcv1TEv)**()**
+```
+template<class T>
+inline operator T*()
+```
 
-**template\<class T\>**  
-**inline bool matches() const**
+```
+template<class T>
+inline bool matches() const
+```
 
-**template\<class T\>**  
-**inline operator** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8raw_data9auto_castcvP1TEv)**\*()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4I0EN8migraphx8internal8raw_data9auto_castcvP1TEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8raw_data9auto_castcvP1TEv)
+```
+template<class T>
+inline operator T*()
+```
+##### Public Members
 
-**Public Members**
-
-**const** [**Derived**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal8raw_dataE) **\*self**
+```
+const Derived *self
+```
 
 ## 5.2.5 Tensor_view <a name="anotherparagraph525"></a>
 
-**template\<class T\>**  
-**struct migraphx::internal::tensor_view**
+```
+template<class T>
+struct migraphx::internal::tensor_view
+```
 
-**Public Types**
+##### Public Types
 
-**using value_type =** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE)[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view10value_typeE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view10value_typeE)
+```
+using value_type = T
+```
 
-**using iterator = basic_iota_iterator\<tensor_view_iterator_read\<**[**tensor_view**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE)**\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE)**\>\>, std::size_t\>**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view8iteratorE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view8iteratorE)
+```
+using iterator = basic_iota_iterator<tensor_view_iterator_read<tensor_view<T>>, std::size_t>
+```
 
-**using const_iterator = basic_iota_iterator\<tensor_view_iterator_read\<const** [**tensor_view**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE)**\<**[**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE)**\>\>, std::size_t\>**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view14const_iteratorE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view14const_iteratorE)
+```
+using const_iterator = basic_iota_iterator<tensor_view_iterator_read<const tensor_view<T>>, std::size_t>
+```
 
-**Public Functions**
+##### Public Functions
 
-**inline tensor_view()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view11tensor_viewEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view11tensor_viewEv)
+```
+inline tensor_view()
+```
 
-**inline tensor_view(**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **s**, [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\*d)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view11tensor_viewE5shapeP1T](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view11tensor_viewE5shapeP1T)
+```
+inline tensor_view(shape s, T *d)
+```
 
-**inline const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&get_shape() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view9get_shapeEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view9get_shapeEv)
+```
+inline const shape &get_shape() const
+```
 
-**inline bool empty() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view5emptyEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view5emptyEv)
+```
+inline bool empty() const
+```
 
-**inline std::size_t size() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view4sizeEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view4sizeEv)
+```
+inline std::size_t size() const
+```
 
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\*data()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view4dataEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view4dataEv)
+```
+inline T *data()
+```
 
-**inline const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\*data() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view4dataEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view4dataEv)
+```
+inline const T *data() const
+```
 
-**template\<class ...Ts, long PrivateRequires__LINE_\_ = \_LINE_, typename std::enable_if\<(PrivateRequires__LINE_\_** **== \_LINE\_ && (migraphx::and_\<std::is_integral\<**[**Ts**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1TDp2Ts)**\>{}...\>{})), int\>::type = 0z**  
-**inline const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&operator()(**[**Ts**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1TDp2Ts)**... xs) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1TDp2Ts](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1TDp2Ts)
+```
+template<class ...Ts, long PrivateRequires__LINE__ = __LINE__, typename std::enable_if<(PrivateRequires__LINE__ == __LINE__ && (migraphx::and_<std::is_integral<Ts>{}...>{})), int>::type = 0>
+inline const T &operator()(Ts... xs) const
+```
 
-**template\<class ...Ts, long PrivateRequires__LINE_\_ = \_LINE_, typename std::enable_if\<(**[**PrivateRequires__LINE_\_**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1TDp2Ts) **== \_LINE\_ && (migraphx::and_\<std::is_integral\<**[**Ts**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1TDp2Ts)**\>{}...\>{})), int\>::type = 0\>**  
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&operator()(**[**Ts**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1TDp2Ts)**... xs)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1TDp2Ts](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4IDp_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IJXclNSt11is_integralI2TsEEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1TDp2Ts)
+```
+template<class ...Ts, long PrivateRequires__LINE__ = __LINE__, typename std::enable_if<(PrivateRequires__LINE__ == __LINE__ && (migraphx::and_<std::is_integral<Ts>{}...>{})), int>::type = 0>
+inline T &operator()(Ts... xs)
+```
 
-**template\<class Iterator, long PrivateRequires__LINE_\_ = \_LINE_, typename std::enable_if\<(PrivateRequires__LINE_\_** **== \_LINE\_ && (migraphx::and_\<not std::is_integral\<**[**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1T8Iterator8Iterator)**\>{}\>{})), int\>::type = 0\>**  
-**inline const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&operator()(**[**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1T8Iterator8Iterator) **start**, [**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1T8Iterator8Iterator) **last) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1T8Iterator8Iterator](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEENK8migraphx8internal11tensor_viewclERK1T8Iterator8Iterator)
+```
+template<class Iterator, long PrivateRequires__LINE__ = __LINE__, typename std::enable_if<(PrivateRequires__LINE__ == __LINE__ && (migraphx::and_<not std::is_integral<Iterator>{}>{})), int>::type = 0>
+inline const T &operator()(Iterator start, Iterator last) const
+```
 
-**template\<class Iterator, long PrivateRequires__LINE_\_ = \_LINE_, typename std::enable_if\<(**[**PrivateRequires__LINE_\_**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1T8Iterator8Iterator) **== \_LINE\_ && (migraphx::and_\<not std::is_integral\<**[**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1T8Iterator8Iterator)**\>{}\>{})), int\>::type = 0\>**  
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&operator()(**[**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1T8Iterator8Iterator) **start**, [**Iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1T8Iterator8Iterator) **last)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1T8Iterator8Iterator](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0_l_NSt9enable_ifIXaaeq23PrivateRequires__LINE__8__LINE__clN8migraphx4and_IXntclNSt11is_integralI8IteratorEEEEEEEEiE4typeEEN8migraphx8internal11tensor_viewclER1T8Iterator8Iterator)
+```
+template<class Iterator, long PrivateRequires__LINE__ = __LINE__, typename std::enable_if<(PrivateRequires__LINE__ == __LINE__ && (migraphx::and_<not std::is_integral<Iterator>{}>{})), int>::type = 0>
+inline T &operator()(Iterator start, Iterator last)
+```
 
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&operator[](std::size_t i)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_viewixENSt6size_tE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_viewixENSt6size_tE)
+```
+inline T &operator[](std::size_t i)
+```
 
-**inline const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&operator[](std::size_t i) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_viewixENSt6size_tE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_viewixENSt6size_tE)
+```
+inline const T &operator[](std::size_t i) const
+```
 
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&front()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view5frontEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view5frontEv)
+```
+inline T &front()
+```
 
-**inline const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&front() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view5frontEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view5frontEv)
+```
+inline const T &front() const
+```
 
-**inline** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&back()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view4backEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view4backEv)
+```
+inline T &back()
+```
 
-**inline const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE) **\&back() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view4backEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view4backEv)
+```
+inline const T &back() const
+```
 
-**inline** [**iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view8iteratorE) **begin()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view5beginEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view5beginEv)
+```
+inline iterator begin()
+```
 
-**inline** [**iterator**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view8iteratorE) **end()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4N8migraphx8internal11tensor_view3endEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal11tensor_view3endEv)
+```
+inline iterator end()
+```
 
-**inline const_iterator begin() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view5beginEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view5beginEv)
+```
+inline const_iterator begin() const
+```
 
-**inline const_iterator end() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4NK8migraphx8internal11tensor_view3endEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4NK8migraphx8internal11tensor_view3endEv)
+```
+inline const_iterator end() const
+```
 
-**template\<class U =** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0EN8migraphx8internal11tensor_viewE)**\>**  
-**inline std::vector\<**[**U**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal11tensor_view9to_vectorENSt6vectorI1UEEv)**\> to_vector() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html\#_CPPv4I0ENK8migraphx8internal11tensor_view9to_vectorENSt6vectorI1UEEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4I0ENK8migraphx8internal11tensor_view9to_vectorENSt6vectorI1UEEv)
+```
+template<class U = T>
+inline std::vector<U> to_vector() const
+```
 
-**Friends**
+##### Friends
 
-**inline friend friend std::ostream & operator\<\< (std::ostream \&os, const tensor_view\< T \> \&x)**
+```
+inline friend friend std::ostream & operator<< (std::ostream &os, const tensor_view< T > &x)
+```
 
 # 5.3 Program <a name="subparagraph53"></a>
 
@@ -3557,58 +3848,61 @@ If we want parameters to the predicate, then we will need to use the make_basic_
 
 ## 5.7.1 roctx.py <a name="anotherparagraph571"></a>
 
-MIGraphX driver provides **roctx** command which can be used with **rocprof** binary to get marker timing information for each MIGraphX operator. In order to help user to process timing information, rocTX helper script is provided at **tools/roctx.py**. The **roctx.py** helper script provides two main functionality: **run** and **parse**. Available knobs and usage are given below:
+MIGraphX driver provides ``` roctx ``` command which can be used with ``` rocprof ``` binary to get marker timing information for each MIGraphX operator. In order to help user to process timing information, rocTX helper script is provided at ``` tools/roctx.py ```. The ``` roctx.py ``` helper script provides two main functionality: ``` run ``` and ``` parse ```. Available knobs and usage are given below:
 
-**Usage**: roctx.py [-h] [--json-path json_path] [--out out]
-
+```
+Usage: roctx.py [-h] [--json-path json_path] [--out out]
 [--study-name study-name] [--repeat repeat] [--parse]
-
 [--run run] [--debug]
+```
 
-\--run
+```
+--run
+```
+Runs ``` migraphx-driver roctx ``` command and given ``` migraphx-driver ``` knobs, and then parses the results, providing GPU kernel timing information. MIGraphX knobs can be given via a string to ``` --run ``` knob. Please see the examples below.
 
-Runs **migraphx-driver roctx** command and given **migraphx-driver** knobs, and then parses the results, providing GPU kernel timing information. MIGraphX knobs can be given via a string to **--run** knob. Please see the examples below.
+```
+--parse
+```
+Given ``` --json-path ```, parses JSON file and provides GPU kernel timing information.
 
-**--parse**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html\#cmdoption-parse](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html#cmdoption-parse)
-
-Given **--json-path**, parses JSON file and provides GPU kernel timing information.
-
-**--out**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html\#cmdoption-out](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html#cmdoption-out)
-
+```
+--out
+```
 Output folder
 
-**--study-name**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html\#cmdoption-study-name](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html#cmdoption-study-name)
-
+```
+--study-name
+```
 Optional. Allows user to name a study for easier interpretation. Defaults to timestamp.
 
-**--repeat**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html\#cmdoption-repeat](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html#cmdoption-repeat)
+```
+--repeat
+```
+Number of iterations. Set to 2 by default.
 
-Number of iterations. Set to **2** by default.
-
-**--debug**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html\#cmdoption-debug](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/tools.html#cmdoption-debug)
-
+```
+--debug
+```
 Provides additional debug information related to data. Only use for debugging purposes.
 
-**Examples:**
+##### Examples:
 
-**Running inference with rocTX for a given ONNX file:**
+##### Running inference with rocTX for a given ONNX file:
 
+```
 python roctx.py --run '--onnx --gpu fcn-resnet50-11.onnx' --out output_folder --repeat 5
+```
+After a run, similar to output given below is expected at terminal. The output will provide ``` SUM ```, ``` MIN ```, ``` MAX ``` and ``` COUNT ``` information for each kernel executed for a given model. Average total time is also provided. There are three files provided for reference:
 
-After a run, similar to output given below is expected at terminal. The output will provide **SUM**, **MIN**, **MAX** and **COUNT** information for each kernel executed for a given model. Average total time is also provided. There are three files provided for reference:
+1. ``` OUTPUT CSV FILE ``` provides a summary of the run, providing utilized MIGraphX knobs and related kernel timing information
 
-1.  **OUTPUT CSV FILE** provides a summary of the run, providing utilized MIGraphX knobs and related kernel timing information
-2.  **KERNEL TIMING DETAILS** provides the hotspot kernel timing information
-3.  This will provide all output data related to all iterations executed during a run.
+2. ``` KERNEL TIMING DETAILS ``` provides the hotspot kernel timing information
 
-An example output:
+3. This will provide all output data related to all iterations executed during a run.
 
-![Table Description automatically generated](media/4e9cabfe12c52e917a4cfd626c3ae52f.png)
+Parsing an already existing JSON file:
 
-Hotspot kerel timing information:
-
-![Text Description automatically generated](media/204c43b3f8b10086b0f6a59a93a554ba.png)
-
-**Parsing an already existing JSON file:**
-
+```
 python roctx.py --parse --json-path ../trace.json
+```
