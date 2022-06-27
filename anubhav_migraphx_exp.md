@@ -131,6 +131,7 @@
 </table 2>
 
 
+
 <table border="0" width="100%">
     <tbody>
 	<tr>
@@ -140,15 +141,125 @@
             <td height="24">
                 <strong> Python User Guide </strong>
             </td>
+	    <td height="24">
+		<strong> C++ User Guide </strong>
+	    </td>
+	    <td height="24">
+		<strong> MIGraphX Driver </strong>
+	    </td>
         </tr>
 	<tr>
             <td height="24">
-                <a href="/anubhav_migraphx_exp.md#11-introduction-">Introduction</a>
+                <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction</a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph21">Setting path and installing package</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph21">2.1. Setting path and installing package</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph31">3.1. Defining different modules in detail</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph41">4.1. Description</a>
             </td>
         </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph111-">1.1.1. Documentation Roadmap</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph22">2.2. Defining different modules in detail</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph311">3.1.1. Shape</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph42">4.2. How to Use</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph12">1.2. List of prerequisites</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph221">2.2.1. Shape</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph312">3.1.2. Argument</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph43">4.3. Defining different modules in detail</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph13">1.3. Installing pre-built packages</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph222">2.2.2. Argument</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph313">3.1.3. Target</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph431">4.3.1. Read</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph14">1.4. Building From Source</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph223">2.2.3. Target</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph314">3.1.4. Program</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph432">4.3.2. compile</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph141">1.4.1. Use the ROCm build tool rbuild</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph224">2.2.4. Program</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph315">3.1.5. Quantize</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph433">4.3.3. Run</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph142">1.4.2. Use cmake to build MIGraphX</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph225">2.2.5. parse_onnx</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph316">3.1.6. parse_onnx</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph434">4.3.4. Perf</a>
+            </td>
+        </tr> 
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph143">1.4.3. Use docker</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph226">2.2.6. parse_tf</a>
+            </td>
+	    <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph317">3.1.7. Load</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph435">4.3.5. Verify</a>
+            </td>
+        </tr>    
     </tbody>
 </table>
 
@@ -774,38 +885,6 @@ enumerator migraphx_shape_bool_type
 ```
 
 ```
-enumerator migraphx_shape_half_type
-```
-
-```
-enumerator migraphx_shape_float_type
-```
-
-```
-enumerator migraphx_shape_double_type
-```
-
-```
-enumerator migraphx_shape_uint8_type
-```
-
-```
-enumerator migraphx_shape_int8_type
-```
-
-```
-enumerator migraphx_shape_uint16_type
-```
-
-```
-enumerator migraphx_shape_int16_type
-```
-
-```
-enumerator migraphx_shape_int32_type
-```
-
-```
 enumerator migraphx_shape_int64_type
 ```
 
@@ -885,12 +964,7 @@ inline friend friend bool operator!= (const shape &px, const shape &py)
 
 ## 3.1.2 Argument <a name="anotherparagraph312"></a>
 
-```
-struct migraphx::argument : public migraphx::handle_base\<\>
-```
-Arguments to be passed to an migraphx arguments.
-
-An ``` argument ``` represents a raw buffer of data with a shape.
+`` raw buffer of data with a shape.
 
 ##### Public Functions
 
