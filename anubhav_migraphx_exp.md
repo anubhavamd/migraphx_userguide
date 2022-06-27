@@ -131,6 +131,28 @@
 </table 2>
 
 
+<table border="0" width="100%">
+    <tbody>
+	<tr>
+	    <td height="24">
+                <strong> Getting Started Guide for MIGraphX </strong>
+            </td>
+            <td height="24">
+                <strong> Python User Guide </strong>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md">Introduction</a>
+            </td>
+            <td>
+                <a href="/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md">Setting path and installing package</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
 # Table Of Contents
 
 1. [Getting Started Guide for MIGraphX](#paragraph1)
