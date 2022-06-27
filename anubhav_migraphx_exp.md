@@ -1,9 +1,10 @@
+<p align="right"><a>English</a> | <a href="docs-jp/README.md">日本語</a></p>
 <table width="100%">
-        <tr width="100%">
-           <td align="center"><img src="https://raw.githubusercontent.com/Xilinx/Image-Collateral/main/xilinx-logo.png" width="30%"/><h1>Vitis™ In-Depth Tutorials</h1>
-           </td>
-        </tr>
-       </table>
+ <tr width="100%">
+    <td align="center"><img src="https://raw.githubusercontent.com/Xilinx/Image-Collateral/main/xilinx-logo.png" width="30%"/><h1>Vitis™ In-Depth Tutorials</h1>
+    </td>
+ </tr>
+</table>
 
 <!---
 # Table Of Contents
