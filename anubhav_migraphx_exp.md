@@ -5,6 +5,7 @@
         </tr>
        </table>
 
+<!---
 # Table Of Contents
 
 <table 1>
@@ -129,6 +130,8 @@
 </td>
 </pre>
 </table 2>
+
+ -->
 
 # Table Of Contents
 
@@ -298,8 +301,203 @@
                 <strong> <a> 5. Contributor Guide</a> </strong>
             </td>
         </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph51">5.1. MIGraphX Fundamentals</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph55">5.5. Passes</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph511">5.1.1. Location of the Examples</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph551">5.5.1. Pass</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph512">5.1.2. Adding Two Literals</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph552">5.5.2. Dead_code_elimination</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph513">5.1.3. Using Parameters</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph553">5.5.3. Eliminate_common_subexpression</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph514">5.1.4. Handling Tensor Data</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph554">5.5.4. Eliminate_concat</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph515">5.1.5. Importing From ONNX</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph555">5.5.5. Eliminate_contiguous</a>
+            </td>
+        </tr>
+        <tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph52">5.2. Data Types</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph556">5.5.6. Eliminate_identity</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph521">5.2.1. Shape</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph557">5.5.7. Eliminate_pad</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph522">5.2.2. Literal</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph558">5.5.8. Propagate_constant</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph523">5.2.3. Argument</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph559">5.5.9. Rewrite_batchnorm</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph524">5.2.4. raw_data</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph5510">5.5.10. Rewrite_rnn</a>
+            </td>
+        </tr>
+        <tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph525">5.2.5. Tensor_view</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph5511">5.5.11. Schedule</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph53">5.3. Program</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph5512">5.5.12. Simplify_algebra</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph531">5.3.1. Instruction</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph5512">5.5.12. Simplify_algebra</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph532">5.3.2. Instruction_ref</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph5513">5.5.13. Simplify_reshapes</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph533">5.3.3. Program</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph56">5.6. Matchers</a>
+            </td>
+        </tr>
+        <tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph534">5.3.4. Parse_onnx</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph561">5.6.1. Introduction</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph535">5.3.5. Parse_tf</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph562">5.6.2. Arguments</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph536">5.3.6. Onnx_options</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph563">5.6.3. Binding</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph537">5.3.7. Tf_options</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph564">5.6.4. Finding matches</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#subparagraph54">5.4. Targets</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph565">5.6.5. Creating matchers</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph541">5.4.1. Target</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#subparagraph57">5.7. Tools</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph542">5.4.2. gpu::target</a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph571">5.7.1. roctx.py</a>
+            </td>
+        </tr>
+	<tr>
+            <td height="24">
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph543">5.4.3. cpu::target</a>
+            </td>
+            <td>
+                <a href=""></a>
+            </td>
+        </tr>
 </tbody>
 </table>
+
+
+<!--
 
 # Table Of Contents
 
@@ -476,7 +674,7 @@
    5.7. [Tools](#subparagraph57)
   
      5.7.1.[roctx.py](#anotherparagraph571)
-      
+ -->
    
 # 1. Getting Started Guide for MIGraphX <a name="paragraph1"></a>
 
