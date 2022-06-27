@@ -130,22 +130,22 @@
 </pre>
 </table 2>
 
-
+# Table Of Contents
 
 <table border="0" width="100%">
     <tbody>
 	<tr>
 	    <td height="24">
-                <strong> Getting Started Guide for MIGraphX </strong>
+                <strong> 1. Getting Started Guide for MIGraphX </strong>
             </td>
             <td height="24">
-                <strong> Python User Guide </strong>
+                <strong> 2. Python User Guide </strong>
             </td>
 	    <td height="24">
-		<strong> C++ User Guide </strong>
+		<strong> 3. C++ User Guide </strong>
 	    </td>
 	    <td height="24">
-		<strong> MIGraphX Driver </strong>
+		<strong> 4. MIGraphX Driver </strong>
 	    </td>
         </tr>
 	<tr>
@@ -259,10 +259,47 @@
             <td>
                 <a href="/anubhav_migraphx_exp.md#anotherparagraph435">4.3.5. Verify</a>
             </td>
+        </tr> 
+	<tr>
+            <td height="24">
+                <a href=""></a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph227">2.2.7. Load</a>
+            </td>
+	    <td>
+                <a href=""></a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph436">	4.3.6. Roctx</a>
+            </td>
+        </tr>  
+	<tr>
+            <td height="24">
+                <a href=""></a>
+            </td>
+            <td>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph228">2.2.8. Save</a>
+            </td>
+	    <td>
+                <a href=""></a>
+            </td>
+            <td>
+                <a href=""></a>
+            </td>
         </tr>    
     </tbody>
 </table>
 
+<table border="0" width="100%">
+    <tbody>
+        <tr>
+            <td colspan="3" height="24" align="center">
+                <strong> <a> 5. Contributor Guide</a> </strong>
+            </td>
+        </tr>
+</tbody>
+</table>
 
 # Table Of Contents
 
