@@ -1,13 +1,14 @@
 <p align="right"><a>English</a> | <a href="docs-jp/README.md">日本語</a></p>
-<table width="100%">
- <tr width="100%">
+<table width="100%" align="center">
+ <tr width="100%" align="center">
     <td align="center"><img src="https://github.com/anubhavamd/migraphx_userguide/blob/main/amdrocm.png" width="30%"/><h1>MiGraphX Tutorials</h1>
     </td>
  </tr>
 </table>
 
 <!---
-# Table Of Contents
+# Table Of Contents 
+</div>
 
 <table 1>
 <tr>
