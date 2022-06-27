@@ -143,10 +143,10 @@
         </tr>
 	<tr>
             <td height="24">
-                <a href="./anubhav_migraphx_exp.md#11-introduction-">Introduction</a>
+                <a href="/anubhav_migraphx_exp.md#11-introduction-">Introduction</a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#11-introduction-">Setting path and installing package</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph21">Setting path and installing package</a>
             </td>
         </tr>
     </tbody>
