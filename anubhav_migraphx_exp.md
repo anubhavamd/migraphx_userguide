@@ -6,7 +6,6 @@
  </tr>
 </table>
 
-<!---
 # Table Of Contents 
 </div>
 
@@ -21,7 +20,7 @@
 <td>
 <pre>
 1. Getting Started Guide for MIGraphX 
-        1.1. Introduction 
+         <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction </a> 
 		1.1.1. Documentation Roadmap
 	1.2. List of prerequisites
 	1.3. Installing pre-built packages
@@ -133,11 +132,11 @@
 </pre>
 </table 2>
 
- -->
+
 
 # Table Of Contents
 
-<table border="0" width="100%">
+<table border="0" width="100%" cellpadding="0">
     <tbody>
 	<tr>
 	    <td height="24">
@@ -155,16 +154,16 @@
         </tr>
 	<tr>
             <td height="24">
-                <a href="/anubhav_migraphx_exp.md#11-introduction-">    1.1. Introduction</a>
+               <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction </a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph21">    2.1. Setting path and installing package</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph21">2.1. Setting path and installing package</a>
             </td>
 	    <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph31">    3.1. Defining different modules in detail</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph31">3.1. Defining different modules in detail</a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph41">    4.1. Description</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph41">4.1. Description</a>
             </td>
         </tr>
 	<tr>
