@@ -20,58 +20,56 @@
 <td>
 <pre>
 1. Getting Started Guide for MIGraphX 
-         <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction </a> 
-		1.1.1. Documentation Roadmap
-	1.2. List of prerequisites
-	1.3. Installing pre-built packages
-	1.4. Building From Source
-		1.4.1. Use the ROCm build tool rbuild
-		1.4.2. Use cmake to build MIGraphX
-		1.4.3. Use docker
+        <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction </a> 
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph111-">1.1.1. Documentation Roadmap</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph12">1.2. List of prerequisites</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph13">1.3. Installing pre-built packages</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph14">1.4. Building From Source</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph141">1.4.1. Use the ROCm build tool rbuild</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph142">1.4.2. Use cmake to build MIGraphX</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph143">1.4.3. Use docker</a>
  </pre>
 </td>
 <td>
 <pre>
 2. Python User Guide
-	2.1. Setting path and installing package
-	2.2. Defining different modules in detail
-		2.2.1. Shape
-		2.2.2. Argument
-		2.2.3. Target
-		2.2.4. Program
-		2.2.5. parse_onnx
-		2.2.6. parse_tf
-		2.2.7. Load
-		2.2.8. Save
+	<a href="/anubhav_migraphx_exp.md#subparagraph21">2.1. Setting path and installing package</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph22">2.2. Defining different modules in detail</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph221">2.2.1. Shape</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph222">2.2.2. Argument</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph223">2.2.3. Target</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph224">2.2.4. Program</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph225">2.2.5. parse_onnx</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph226">2.2.6. parse_tf</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph227">2.2.7. Load</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph228">2.2.8. Save</a>
 </pre>
 </td>
 <td>
 <pre>
 3. C++ User Guide
-	3.1. Defining different modules in detail
-		3.1.1. Shape
-		3.1.2. Argument
-		3.1.3. Target
-		3.1.4. Program
-		3.1.5. Quantize
-		3.1.6. parse_onnx
-		3.1.7. Load
+	<a href="/anubhav_migraphx_exp.md#subparagraph31">3.1. Defining different modules in detail</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph311">3.1.1. Shape</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph312">3.1.2. Argument</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph313">3.1.3. Target</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph314">3.1.4. Program</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph315">3.1.5. Quantize</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph316">3.1.6. parse_onnx</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph317">3.1.7. Load</a>
 </pre>
 </td>
 <td>
 <pre>
 4. MIGraphX Driver
-	4.1. Description
-	4.2. How to Use
-		4.2.1. Commands
-		4.2.2. Options
-	4.3. Defining different modules in detail
-		4.3.1. Read	
-		4.3.2. compile
-		4.3.3. Run
-		4.3.4. Perf
-		4.3.5. Verify
-		4.3.6. Roctx
+	<a href="/anubhav_migraphx_exp.md#subparagraph41">4.1. Description</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph42">4.2. How to Use</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph43">4.3. Defining different modules in detail</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph431">4.3.1. Read</a>	
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph432">4.3.2. compile</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph433">4.3.3. Run</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph434">4.3.4. Perf</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph435">4.3.5. Verify</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph436">4.3.6. Roctx</a>
 </pre>
 </td>
 </table 1>
@@ -82,11 +80,11 @@
 <td>
 <pre>
 5. Contributor Guide
-	5.1. MIGraphX Fundamentals
-		5.1.1. Location of the Examples
-		5.1.2. Adding Two Literals
-		5.1.3. Using Parameters
-		5.1.4. Handling Tensor Data
+	<a href="/anubhav_migraphx_exp.md#subparagraph51">5.1. MIGraphX Fundamentals</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph511">5.1.1. Location of the Examples</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph512">5.1.2. Adding Two Literals</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph513">5.1.3. Using Parameters</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph514">5.1.4. Handling Tensor Data</a>
 		5.1.5. Importing From ONNX
 	5.2. Data Types
 		5.2.1. Shape
@@ -106,11 +104,11 @@
 		5.4.1. Target
 		5.4.2. gpu::target
 		5.4.3. cpu::target
-	5.5. Passes
-		5.5.1. Pass
-		5.5.2. Dead_code_elimination
-		5.5.3. Eliminate_common_subexpression
-		5.5.4. Eliminate_concat
+	<a href="/anubhav_migraphx_exp.md#subparagraph55">5.5. Passes</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph551">5.5.1. Pass</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph552">5.5.2. Dead_code_elimination</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph553">5.5.3. Eliminate_common_subexpression</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph554">5.5.4. Eliminate_concat</a>
 		5.5.5. Eliminate_contiguous
 `		5.5.6. Eliminate_identity
 		5.5.7. Eliminate_pad
@@ -132,7 +130,7 @@
 </pre>
 </table 2>
 
-
+<!--
 
 # Table Of Contents
 
@@ -275,7 +273,7 @@
                 <a href=""></a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#anotherparagraph436">	4.3.6. Roctx</a>
+                <a href="/anubhav_migraphx_exp.md#anotherparagraph436">4.3.6. Roctx</a>
             </td>
         </tr>  
 	<tr>
@@ -496,7 +494,7 @@
         </tr>
 </tbody>
 </table>
-
+-->
 
 <!--
 
