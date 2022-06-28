@@ -3569,611 +3569,909 @@ inline friend friend std::ostream & operator<< (std::ostream &os, const tensor_v
 
 ## 5.3.1 Instruction <a name="anotherparagraph531"></a>
 
+```
 **struct migraphx::internal::instruction**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instructionE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instructionE)
+```
 
-**Public Functions**
+##### Public Functions
 
-**inline instruction()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction11instructionEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction11instructionEv)
+```
+inline instruction()
+```
 
-**instruction(**[**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **o**, [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **r**, **std::vector\<**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**\> args)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction11instructionE9operation5shapeNSt6vectorI15instruction_refEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction11instructionE9operation5shapeNSt6vectorI15instruction_refEE)
+```
+instruction(operation o, shape r, std::vector<instruction_ref> args)
+```
 
-**instruction(**[**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **o**, [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **r**, **std::vector\<**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**\> args**, **std::vector\<module_ref\> modules)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction11instructionE9operation5shapeNSt6vectorI15instruction_refEENSt6vectorI10module_refEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction11instructionE9operation5shapeNSt6vectorI15instruction_refEENSt6vectorI10module_refEE)
+```
+instruction(operation o, shape r, std::vector<instruction_ref> args, std::vector<module_ref> modules)
+```
 
-**instruction(**[**literal**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal7literalE) **l)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction11instructionE7literal](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction11instructionE7literal)
+```
+instruction(literal l)
+```
 
-**void replace(**[**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **o)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction7replaceE9operation](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction7replaceE9operation)
+```
+void replace(operation o)
+```
 
-**void recompute_shape()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction15recompute_shapeEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction15recompute_shapeEv)
+```
+void recompute_shape()
+```
 
-**void clear_arguments()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction15clear_argumentsEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction15clear_argumentsEv)
+```
+void clear_arguments()
+```
 
-**bool valid(instruction_ref** **start**, **bool check_order = false) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction5validE15instruction_refb](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction5validE15instruction_refb)
+```
+bool valid(instruction_ref start, bool check_order = false) const
+```
 
-**bool valid() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction5validEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction5validEv)
+```
+bool valid() const
+```
 
-[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **get_shape() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction9get_shapeEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction9get_shapeEv)
+```
+shape get_shape() const
+```
 
-**const** [**literal**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal7literalE) **\&get_literal() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction11get_literalEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction11get_literalEv)
+```
+const literal &get_literal() const
+```
 
-**const** [**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **\&get_operator() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction12get_operatorEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction12get_operatorEv)
+```
+const operation &get_operator() const
+```
 
-**std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction4nameEv)
+```
+std::string name() const
+```
 
-**const std::vector\<instruction_ref\> \&inputs() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction6inputsEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction6inputsEv)
+```
+const std::vector<instruction_ref> &inputs() const
+```
 
-**const std::vector\<module_ref\> \&module_inputs() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction13module_inputsEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction13module_inputsEv)
+```
+const std::vector<module_ref> &module_inputs() const
+```
 
-**const std::vector\<instruction_ref\> \&outputs() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction7outputsEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction7outputsEv)
+```
+const std::vector<instruction_ref> &outputs() const
+```
 
-**void add_output(instruction_ref ins)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction10add_outputE15instruction_ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction10add_outputE15instruction_ref)
+```
+void add_output(instruction_ref ins)
+```
 
-**template\<class T\>**  
-**inline void remove_output(const** [**T**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4I0EN8migraphx8internal11instruction13remove_outputEvRK1T) **\&ins)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4I0EN8migraphx8internal11instruction13remove_outputEvRK1T](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4I0EN8migraphx8internal11instruction13remove_outputEvRK1T)
+```
+template<class T>
+inline void remove_output(const T &ins)
+```
 
-**bool can_eval() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction8can_evalEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction8can_evalEv)
+```
+bool can_eval() const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **eval(bool check_eval = true) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction4evalEb](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction4evalEb)
+```
+argument eval(bool check_eval = true) const
+```
 
-**void finalize(context \&ctx)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction8finalizeER7context](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction8finalizeER7context)
+```
+void finalize(context &ctx)
+```
 
-**void set_normalized(bool value = true)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction14set_normalizedEb](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction14set_normalizedEb)
+```
+void set_normalized(bool value = true)
+```
 
-**bool is_normalized() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction13is_normalizedEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction13is_normalizedEv)
+```
+bool is_normalized() const
+```
 
-**bool need_normalization() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction18need_normalizationEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction18need_normalizationEv)
+```
+bool need_normalization() const
+```
 
-[**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **normalized_operator() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction19normalized_operatorEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction19normalized_operatorEv)
+```
+operation normalized_operator() const
+```
 
-**void debug_print() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal11instruction11debug_printEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal11instruction11debug_printEv)
+```
+void debug_print() const
+```
 
-**Public Static Functions**
+##### Public Static Functions
 
-**static void replace_refs(**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, **const std::unordered_map\<**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**,** [**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**\> \&map_insts**, **const std::unordered_map\<module_ref, module_ref\> \&map_mods)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction12replace_refsE15instruction_refRKNSt13unordered_mapI15instruction_ref15instruction_refEERKNSt13unordered_mapI10module_ref10module_refEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction12replace_refsE15instruction_refRKNSt13unordered_mapI15instruction_ref15instruction_refEERKNSt13unordered_mapI10module_ref10module_refEE)
+```
+static void replace_refs(instruction_ref ins, const std::unordered_map<instruction_ref, instruction_ref> &map_insts, const std::unordered_map<module_ref, module_ref> &map_mods)
+```
 
-**static void backreference(instruction_ref ref)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction13backreferenceE15instruction_ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction13backreferenceE15instruction_ref)
+```
+static void backreference(instruction_ref ref)
+```
 
-**static void replace_argument(**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, [**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **old**, [**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **new_ins)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction16replace_argumentE15instruction_ref15instruction_ref15instruction_ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction16replace_argumentE15instruction_ref15instruction_ref15instruction_ref)
+```
+static void replace_argument(instruction_ref ins, instruction_ref old, instruction_ref new_ins)
+```
 
-**static void replace_mod_argument(**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, **module_ref old**, **module_ref new_mod)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction20replace_mod_argumentE15instruction_ref10module_ref10module_ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction20replace_mod_argumentE15instruction_ref10module_ref10module_ref)
+```
+static void replace_mod_argument(instruction_ref ins, module_ref old, module_ref new_mod)
+```
 
-**static void replace(**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, [**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **o**, **const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&r**, **std::vector\<**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**\> args)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction7replaceE15instruction_ref9operationRK5shapeNSt6vectorI15instruction_refEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction7replaceE15instruction_ref9operationRK5shapeNSt6vectorI15instruction_refEE)
+```
+static void replace(instruction_ref ins, operation o, const shape &r, std::vector<instruction_ref> args)
+```
 
-**static void replace(**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, [**operation**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/operators.html#_CPPv4N8migraphx8internal9operationE) **o**, **const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&r**, **std::vector\<**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**\> args**, **std::vector\<module_ref\> module_args)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction7replaceE15instruction_ref9operationRK5shapeNSt6vectorI15instruction_refEENSt6vectorI10module_refEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction7replaceE15instruction_ref9operationRK5shapeNSt6vectorI15instruction_refEENSt6vectorI10module_refEE)
+```
+static void replace(instruction_ref ins, operation o, const shape &r, std::vector<instruction_ref> args, std::vector<module_ref> module_args)
+```
 
-**static** [**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **get_output_alias(**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, **bool shallow = false)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction16get_output_aliasE15instruction_refb](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction16get_output_aliasE15instruction_refb)
+```
+static instruction_ref get_output_alias(instruction_ref ins, bool shallow = false)
+```
 
-**static void print(std::ostream \&os**, [**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **ins**, **const std::unordered_map\<**[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE)**, std::string\> \&names)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal11instruction5printERNSt7ostreamE15instruction_refRKNSt13unordered_mapI15instruction_refNSt6stringEEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal11instruction5printERNSt7ostreamE15instruction_refRKNSt13unordered_mapI15instruction_refNSt6stringEEE)
+```
+static void print(std::ostream &os, instruction_ref ins, const std::unordered_map<instruction_ref, std::string> &names)
+```
 
-**Friends**
+##### Friends
 
-**friend friend bool operator== (const instruction \&i, instruction_ref ref)**
+```
+friend friend bool operator== (const instruction &i, instruction_ref ref)
+```
 
-**friend friend bool operator== (const instruction \&x, const instruction \&y)**
+```
+friend friend bool operator== (const instruction &x, const instruction &y)
+```
 
-**friend friend bool operator!= (const instruction \&x, const instruction \&y)**
+```
+friend friend bool operator!= (const instruction &x, const instruction &y)
+```
 
-**friend friend bool operator== (instruction_ref ref, const instruction \&i)**
+```
+friend friend bool operator== (instruction_ref ref, const instruction &i)
+```
 
-**friend friend bool operator!= (const instruction \&i, instruction_ref ref)**
+```
+friend friend bool operator!= (const instruction &i, instruction_ref ref)
+```
 
-**friend friend bool operator!= (instruction_ref ref, const instruction \&i)**
+```
+friend friend bool operator!= (instruction_ref ref, const instruction &i)
+```
 
 ## 5.3.2 Instruction_ref <a name="anotherparagraph532"></a>
 
-**type migraphx::internal::instruction_ref**
-
+```
+type migraphx::internal::instruction_ref
+```
 References an instruction in the program.
 
 ## 5.3.3 Program <a name="anotherparagraph533"></a>
 
-**struct migraphx::internal::program**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7programE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE)
-
+```
+struct migraphx::internal::program
+```
 Stores the instruction stream.
 
-**Public Functions**
+##### Public Functions
 
-**program()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program7programEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program7programEv)
+```
+program()
+```
 
-**program(**[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program7programERR7program)**&&) noexcept**
+```
+program(program&&) noexcept
+```
 
-**program(const** [**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program7programERK7program)**&)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program7programERK7program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program7programERK7program)
+```
+program(const program&)
+```
 
-[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **\&operator=(**[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE)**)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7programaSE7program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programaSE7program)
+```
+program &operator=(program)
+```
 
-**\~program() noexcept**
+```
+program() noexcept
+```
 
-**std::vector\<std::string\> get_parameter_names() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program19get_parameter_namesEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program19get_parameter_namesEv)
+```
+std::vector<std::string> get_parameter_names() const
+```
 
-[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **get_parameter_shape(std::string name) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program19get_parameter_shapeENSt6stringE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program19get_parameter_shapeENSt6stringE)
+```
+shape get_parameter_shape(std::string name) const
+```
 
-[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **get_parameter(std::string name) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program13get_parameterENSt6stringE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program13get_parameterENSt6stringE)
+```
+instruction_ref get_parameter(std::string name) const
+```
 
-**std::unordered_map\<std::string,** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE)**\> get_parameter_shapes() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program20get_parameter_shapesEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program20get_parameter_shapesEv)
+```
+std::unordered_map<std::string, shape> get_parameter_shapes() const
+```
 
-**std::vector\<**[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE)**\> eval(parameter_map params) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program4evalE13parameter_map](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program4evalE13parameter_map)
+```
+std::vector<argument> eval(parameter_map params) const
+```
 
-**std::size_t size() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program4sizeEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program4sizeEv)
+```
+std::size_t size() const
+```
 
-**std::vector\<**[**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE)**\> get_output_shapes() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program17get_output_shapesEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program17get_output_shapesEv)
+```
+std::vector<shape> get_output_shapes() const
+```
 
-**context \&get_context() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11get_contextEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11get_contextEv)
+```
+context &get_context() const
+```
 
-[**instruction_ref**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal15instruction_refE) **validate() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program8validateEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program8validateEv)
+```
+instruction_ref validate() const
+```
 
-**void compile(const** [**target**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal6targetE) **\&t**, **compile_options options = compile_options{})**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program7compileERK6target15compile_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program7compileERK6target15compile_options)
+```
+void compile(const target &t, compile_options options = compile_options{})
+```
 
-**bool is_compiled() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11is_compiledEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11is_compiledEv)
+```
+bool is_compiled() const
+```
 
-**void finalize()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program8finalizeEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program8finalizeEv)
+```
+void finalize()
+```
 
-**void perf_report(std::ostream \&os**, **std::size_t n**, **parameter_map params**, **std::size_t batch = 1) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11perf_reportERNSt7ostreamENSt6size_tE13parameter_mapNSt6size_tE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11perf_reportERNSt7ostreamENSt6size_tE13parameter_mapNSt6size_tE)
+```
+void perf_report(std::ostream &os, std::size_t n, parameter_map params, std::size_t batch = 1) const
+```
 
-**void mark(const parameter_map \&params**, **marker &&m)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program4markERK13parameter_mapRR6marker](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program4markERK13parameter_mapRR6marker)
+```
+void mark(const parameter_map &params, marker &&m)
+```
 
-**value to_value() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program8to_valueEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program8to_valueEv)
+```
+value to_value() const
+```
 
-**void from_value(const value \&v)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program10from_valueERK5value](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program10from_valueERK5value)
+```
+void from_value(const value &v)
+```
 
-**void debug_print() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11debug_printEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11debug_printEv)
+```
+void debug_print() const
+```
 
-**void debug_print(instruction_ref ins) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11debug_printE15instruction_ref](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11debug_printE15instruction_ref)
+```
+void debug_print(instruction_ref ins) const
+```
 
-**void print(std::unordered_map\<instruction_ref, std::string\> \&names**, **const std::function\<void(instruction_ref, std::unordered_map\<instruction_ref, std::string\>)\> \&print_func) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program5printERNSt13unordered_mapI15instruction_refNSt6stringEEERKNSt8functionIFv15instruction_refNSt13unordered_mapI15instruction_refNSt6stringEEEEEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program5printERNSt13unordered_mapI15instruction_refNSt6stringEEERKNSt8functionIFv15instruction_refNSt13unordered_mapI15instruction_refNSt6stringEEEEEE)
+```
+void print(std::unordered_map<instruction_ref, std::string> &names, const std::function<void(instruction_ref, std::unordered_map<instruction_ref, std::string>)> &print_func) const
+```
 
-**void print_graph(std::ostream \&os**, **bool brief = false) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11print_graphERNSt7ostreamEb](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11print_graphERNSt7ostreamEb)
+```
+void print_graph(std::ostream &os, bool brief = false) const
+```
 
-**void print_cpp(std::ostream \&os) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program9print_cppERNSt7ostreamE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program9print_cppERNSt7ostreamE)
+```
+void print_cpp(std::ostream &os) const
+```
 
-**void dry_run(parameter_map params) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program7dry_runE13parameter_map](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program7dry_runE13parameter_map)
+```
+void dry_run(parameter_map params) const
+```
 
-**void annotate(std::ostream \&os**, **const std::function\<void(instruction_ref)\> \&a) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program8annotateERNSt7ostreamERKNSt8functionIFv15instruction_refEEE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program8annotateERNSt7ostreamERKNSt8functionIFv15instruction_refEEE)
+```
+void annotate(std::ostream &os, const std::function<void(instruction_ref)> &a) const
+```
 
-[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **\&sort()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program4sortEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program4sortEv)
+```
+program &sort()
+```
 
-**module \*create_module(const std::string \&name)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program13create_moduleERKNSt6stringE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program13create_moduleERKNSt6stringE)
+```
+module *create_module(const std::string &name)
+```
 
-**module \*get_module(const std::string \&name)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program10get_moduleERKNSt6stringE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program10get_moduleERKNSt6stringE)
+```
+module *get_module(const std::string &name)
+```
 
-**const module \*get_module(const std::string \&name) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program10get_moduleERKNSt6stringE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program10get_moduleERKNSt6stringE)
+```
+const module *get_module(const std::string &name) const
+```
 
-**module \*get_main_module()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program15get_main_moduleEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program15get_main_moduleEv)
+```
+module *get_main_module()
+```
 
-**const module \*get_main_module() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program15get_main_moduleEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program15get_main_moduleEv)
+```
+const module *get_main_module() const
+```
 
-**std::vector\<const module\*\> get_modules() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4NK8migraphx8internal7program11get_modulesEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4NK8migraphx8internal7program11get_modulesEv)
+```
+std::vector<const module*> get_modules() const
+```
 
-**std::vector\<module\*\> get_modules()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program11get_modulesEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program11get_modulesEv)
+```
+std::vector<module*> get_modules()
+```
 
-**void remove_module(const std::string \&name)**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program13remove_moduleERKNSt6stringE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program13remove_moduleERKNSt6stringE)
+```
+void remove_module(const std::string &name)
+```
 
-**void remove_unused_modules()**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal7program21remove_unused_modulesEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7program21remove_unused_modulesEv)
+```
+void remove_unused_modules()
+```
 
-**Friends**
+###### Friends
 
-**friend friend std::ostream & operator\<\< (std::ostream \&os, const program \&p)**
+```
+friend friend std::ostream & operator<< (std::ostream &os, const program &p)
+```
 
-**friend friend bool operator== (const program \&x, const program \&y)**
+```
+friend friend bool operator== (const program &x, const program &y)
+```
 
-**inline friend friend bool operator!= (const program \&x, const program \&y)**
+```
+inline friend friend bool operator!= (const program &x, const program &y)
+```
 
 ## 5.3.4 Parse_onnx <a name="anotherparagraph534"></a>
 
-[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **migraphx::internal::parse_onnx(const std::string \&name**, **const** [**onnx_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_optionsE)**& =** [**onnx_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_optionsE)**{})**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal10parse_onnxERKNSt6stringERK12onnx_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10parse_onnxERKNSt6stringERK12onnx_options)
-
+```
+program migraphx::internal::parse_onnx(const std::string &name, const onnx_options& = onnx_options{})
+```
 Create a program from an onnx file.
 
 ## 5.3.5 Parse_tf <a name="anotherparagraph535"></a>
 
-[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **migraphx::internal::parse_tf(const std::string \&name**, **const** [**tf_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_optionsE) **\&options =** [**tf_options**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_optionsE)**{})**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal8parse_tfERKNSt6stringERK10tf_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal8parse_tfERKNSt6stringERK10tf_options)
-
+```
+program migraphx::internal::parse_tf(const std::string &name, const tf_options &options = tf_options{})
+```
 Create a program from a tf pb file (default is nhwc format)
 
 ## 5.3.6 Onnx_options <a name="anotherparagraph536"></a>
 
-**struct migraphx::internal::onnx_options**
-
+```
+struct migraphx::internal::onnx_options
+```
 struct to pass in onnx options to parser
 
-**Public Members**
+##### Public Members
 
-**std::size_t default_dim_value = 1** [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal12onnx_options17default_dim_valueE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_options17default_dim_valueE)
-
+```
+std::size_t default_dim_value = 1
+```
 default batch size to use (if not specified in onnx file)
 
-**std::unordered_map\<std::string, std::vector\<std::size_t\>\> map_input_dims = {}**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal12onnx_options14map_input_dimsE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_options14map_input_dimsE)
-
+```
+std::unordered_map<std::string, std::vector<std::size_t>> map_input_dims = {}
+```
 Explicitly specify the dims of an input.
 
-**bool skip_unknown_operators = false**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal12onnx_options22skip_unknown_operatorsE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_options22skip_unknown_operatorsE)
-
+```
+bool skip_unknown_operators = false
+```
 Continue parsing onnx file if an unknown operator is found.
 
-**bool print_program_on_error = false** [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal12onnx_options22print_program_on_errorE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_options22print_program_on_errorE)
-
+```
+bool print_program_on_error = false
+```
 Print program if an error occurs.
 
-**int64_t max_loop_iterations = 10**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal12onnx_options19max_loop_iterationsE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal12onnx_options19max_loop_iterationsE)
-
+```
+int64_t max_loop_iterations = 10
+```
 Max iter num for the loop operator.
 
 ## 5.3.7 Tf_options <a name="anotherparagraph537"></a>
 
-**struct migraphx::internal::tf_options**
-
+```
+struct migraphx::internal::tf_options
+```
 struct to pass in tf options to parser
 
-**Public Members**
+##### Public Members
 
-**bool is_nhwc = false**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal10tf_options7is_nhwcE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_options7is_nhwcE)
+```
+bool is_nhwc = false
+```
 
-**unsigned int batch_size = 1**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal10tf_options10batch_sizeE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_options10batch_sizeE)
+```
+unsigned int batch_size = 1
+```
 
-**std::unordered_map\<std::string, std::vector\<std::size_t\>\> map_input_dims = {}**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html\#_CPPv4N8migraphx8internal10tf_options14map_input_dimsE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal10tf_options14map_input_dimsE)
-
+```
+std::unordered_map<std::string, std::vector<std::size_t>> map_input_dims = {}
+```
 Explicitly specify the dims of an input.
 
-**std::vector\<std::string\> output_node_names = {}**
+```
+std::vector<std::string> output_node_names = {}
+```
 
 # 5.4 Targets <a name="subparagraph54"></a>
 
 ## 5.4.1 Target <a name="anotherparagraph541"></a>
 
-**struct migraphx::internal::target**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4N8migraphx8internal6targetE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal6targetE)
-
+```
+struct migraphx::internal::target
+```
 An interface for a compilation target.
 
-**Public Functions**
+##### Public Functions
 
-**std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal6target4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal6target4nameEv)
-
+```
+std::string name() const
+```
 A unique name used to identify the target.
 
-**std::vector\<**[**pass**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal4passE)**\> get_passes(context \&ctx**, **const compile_options \&options) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal6target10get_passesER7contextRK15compile_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal6target10get_passesER7contextRK15compile_options)
-
+```
+std::vector<pass> get_passes(context &ctx, const compile_options &options) const
+```
 The transformation pass to be run during compilation.
 
-**Parameters**
+##### Parameters
 
--   **ctx** – This is the target-dependent context that is created by get_context
--   **options** – Compiling options passed in by the user
+-   ctx – This is the target-dependent context that is created by ``` get_context ```
+-   options – Compiling options passed in by the user
 
-    **Returns:** The passes to be ran
+##### Returns: The passes to be ran
 
-**context get_context() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal6target11get_contextEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal6target11get_contextEv)
-
+```
+context get_context() const
+```
 Construct a context for the target.
 
-**Returns:** The context to be used during compilation and execution.
+##### Returns: The context to be used during compilation and execution.
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy_to(const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **\&arg) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal6target7copy_toERK8argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal6target7copy_toERK8argument)
-
+```
+argument copy_to(const argument &arg) const
+```
 copy an argument to the current target.
 
-**Parameters: arg** – Input argument to be copied to the target
+##### Parameters
 
-**Returns:** Argument in the target.
+-   arg – Input argument to be copied to the target
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy_from(const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **\&arg) const** [https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal6target9copy_fromERK8argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal6target9copy_fromERK8argument)
+-   Returns: Argument in the target.
 
+```
+argument copy_from(const argument &arg) const
+```
 copy an argument from the current target.
 
-**Parameters: arg** – Input argument to be copied from the target
+##### Parameters: 
 
-**Returns:** Argument in the host.
+-   arg – Input argument to be copied from the target
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **allocate(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal6target8allocateERK5shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal6target8allocateERK5shape)
+-   Returns: Argument in the host.
 
+```
+argument allocate(const shape &s) const
+```
 Allocate an argument based on the input shape.
 
-**Parameters: s** – Shape of the argument to be allocated in the target
+##### Parameters: 
 
-**Returns** Allocated argument in the target.
+-   s – Shape of the argument to be allocated in the target
+
+-   Returns: Allocated argument in the target.
 
 ## 5.4.2 gpu::target <a name="anotherparagraph542"></a>
 
-**struct migraphx::internal::gpu::target**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4N8migraphx8internal3gpu6targetE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal3gpu6targetE)
+```
+struct migraphx::internal::gpu::target
+```
 
-**Public Functions**
+##### Public Functions
 
-**std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target4nameEv)
+```
+std::string name() const
+```
 
-**std::vector\<**[**pass**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal4passE)**\> get_passes(migraphx::context \&gctx**, **const compile_options \&options) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target10get_passesERN8migraphx7contextERK15compile_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target10get_passesERN8migraphx7contextERK15compile_options)
+```
+std::vector<pass> get_passes(migraphx::context &gctx, const compile_options &options) const
+```
 
-**migraphx::context get_context() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target11get_contextEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target11get_contextEv)
+```
+migraphx::context get_context() const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy_to(const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **\&arg) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target7copy_toERK8argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target7copy_toERK8argument)
+```
+argument copy_to(const argument&arg) const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy_from(const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **\&arg) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target9copy_fromERK8argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target9copy_fromERK8argument)
+```
+argument copy_from(const argument &arg) const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **allocate(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3gpu6target8allocateERK5shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3gpu6target8allocateERK5shape)
+```
+argument allocate(const shape &s) const
+```
 
 ## 5.4.3 cpu::target <a name="anotherparagraph543"></a>
 
-**struct migraphx::internal::cpu::target**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4N8migraphx8internal3cpu6targetE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4N8migraphx8internal3cpu6targetE)
+```
+struct migraphx::internal::cpu::target
+```
 
-**Public Functions**
+##### Public Functions
 
-**std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target4nameEv)
+```
+std::string name() const
+```
 
-**std::vector\<**[**pass**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal4passE)**\> get_passes(migraphx::context \&gctx**, **const compile_options&) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target10get_passesERN8migraphx7contextERK15compile_options](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target10get_passesERN8migraphx7contextERK15compile_options)
+```
+std::vector<pass> get_passes(migraphx::context &gctx, const compile_options&) const
+```
 
-**inline migraphx::context get_context() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target11get_contextEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target11get_contextEv)
+```
+inline migraphx::context get_context() const
+```
 
-**inline** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy_to(const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **\&arg) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target7copy_toERK8argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target7copy_toERK8argument)
+```
+inline argument copy_to(const argument &arg) const
+```
 
-**inline** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **copy_from(const** [**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **\&arg) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target9copy_fromERK8argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target9copy_fromERK8argument)
+```
+inline argument copy_from(const argument &arg) const
+```
 
-[**argument**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal8argumentE) **allocate(const** [**shape**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/data.html#_CPPv4N8migraphx8internal5shapeE) **\&s) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html\#_CPPv4NK8migraphx8internal3cpu6target8allocateERK5shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/targets.html#_CPPv4NK8migraphx8internal3cpu6target8allocateERK5shape)
+```
+argument allocate(const shape &s) const
+```
 
 # 5.5 Passes <a name="subparagraph55"></a>
 
 ## 5.5.1 Pass <a name="anotherparagraph551"></a>
 
-**struct migraphx::internal::pass**
+```
+struct migraphx::internal::pass
+```
+An interface for applying a transformation to the instructions in a ``` program ```
 
-An interface for applying a transformation to the instructions in a program
+##### Public Functions
 
-**Public Functions**
-
-**std::string name() const**
-
+```
+std::string name() const
+```
 A unique name used to identify the pass.
 
-**void apply(module_pass_manager \&mpm) const**
-
+```
+void apply(module_pass_manager \&mpm) const
+```
 Run the pass on the module.
 
-**void apply(module \&m) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal4pass5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal4pass5applyER6module)
+```
+void apply(module \&m)const
+```
 
-**void apply(**[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **\&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal4pass5applyER7program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal4pass5applyER7program)
-
+```
+void apply(program&p)const
+```
 Run the pass on the program.
 
 ## 5.5.2 Dead_code_elimination <a name="anotherparagraph552"></a>
 
-**struct migraphx::internal::dead_code_elimination**
-
+```
+struct migraphx::internal::dead_code_elimination
+```
 Remove instructions where the output is not used.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal21dead_code_elimination4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal21dead_code_elimination4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&m) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal21dead_code_elimination5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal21dead_code_elimination5applyER6module)
+```
+void apply(module &m) const
+```
 
-**void apply(**[**program**](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/program.html#_CPPv4N8migraphx8internal7programE) **\&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal21dead_code_elimination5applyER7program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal21dead_code_elimination5applyER7program)
+```
+void apply(program &p) const
+```
 
 ## 5.5.3 Eliminate_common_subexpression <a name="anotherparagraph553"></a>
 
-**struct migraphx::internal::eliminate_common_subexpression**
-
+```
+struct migraphx::internal::eliminate_common_subexpression
+```
 Remove identical instructions.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal30eliminate_common_subexpression4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal30eliminate_common_subexpression4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal30eliminate_common_subexpression5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal30eliminate_common_subexpression5applyER6module)
+```
+void apply(module \&p) const
+```
 
 ## 5.5.4 Eliminate_concat <a name="anotherparagraph554"></a>
 
-**struct migraphx::internal::eliminate_concat**
-
+```
+struct migraphx::internal::eliminate_concat
+```
 Remove concat operators by having each operator can write to different chunk of memory.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal16eliminate_concat4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal16eliminate_concat4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal16eliminate_concat5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal16eliminate_concat5applyER6module)
+```
+void apply(module \&p) const
+```
 
-**Public Members**
+##### Public Members
 
-**concat_optimization concat_opt**
+```
+concat_optimization concat_opt
+```
 
 ## 5.5.5 Eliminate_contiguous <a name="anotherparagraph555"></a>
 
-**struct migraphx::internal::eliminate_contiguous**
-
+```
+struct migraphx::internal::eliminate_contiguous
+```
 Remove contiguous instructions by checking if the operator can use non-standard shapes.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal20eliminate_contiguous4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal20eliminate_contiguous4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal20eliminate_contiguous5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal20eliminate_contiguous5applyER6module)
+```
+void apply(module &p) const
+```
 
-**Public Members**
+##### Public Members
 
-**std::string op_name**
+```
+std::string op_name
+```
 
 ## 5.5.6 Eliminate_identity <a name="anotherparagraph556"></a>
 
-**struct migraphx::internal::eliminate_identity**
-
+```
+struct migraphx::internal::eliminate_identity
+```
 Remove identity instructions. Currently when used as the last pass, it will preserve the semantics of previous program state, therefore dead code elimination should not be used afterwards.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal18eliminate_identity4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal18eliminate_identity4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal18eliminate_identity5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal18eliminate_identity5applyER6module)
+```
+void apply(module &p) const
+```
 
 ## 5.5.7 Eliminate_pad <a name="anotherparagraph557"></a>
 
-**struct migraphx::internal::eliminate_pad**
-
+```
+struct migraphx::internal::eliminate_pad
+```
 Remove pads if they can be written as an attribute to another op (im2col, convolution, pooling)
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal13eliminate_pad4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal13eliminate_pad4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&m) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal13eliminate_pad5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal13eliminate_pad5applyER6module)
+```
+void apply(module &m) const
+```
 
 ## 5.5.8 Propagate_constant <a name="anotherparagraph558"></a>
 
-**struct migraphx::internal::propagate_constant**
-
+```
+struct migraphx::internal::propagate_constant
+```
 Replace instructions which take all literals with a literal of the computation.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal18propagate_constant4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal18propagate_constant4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal18propagate_constant5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal18propagate_constant5applyER6module)
+```
+void apply(module &p) const
+```
 
 ## 5.5.9 Rewrite_batchnorm <a name="anotherparagraph559"></a>
 
-**struct migraphx::internal::rewrite_batchnorm**
-
+```
+struct migraphx::internal::rewrite_batchnorm
+```
 Rewrite batchnorm to a multiply and add.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal17rewrite_batchnorm4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal17rewrite_batchnorm4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal17rewrite_batchnorm5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal17rewrite_batchnorm5applyER6module)
+```
+void apply(module &p) const
+```
 
 ## 5.5.10 Rewrite_rnn <a name="anotherparagraph5510"></a>
 
-**struct migraphx::internal::rewrite_rnn**
-
+```
+struct migraphx::internal::rewrite_rnn
+```
 Rewrite rnn to gemm and add.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal11rewrite_rnn4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal11rewrite_rnn4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&prog) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal11rewrite_rnn5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal11rewrite_rnn5applyER6module)
+```
+void apply(module &prog) const
+```
 
 ## 5.5.11 Schedule <a name="anotherparagraph5511"></a>
 
-**struct migraphx::internal::schedule**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4N8migraphx8internal8scheduleE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal8scheduleE)
-
+```
+struct migraphx::internal::schedule
+```
 Schedule instructions for concurrent execution
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal8schedule4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal8schedule4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal8schedule5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal8schedule5applyER6module)
+```
+void apply(module &p) const
+```
 
-**Public Members**
+##### Public Members
 
-**schedule_model model = {}**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4N8migraphx8internal8schedule5modelE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal8schedule5modelE)
+```
+schedule_model model = {}
+```
 
-**bool enable = true**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4N8migraphx8internal8schedule6enableE](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4N8migraphx8internal8schedule6enableE)
+```
+bool enable = true
+```
 
 ## 5.5.12 Simplify_algebra <a name="anotherparagraph5512"></a>
 
-**struct migraphx::internal::simplify_algebra**
-
+```
+struct migraphx::internal::simplify_algebra
+```
 Simplify many algebraic instructions to more efficient versions.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal16simplify_algebra4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal16simplify_algebra4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal16simplify_algebra5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal16simplify_algebra5applyER6module)
+```
+void apply(module &p) const
+```
 
 ## 5.5.13 Simplify_reshapes <a name="anotherparagraph5513"></a>
 
-**struct migraphx::internal::simplify_reshapes**
-
+```
+struct migraphx::internal::simplify_reshapes
+```
 Eliminate redundant reshapes.
 
-**Public Functions**
+##### Public Functions
 
-**inline std::string name() const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal17simplify_reshapes4nameEv](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal17simplify_reshapes4nameEv)
+```
+inline std::string name() const
+```
 
-**void apply(module \&p) const**[https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html\#_CPPv4NK8migraphx8internal17simplify_reshapes5applyER6module](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/dev/pass.html#_CPPv4NK8migraphx8internal17simplify_reshapes5applyER6module)
+```
+void apply(module &p) const
+```
 
 # 5.6 Matchers <a name="subparagraph56"></a>
 
 ## 5.6.1 Introduction <a name="anotherparagraph561"></a>
 
-The matchers provide a way compose several predicates together. Many of the matchers can be composed so that m(m1, m2) will first check that m matches and then it will check that m1 and m2 will match.
+The matchers provide a way compose several predicates together. Many of the matchers can be composed so that ``` m(m1, m2) ``` will first check that ``` m ``` matches and then it will check that ``` m1 ``` and ``` m2 ``` will match.
 
-The most commonly-used matcher is the name matcher. It will match the instruction that have the operator that is equal to the name specified:
+The most commonly-used matcher is the ``` name ``` matcher. It will match the instruction that have the operator that is equal to the name specified:
 
-**auto** match_sum = name("sum");
+```
+auto match_sum = name("sum");
+```
 
-This will find sum operators. We can also find sum operators which the output is standard_shape:
+This will find ``` sum ``` operators. We can also find ``` sum ``` operators which the output is ``` standard_shape ```:
 
 auto match_sum = name(“sum”)(standard_shape());
 
 ## 5.6.2 Arguments <a name="anotherparagraph562"></a>
 
-We also want to match arguments to the instructions as well. One way, is to match each argument using the arg matcher:
+We also want to match arguments to the instructions as well. One way, is to match each argument using the ``` arg ``` matcher:
 
-**auto** match_sum = name("sum")(arg(0)(name("@literal"), arg(1)(name("@literal"))));
+```
+auto match_sum = name("sum")(arg(0)(name("@literal"), arg(1)(name("@literal"))));
+```
 
-This will match a sum operator with the two arguments that are literals. Of course, instead of writing arg(0) and arg(1) everytime, the args matcher can be used:
+This will match a ``` sum ``` operator with the two arguments that are literals. Of course, instead of writing ``` arg(0) ``` and ``` arg(1) ``` everytime, the ``` args ``` matcher can be used:
 
-**auto** match_sum = name("sum")(args(name("@literal"), name("@literal")));
+```
+auto match_sum = name("sum")(args(name("@literal"), name("@literal")));
+```
 
 ## 5.6.3 Binding <a name="anotherparagraph563"></a>
 
-As we traverse through the instructions we may want reference some of the instructions we find along the way. We can do this by calling .bind:
+As we traverse through the instructions we may want reference some of the instructions we find along the way. We can do this by calling ``` .bind ```:
 
-**auto** match_sum = name("sum")(args(
+```
+auto match_sum = name("sum")(args(
+			name("@literal").bind("one"),
+			name("@literal").bind("two")
+		)).bind("sum");
+```
 
-name("@literal").bind("one"),
-
-name("@literal").bind("two")
-
-)).bind("sum");
-
-This will associate the instruction to a name that can be read from the matcher_result when it matches.
+This will associate the instruction to a name that can be read from the ``` matcher_result ``` when it matches.
 
 ## 5.6.4 Finding matches <a name="anotherparagraph564"></a>
 
-Finally, when you want to use the matchers to find instructions a callback object can be written which has the matcher and an apply function which will take the matcher_result when the match is found:
+Finally, when you want to use the matchers to find instructions a callback object can be written which has the matcher and an ``` apply ``` function which will take the ``` matcher_result ``` when the match is found:
 
-**struct** **match_find_sum**
-
+```
+struct match_find_sum
 {
 
-**auto** matcher() **const** { **return** name("sum"); }
+	auto matcher() const { return name("sum"); }
 
-void apply(program& p, matcher_result r) **const**
-
-{
-
-*// Do something with the result*
-
-}
-
+	void apply(program& p, matcher_result r) const
+	{
+		// Do something with the result
+	}
 };
 
 find_matches(prog, match_find_sum{});
+```
 
 ## 5.6.5 Creating matchers <a name="anotherparagraph565"></a>
 
-There are several ways to create matchers. The macros MIGRAPH_BASIC_MATCHER and MIGRAPH_PRED_MATCHER help with creating matchers. For example, we can create a matcher for shapes that are broadcasted:
+There are several ways to create matchers. The macros ``` MIGRAPH_BASIC_MATCHER ``` and ``` MIGRAPH_PRED_MATCHER ``` help with creating matchers. For example, we can create a matcher for shapes that are broadcasted:
 
+```
 MIGRAPH_PRED_MATCHER(broadcasted_shape, instruction_ref ins)
-
 {
-
-**return** ins-\>get_shape().broadcasted();
-
+	return ins-\>get_shape().broadcasted();
 }
+```
 
-If we want parameters to the predicate, then we will need to use the make_basic_pred_matcher to create the matcher. For example, here is how we would create a matcher to check the number of dimensions of the shape:
+If we want parameters to the predicate, then we will need to use the ``` make_basic_pred_matcher ``` to create the matcher. For example, here is how we would create a matcher to check the number of dimensions of the shape:
 
-**inline** **auto** number_of_dims(std::size_t n)
-
+```
+inline auto number_of_dims(std::size_t n)
 {
+	return make_basic_pred_matcher([=](instruction_ref ins) {
+	    return ins-\>get_shape().lens().size() == n;
 
-**return** make_basic_pred_matcher([=](instruction_ref ins) {
-
-**return** ins-\>get_shape().lens().size() == n;
-
-});
-
+	});
 }
+```
 
 # 5.7 Tools <a name="subparagraph57"></a>
 
