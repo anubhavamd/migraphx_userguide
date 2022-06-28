@@ -1,7 +1,7 @@
 
 <table width="100%" align="center">
  <tr width="100%" align="center">
-    <td align="center"><img src="https://github.com/anubhavamd/migraphx_userguide/blob/main/amd_final_demo.png" width=""/><h1>MiGraphX Documentation (Draft)</h1>
+    <td align="center"><img src="https://github.com/anubhavamd/migraphx_userguide/blob/main/amd_final_demo.png" width=""/><h1>MiGraphX Documentation </h1>
     </td>
  </tr>
 </table>
@@ -155,16 +155,16 @@
         </tr>
 	<tr>
             <td height="24">
-                <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction</a>
+                <a href="/anubhav_migraphx_exp.md#11-introduction-">    1.1. Introduction</a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph21">2.1. Setting path and installing package</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph21">    2.1. Setting path and installing package</a>
             </td>
 	    <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph31">3.1. Defining different modules in detail</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph31">    3.1. Defining different modules in detail</a>
             </td>
             <td>
-                <a href="/anubhav_migraphx_exp.md#subparagraph41">4.1. Description</a>
+                <a href="/anubhav_migraphx_exp.md#subparagraph41">    4.1. Description</a>
             </td>
         </tr>
 	<tr>
