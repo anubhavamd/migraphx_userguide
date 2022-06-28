@@ -7,6 +7,7 @@
 </table>
 
 # Table Of Contents 
+
 </div>
 
 <table 1>
@@ -19,7 +20,7 @@
 <tr>
 <td>
 <pre>
-1. Getting Started Guide for MIGraphX 
+<a href="/anubhav_migraphx_exp.md#1-getting-started-guide-for-migraphx-">1. Getting Started Guide for MIGraphX </a> 
         <a href="/anubhav_migraphx_exp.md#11-introduction-">1.1. Introduction </a> 
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph111-">1.1.1. Documentation Roadmap</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph12">1.2. List of prerequisites</a>
@@ -32,7 +33,7 @@
 </td>
 <td>
 <pre>
-2. Python User Guide
+<a href="/anubhav_migraphx_exp.md#2-python-user-guide-">2. Python User Guide</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph21">2.1. Setting path and installing package</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph22">2.2. Defining different modules in detail</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph221">2.2.1. Shape</a>
@@ -47,7 +48,7 @@
 </td>
 <td>
 <pre>
-3. C++ User Guide
+<a href="/anubhav_migraphx_exp.md#3-c-user-guide-">3. C++ User Guide</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph31">3.1. Defining different modules in detail</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph311">3.1.1. Shape</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph312">3.1.2. Argument</a>
@@ -60,7 +61,7 @@
 </td>
 <td>
 <pre>
-4. MIGraphX Driver
+<a href="/anubhav_migraphx_exp.md#4-migraphx-driver-">4. MIGraphX Driver</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph41">4.1. Description</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph42">4.2. How to Use</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph43">4.3. Defining different modules in detail</a>
@@ -79,53 +80,53 @@
 </tr>
 <td>
 <pre>
-5. Contributor Guide
+<a href="/anubhav_migraphx_exp.md#5-contributor-guide-">5. Contributor Guide</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph51">5.1. MIGraphX Fundamentals</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph511">5.1.1. Location of the Examples</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph512">5.1.2. Adding Two Literals</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph513">5.1.3. Using Parameters</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph514">5.1.4. Handling Tensor Data</a>
-		5.1.5. Importing From ONNX
-	5.2. Data Types
-		5.2.1. Shape
-		5.2.2. Literal
-		5.2.3. Argument
-		5.2.4. raw_data
-		5.2.5. Tensor_view
-	5.3. Program
-		5.3.1. Instruction
-		5.3.2. Instruction_ref
-		5.3.3. Program
-		5.3.4. Parse_onnx
-		5.3.5. Parse_tf
-		5.3.6. Onnx_options
-		5.3.7. Tf_options
-	5.4. Targets
-		5.4.1. Target
-		5.4.2. gpu::target
-		5.4.3. cpu::target
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph515">5.1.5. Importing From ONNX</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph52">5.2. Data Types</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph521">5.2.1. Shape</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph522">5.2.2. Literal</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph523">5.2.3. Argument</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph524">5.2.4. raw_data</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph525">5.2.5. Tensor_view</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph53">5.3. Program</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph531">5.3.1. Instruction</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph532">5.3.2. Instruction_ref</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph533">5.3.3. Program</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph534">5.3.4. Parse_onnx</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph535">5.3.5. Parse_tf</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph536">5.3.6. Onnx_options</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph537">5.3.7. Tf_options</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph54">5.4. Targets</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph541">5.4.1. Target</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph542">5.4.2. gpu::target</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph543">5.4.3. cpu::target</a>
 	<a href="/anubhav_migraphx_exp.md#subparagraph55">5.5. Passes</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph551">5.5.1. Pass</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph552">5.5.2. Dead_code_elimination</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph553">5.5.3. Eliminate_common_subexpression</a>
 		<a href="/anubhav_migraphx_exp.md#anotherparagraph554">5.5.4. Eliminate_concat</a>
-		5.5.5. Eliminate_contiguous
-`		5.5.6. Eliminate_identity
-		5.5.7. Eliminate_pad
-		5.5.8. Propagate_constant
-		5.5.9. Rewrite_batchnorm
-		5.5.10. Rewrite_rnn
-		5.5.11. Schedule
-		5.5.12. Simplify_algebra
-		5.5.13. Simplify_reshapes
-	5.6. Matchers
-		5.6.1. Introduction
-		5.6.2. Arguments
-		5.6.3. Binding
-		5.6.4. Finding matches
-		5.6.5. Creating matchers
-	5.7. Tools
-		5.7.1. roctx.py
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph555">5.5.5. Eliminate_contiguous</a>
+`		<a href="/anubhav_migraphx_exp.md#anotherparagraph556">5.5.6. Eliminate_identity</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph557">5.5.7. Eliminate_pad</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph558">5.5.8. Propagate_constant</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph559">5.5.9. Rewrite_batchnorm</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph5510">5.5.10. Rewrite_rnn</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph5511">5.5.11. Schedule</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph5512">5.5.12. Simplify_algebra</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph5513">5.5.13. Simplify_reshapes</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph56">5.6. Matchers</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph561">5.6.1. Introduction</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph562">5.6.2. Arguments</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph563">5.6.3. Binding</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph564">5.6.4. Finding matches</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph565">5.6.5. Creating matchers</a>
+	<a href="/anubhav_migraphx_exp.md#subparagraph57">5.7. Tools</a>
+		<a href="/anubhav_migraphx_exp.md#anotherparagraph571">5.7.1. roctx.py</a>
 </td>
 </pre>
 </table 2>
