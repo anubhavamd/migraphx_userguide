@@ -980,20 +980,20 @@ migraphx.clone()
 ```
 Make a copy of the program
 
-##### Return type: [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
+##### Return type: program
 
 ```
 migraphx.get_parameter_shapes()
 ```
 Get the shapes of all the input parameters in the program.
 
-##### Return type: dict[str,[shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.shape)]
+##### Return type: dict[str,shape]
 ```
 migraphx.get_shape()
 ```
 Get the shape of the final output of the program.
 
-##### Return type: [shape](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.shape)
+##### Return type: shape
 ```
 migraphx.compile(t, offload_copy=True, fast_math=True)
 ```
@@ -1001,7 +1001,7 @@ Compiles the program for the target and optimizes it.
 
 ##### Parameters
 
--   t ([target](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.target)) – This is the target to compile the program for.
+-   t (target) – This is the target to compile the program for.
 -   offload_copy (bool) – For targets with offloaded memory(such as the gpu), this will insert instructions during compilation to copy the input parameters to the offloaded memory and to copy the final result from the offloaded memory back to main memory.
 -   fast_math (bool) – Optimize math functions to use faster approximate versions. There may be slight accuracy degredation when enabled.
 
@@ -1011,11 +1011,11 @@ migraphx.run(params)
 Run the program.
 
 ##### Parameters: 
-- params (dict[str, [argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)*]*) – This is a map of the   input parameters which will be used when running the program.
+- params (dict[str,argument]) – This is a map of the   input parameters which will be used when running the program.
 
 - Returns: The result of the last instruction.
 
-##### Return type: [argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)
+##### Return type: argument
 
 ```
 migraphx.quantize_fp16(prog, ins_names=['all'])
@@ -1023,7 +1023,7 @@ migraphx.quantize_fp16(prog, ins_names=['all'])
 Quantize the program to use fp16.
 
 ##### Parameters: 
--    prog ([program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)) – Program to quantize.
+-    prog (program) – Program to quantize.
 
 -    ins_names (list[str]) – List of instructions to quantize.
 
@@ -1034,9 +1034,9 @@ Quantize the program to use int8.
 
 ##### Parameters:
 
--   prog ([program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)) – Program to quantize.
--   t ([target](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.target)) – Target that will be used to run the calibration data.
--   calibration (list[dict[str, [argument](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.argument)*]]*) – Calibration data used to decide the parameters to the int8 optimization.
+-   prog (program) – Program to quantize.
+-   t (target) – Target that will be used to run the calibration data.
+-   calibration (list[dict[str,argument]]) – Calibration data used to decide the parameters to the int8 optimization.
 -   ins_names (list[str]) – List of instructions to quantize.
 
 ## 2.2.5. parse_onnx <a name="anotherparagraph225"></a>
@@ -1054,7 +1054,7 @@ Load and parse an onnx file.
 -   skip_unknown_operators (str) – Continue parsing onnx file if an unknown operator is found.
 -   print_program_on_error (str) – Print program if an error occurs.
 
-##### Return type: [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
+##### Return type: program
 
 ## 2.2.6. parse_tf <a name="anotherparagraph226"></a>
 
@@ -1069,7 +1069,7 @@ Load and parse an tensorflow protobuf file file.
 -   is_nhwc (bool) – Use nhwc as default format.
 -   batch_size (str) – default batch size to use (if not specified in protobuf).
 
-##### Return type: [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
+##### Return type: program
 
 ## 2.2.7. Load <a name="anotherparagraph227"></a>
 
@@ -1083,7 +1083,7 @@ Load a MIGraphX program
 -   filename (str) – Path to file.
 -   format (str) – Format of file. Valid options are msgpack or json.
 
-##### Return type: [program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)
+##### Return type: program
 
 ## 2.2.8. Save <a name="anotherparagraph228"></a>
 
@@ -1094,7 +1094,7 @@ Save a MIGraphX program
 
 ##### Parameters:
 
--   p ([program](https://rocmsoftwareplatform.github.io/AMDMIGraphX/doc/html/reference/py.html#migraphx.program)) – Program to save.
+-   p (program) – Program to save.
 -   filename (str) – Path to file.
 -   format (str) – Format of file. Valid options are msgpack or json.
 
