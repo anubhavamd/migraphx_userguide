@@ -720,6 +720,22 @@ then the header files and libs are installed under ``` /opt/rocm-\<version\> ```
 
 # 1.4. Building From Source <a name="subparagraph14"></a>
 
+```mermaid
+flowchart LR
+    MIGraphX-Sources-->Use-the-ROCm-build-tool
+    MIGraphX-Sources-->Use-cmake
+    MIGraphX-Sources-->Use-Docker
+    Use-the-ROCm-build-tool-->Installing-the-prerequisites
+    Use-the-ROCm-build-tool-->Building-MIGraphX-source-and-install-libs
+    
+    click MIGraphX-Sources href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#14-building-from-source-"
+    click Use-the-ROCm-build-tool href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#141-use-the-rocm-build-tool-rbuild-"
+    click Use-cmake href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#142-use-cmake-to-build-migraphx-"
+    click Use-Docker href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#143-use-docker-"
+    click Installing-the-prerequisites href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#1-installing-the-prerequisites"
+    click Building-MIGraphX-source-and-install-libs href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#2-building-migraphx-source-and-install-libs"
+```
+
 There are three ways to build the MIGraphX sources.
 
 -   [Use the ROCm build tool](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX#use-the-rocm-build-tool-rbuild)
@@ -812,6 +828,32 @@ docker run --device='/dev/kfd' --device='/dev/dri' -v=\`pwd\`:/code/AMDMIGraphX 
 In the docker container, all the required prerequisites are already installed, so users can just go to the folder /code/AMDMIGraphX and follow the steps in the above [Build MIGraphX source and install libs](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX#building-migraphx-source-and-install-libs) section to build MIGraphX source.c
 
 # 2. Python User Guide <a name="paragraph2"></a>
+
+```mermaid
+flowchart TB
+    Python-User-Guide-->Setting-path-and-installing-package
+    Setting-path-and-installing-package-->Defining-different-modules-in-detail
+    Defining-different-modules-in-detail-->Shape
+    Defining-different-modules-in-detail-->Argument
+    Defining-different-modules-in-detail-->Target
+    Defining-different-modules-in-detail-->Program
+    Defining-different-modules-in-detail-->parse_onnx
+    Defining-different-modules-in-detail-->parse_tf
+    Defining-different-modules-in-detail-->Load
+    Defining-different-modules-in-detail-->Save
+    
+    click  Python-User-Guide href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#2-python-user-guide-"
+    click Setting-path-and-installing-package href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#21-setting-path-and-installing-package-"
+    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#22-defining-different-modules-in-detail-"
+    click Shape href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#221-shape-"
+    click Argument href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#222-argument-"
+    click Target href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#223-target-"
+    click Program href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#224-program-"
+    click parse_onnx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#225-parse_onnx-"
+    click parse_tf href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#226-parse_tf-"
+    click Load href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#227-load-"
+    click Save href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#228-save-"
+```
 
 # 2.1. Setting path and installing package <a name="subparagraph21"></a>
 
