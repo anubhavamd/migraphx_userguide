@@ -1154,17 +1154,16 @@ flowchart TB
     Defining-different-modules-in-detail-->Load
     Defining-different-modules-in-detail-->Save
     
-    click C++-User-Guide href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#2-python-user-guide-"
-    click Setting-path-and-installing-package href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#21-setting-path-and-installing-package-"
-    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#22-defining-different-modules-in-detail-"
-    click Shape href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#221-shape-"
-    click Argument href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#222-argument-"
-    click Target href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#223-target-"
-    click Program href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#224-program-"
-    click parse_onnx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#225-parse_onnx-"
-    click parse_tf href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#226-parse_tf-"
-    click Load href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#227-load-"
-    click Save href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#228-save-"
+    click C++-User-Guide href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#3-c-user-guide-"
+    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#31-defining-different-modules-in-detail-"
+    click Shape href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#311-shape-"
+    click Argument href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#312-argument-"
+    click Target href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#313-target--"
+    click Program href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#314-program--"
+    click Quantize href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#315-quantize--"
+    click parse_onnx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#316-parse_onnx--"
+    click Load href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#317-load--"
+    click Save href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#318-save--"
 ```
 
 # 3.1 Defining different modules in detail <a name="subparagraph31"></a>
@@ -1675,6 +1674,30 @@ inline void migraphx::save(const [**program**](https://rocmsoftwareplatform.gith
 Save a program to a file.
 
 # 4. MIGraphX Driver <a name="paragraph4"></a>
+
+```mermaid
+flowchart TB
+    MIGraphX-Driver-->Description
+    Description--> How-to-Use
+    How-to-Use-->Defining-different-modules-in-detail
+    Defining-different-modules-in-detail-->Read
+    Defining-different-modules-in-detail-->Compile
+    Defining-different-modules-in-detail-->Run
+    Defining-different-modules-in-detail-->Perf
+    Defining-different-modules-in-detail-->Verify
+    Defining-different-modules-in-detail-->Roctx
+ 
+    click MIGraphX-Driver href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#4-migraphx-driver-"
+    click Description href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#41-description-"
+    click How-to-Use href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#42-how-to-use-"
+    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#43-defining-different-modules-in-detail-"
+    click Read href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#431-read-"
+    click Compile href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#432-compile-"
+    click Run href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#433-run-"
+    click Perf href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#434-perf-"
+    click Verify href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#435-verify-"
+    click Roctx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#436-roctx-"
+```
 
 # 4.1 Description <a name="subparagraph41"></a>
 
@@ -2728,6 +2751,30 @@ Quantize for fp16
 Quantize for int8
 
 # 5. Contributor Guide <a name="paragraph5"></a>
+
+```mermaid
+flowchart TB
+    MIGraphX-Driver-->Description
+    Description--> How-to-Use
+    How-to-Use-->Defining-different-modules-in-detail
+    Defining-different-modules-in-detail-->Read
+    Defining-different-modules-in-detail-->Compile
+    Defining-different-modules-in-detail-->Run
+    Defining-different-modules-in-detail-->Perf
+    Defining-different-modules-in-detail-->Verify
+    Defining-different-modules-in-detail-->Roctx
+ 
+    click MIGraphX-Driver href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#4-migraphx-driver-"
+    click Description href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#41-description-"
+    click How-to-Use href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#42-how-to-use-"
+    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#43-defining-different-modules-in-detail-"
+    click Read href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#431-read-"
+    click Compile href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#432-compile-"
+    click Run href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#433-run-"
+    click Perf href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#434-perf-"
+    click Verify href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#435-verify-"
+    click Roctx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#436-roctx-"
+```
 
 # 5.1 MIGraphX Fundamentals <a name="subparagraph51"></a>
 
