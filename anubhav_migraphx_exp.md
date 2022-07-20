@@ -842,7 +842,7 @@ flowchart TB
     Defining-different-modules-in-detail-->Load
     Defining-different-modules-in-detail-->Save
     
-    click  Python-User-Guide href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#2-python-user-guide-"
+    click Python-User-Guide href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#2-python-user-guide-"
     click Setting-path-and-installing-package href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#21-setting-path-and-installing-package-"
     click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#22-defining-different-modules-in-detail-"
     click Shape href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#221-shape-"
@@ -1141,6 +1141,31 @@ Save a MIGraphX program
 -   format (str) – Format of file. Valid options are msgpack or json.
 
 # 3. C++ User Guide <a name="paragraph3"></a>
+
+```mermaid
+flowchart TB
+    C++-User-Guide-->Defining-different-modules-in-detail
+    Defining-different-modules-in-detail-->Shape
+    Defining-different-modules-in-detail-->Argument
+    Defining-different-modules-in-detail-->Target
+    Defining-different-modules-in-detail-->Program
+    Defining-different-modules-in-detail-->Quantize
+    Defining-different-modules-in-detail-->parse_onnx
+    Defining-different-modules-in-detail-->Load
+    Defining-different-modules-in-detail-->Save
+    
+    click C++-User-Guide href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#2-python-user-guide-"
+    click Setting-path-and-installing-package href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#21-setting-path-and-installing-package-"
+    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#22-defining-different-modules-in-detail-"
+    click Shape href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#221-shape-"
+    click Argument href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#222-argument-"
+    click Target href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#223-target-"
+    click Program href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#224-program-"
+    click parse_onnx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#225-parse_onnx-"
+    click parse_tf href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#226-parse_tf-"
+    click Load href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#227-load-"
+    click Save href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#228-save-"
+```
 
 # 3.1 Defining different modules in detail <a name="subparagraph31"></a>
 
