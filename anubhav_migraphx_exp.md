@@ -2797,8 +2797,8 @@ flowchart TB
     Matchers-->Introduction
     Matchers-->Arguments
     Matchers-->Binding
-    Matchers-->Finding matches
-    Matchers-->Creating matchers
+    Matchers-->Finding-matches
+    Matchers-->Creating-matchers
     Tools-->roctx.py
     
     click MIGraphX-Driver href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#4-migraphx-driver-"
