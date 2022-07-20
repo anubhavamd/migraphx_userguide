@@ -2773,7 +2773,7 @@ flowchart LR
     Data-Types-->Tensor_view
     Program-->Instruction
     Program-->Instruction_ref
-    Program-->Program
+    Program-->Programs
     Program-->Parse_onnx
     Program-->Parse_tf
     Program-->Onnx_options
@@ -2801,16 +2801,53 @@ flowchart LR
     Matchers-->Creating-matchers
     Tools-->roctx.py
     
-    click MIGraphX-Driver href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#4-migraphx-driver-"
-    click Description href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#41-description-"
-    click How-to-Use href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#42-how-to-use-"
-    click Defining-different-modules-in-detail href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#43-defining-different-modules-in-detail-"
-    click Read href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#431-read-"
-    click Compile href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#432-compile-"
-    click Run href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#433-run-"
-    click Perf href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#434-perf-"
-    click Verify href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#435-verify-"
-    click Roctx href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#436-roctx-"
+    click Contributor-Guide href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#5-contributor-guide-"
+    click MIGraphX-Fundamentals href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#51-migraphx-fundamentals-"
+    click Location-of-the-Examples href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#511-location-of-the-examples-"
+    click Adding-Two-Literals href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#512-adding-two-literals-"
+    click Using-Parameters href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#513-using-parameters-"
+    click Handling-Tensor-Data href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#514-handling-tensor-data-"
+    click Importing-From-ONNX href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#515-importing-from-onnx-"
+    click Data-Types href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#52-data-types-"
+    click Shape href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#521-shape-"
+    click Literal href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#522-literal-"
+    click Argument href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#523-argument-"
+    click raw_data href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#524-raw_data-"
+    click Tensor_view href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#525-tensor_view-"
+    click Program href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#53-program-"
+    click Instruction href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#531-instruction-"
+    click Instruction_ref href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#532-instruction_ref-"
+    click Programs href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#533-program-"
+    click Parse_onnx href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#534-parse_onnx-"
+    click Parse_tf href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#535-parse_tf-"
+    click Onnx_options href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#536-onnx_options-"
+    click Tf_options href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#537-tf_options-"
+    click Targets href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#54-targets-"
+    click Target href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#541-target-"
+    click gpu::target href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#542-gputarget-"
+    click cpu::target href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#543-cputarget-"
+    click Passes href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#55-passes-"
+    click pass href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#551-pass-"
+    click Dead_code_elimination href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#552-dead_code_elimination-"
+    click Eliminate_common_subexpression href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#553-eliminate_common_subexpression-"
+    click Eliminate_concat href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#554-eliminate_concat-"
+    click Eliminate_contiguous href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#555-eliminate_contiguous-"
+    click Eliminate_identity href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#556-eliminate_identity-"
+    click Eliminate_pad href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#557-eliminate_pad-"
+    click Propagate_constant href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#558-propagate_constant-"
+    click Rewrite_batchnorm href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#559-rewrite_batchnorm-"
+    click Rewrite_rnn href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#5510-rewrite_rnn-"
+    click Schedule href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#5511-schedule-"
+    click Simplify_algebra href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#5512-simplify_algebra-"
+    click Simplify_reshapes href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#5513-simplify_reshapes-"
+    click Matchers href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#56-matchers-"
+    click Introduction href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#561-introduction-"
+    click Arguments href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#562-arguments-"
+    click Binding href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#563-binding-"
+    click Finding matches href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#564-finding-matches-"
+    click Creating matchers href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#565-creating-matchers-"
+    click Tools href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#57-tools-"
+    click roctx.py href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#571-roctxpy-"
 ```
 
 # 5.1 MIGraphX Fundamentals <a name="subparagraph51"></a>
