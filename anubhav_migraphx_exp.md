@@ -2754,16 +2754,53 @@ Quantize for int8
 
 ```mermaid
 flowchart TB
-    MIGraphX-Driver-->Description
-    Description--> How-to-Use
-    How-to-Use-->Defining-different-modules-in-detail
-    Defining-different-modules-in-detail-->Read
-    Defining-different-modules-in-detail-->Compile
-    Defining-different-modules-in-detail-->Run
-    Defining-different-modules-in-detail-->Perf
-    Defining-different-modules-in-detail-->Verify
-    Defining-different-modules-in-detail-->Roctx
- 
+    Contributor-Guide-->MIGraphX-Fundamentals
+    Contributor-Guide-->Data-Types
+    Contributor-Guide-->Program
+    Contributor-Guide-->Targets
+    Contributor-Guide-->Passes
+    Contributor-Guide-->Matchers
+    Contributor-Guide-->Tools
+    MIGraphX-Fundamentals-->Location-of-the-Examples
+    MIGraphX-Fundamentals-->Adding-Two-Literals
+    MIGraphX-Fundamentals-->Using-Parameters
+    MIGraphX-Fundamentals-->Handling-Tensor-Data
+    MIGraphX-Fundamentals-->Importing-From-ONNX
+    Data-Types-->Shape
+    Data-Types-->Literal
+    Data-Types-->Argument
+    Data-Types-->raw_data
+    Data-Types-->Tensor_view
+    Program-->Instruction
+    Program-->Instruction_ref
+    Program-->Program
+    Program-->Parse_onnx
+    Program-->Parse_tf
+    Program-->Onnx_options
+    Program-->Tf_options
+    Targets-->Target
+    Targets-->gpu::target
+    Targets-->cpu::target
+    Passes-->Pass
+    Passes-->Dead_code_elimination
+    Passes-->Eliminate_common_subexpression
+    Passes-->Eliminate_concat
+    Passes-->Eliminate_contiguous
+    Passes-->Eliminate_identity
+    Passes-->Eliminate_pad
+    Passes-->Propagate_constant
+    Passes-->Rewrite_batchnorm
+    Passes-->Rewrite_rnn
+    Passes-->Schedule
+    Passes-->Simplify_algebra
+    Passes-->Simplify_reshapes
+    Matchers-->Introduction
+    Matchers-->Arguments
+    Matchers-->Binding
+    Matchers-->Finding matches
+    Matchers-->Creating matchers
+    Tools-->roctx.py
+    
     click MIGraphX-Driver href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#4-migraphx-driver-"
     click Description href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#41-description-"
     click How-to-Use href "https://github.com/anubhavamd/migraphx_userguide/edit/main/anubhav_migraphx_exp.md#42-how-to-use-"
