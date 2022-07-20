@@ -2753,7 +2753,7 @@ Quantize for int8
 # 5. Contributor Guide <a name="paragraph5"></a>
 
 ```mermaid
-flowchart TB
+flowchart LR
     Contributor-Guide-->MIGraphX-Fundamentals
     Contributor-Guide-->Data-Types
     Contributor-Guide-->Program
