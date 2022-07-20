@@ -2844,8 +2844,8 @@ flowchart LR
     click Introduction href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#561-introduction-"
     click Arguments href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#562-arguments-"
     click Binding href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#563-binding-"
-    click Finding matches href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#564-finding-matches-"
-    click Creating matchers href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#565-creating-matchers-"
+    click Finding-matches href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#564-finding-matches-"
+    click Creating-matchers href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#565-creating-matchers-"
     click Tools href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#57-tools-"
     click roctx.py href "https://github.com/anubhavamd/migraphx_userguide/blob/main/anubhav_migraphx_exp.md#571-roctxpy-"
 ```
